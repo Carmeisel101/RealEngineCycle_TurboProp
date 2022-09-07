@@ -31,3 +31,21 @@ def stage02(p02i, w_ci, h01, eff_c):
     s02 = s02_1bar - 0.28716 * np.log(p02)
     return s02, w_c, h02
 
+def stage03( TIT, h02, eff_comb, p03):
+    minL = 14.66
+    LHV = 43.5e3
+    GP = GasProp()
+    GP.air()
+    h03_air = GP.h(T=TIT)
+    GP.combustion(lamb=1)
+    h03_stoich = GP.h(T=TIT)
+    excess_air = (h03_stoich*(1+minL)-(eff_comb*LHV)-(h03_air*minL)) / (minL*(h02 - h03_air))
+    r = (1+minL)/(1+(excess_air*minL))
+    q= 1-r
+    h03 = r*h03_stoich + q*h03_air
+    s03_stoich_1bar = GP.s(T=TIT, p=1)
+    GP.air()
+    s03_air_1bar = GP.s(T=TIT, p=1)
+    s03_1bar_mix = r*s03_stoich_1bar + q*s03_air_1bar
+    s03 = s03_1bar_mix - 0.28716 * np.log(p03)
+    return h03, s03

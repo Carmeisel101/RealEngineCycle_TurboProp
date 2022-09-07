@@ -5,7 +5,7 @@ from winGasProp import GasProp
 from stages import stage01
 from stages import stage02i
 from stages import stage02
-
+from stages import stage03
 
 if __name__ == '__main__':
     # Stage 01
@@ -31,5 +31,17 @@ if __name__ == '__main__':
     print('The enthalpy at stage 02 is: {:.2f} kJ/kg'.format(h02))
 
     # Stage 03
+    comb_pLoss = specs['pres_drop_combustor'].values[0]
+    eff_comb = specs['eff_combustor'].values[0]
+    eff_comb_test = 0.97
+    # TIT = specs['TIT [K]'].values[0]
+    p03 = p02i * (1- comb_pLoss)
+    TIT_test = 1400
+    h03, s03 = stage03(TIT_test, h02, eff_comb_test, p03)
+    print('The enthalpy at stage 03 is: {:.2f} kJ/kg'.format(h03))
+    print('The entropy at stage 03 is: {:.5f} kJ/kg-K'.format(s03))
+
+    # Stage 04i
+    s04i = s03
 
 
