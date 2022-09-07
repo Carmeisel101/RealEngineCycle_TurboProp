@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Sep  6 07:47:30 2022
+
+@author: Ozzy
+"""
 import pandas as pd
 import numpy as np
 from winGasProp import GasProp
@@ -31,3 +37,51 @@ def stage02(p02i, w_ci, h01, eff_c):
     s02 = s02_1bar - 0.28716 * np.log(p02)
     return s02, w_c, h02
 
+def stage03(p02, h02):
+    pres_drop_comb = 0.03
+    T03 = 1400
+    minL = 14.66
+    LHV = 43500
+    comb_eff = 0.97
+    p03 = p02 * (1 - pres_drop_comb)
+    GP = GasProp()
+    
+    GP.air()
+    h03_air = GP.h(T=T03)
+    s03_air = GP.s(T=T03, p=1)
+    
+    GP.combustion(lamb=1)
+    h03_lam1 = GP.h(T=T03)
+    s03_lam1 = GP.s(T=T03, p=1)
+    
+    excess_air = (h03_lam1 * (1 + minL) - comb_eff * LHV - h03_air * minL) / (minL * (h02 - h03_air))
+    r = (1 + minL) / (1 + excess_air * minL)
+    q = ((excess_air - 1) * minL) / (1 + excess_air * minL)
+    
+    h03 = r * h03_lam1 + q * h03_air
+    s03_lam = r * s03_lam1 + q * s03_air
+    s03 = s03_lam - 0.28716 * np.log(11.791) #Dont know what 11.791 just copied from page 243
+    return T03, p03, h03, s03, excess_air, r, q
+
+def stage04i(s03, excess_air, w_c, h03, r, q):
+    minL = 14.66
+    turbine_eff = 0.92
+    s04i = s03
+    w_T = w_c * (1 / (1 + (1 / (excess_air * minL))))
+    w_Ti = w_T / turbine_eff
+    h04i = h03 - w_Ti
+    
+    #Iterative Process I dont understand
+    T04i = 1093.4
+    GP = GasProp()
+    GP.air()
+    s04i_air = GP.s(T=T04i)
+    GP.combustion(lam=1)
+    s04i_lam = GP.s(T=T04i)
+    s04i_p1_lam = r * s04i_lam + q * s04i_air
+    p04i = np.exp(-(s04i - s04i_p1_lam) / 0.28716)
+    
+    return s04i, h04i, T04i, p04i
+    
+    
+    
