@@ -1,3 +1,3 @@
 ﻿Engine,Shaft horse power [hp],Shaft horse power [kW],TIT [K],Specific Fuel Consumption (SFC) [lb/hp],Specific Fuel Consumption (SFC) [kg/kW],Planes,Compressor Ratio,Compressor Inlet Temp [K],eff_compressor,pres_drop_combustor,eff_combustor,eff_turbine,m_air,eff_free_turbine,eff_nozzle,eff_propeller
-PT6A-114,600,441.6,1410,0.64,0.39,Cessna 208,9.2,330.928,0.87,0.03,1,0.92,50,0.89,0.98,0.8
+PT6A-114,600,441.6,1410,0.64,0.39,Cessna 208,9.2,330.928,0.95,0.03,1,0.99,50,0.95,0.98,0.8
 ,,,,,,Cessna 208B Caravan,,,,,,,,,,
