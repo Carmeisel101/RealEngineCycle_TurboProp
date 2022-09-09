@@ -37,7 +37,7 @@ def Iterate_temp_ps(s, r, q):
     f1 = s -r*s_stoich1 - q*s_air1
     # print('f1 = ', f1)
     GP.combustion(lamb=1)
-    T_comb2 = GP.T(p=1, s=s) # HARDCODED VALUE FIX THIS LATER
+    T_comb2 = 711.6 # HARDCODED VALUE FIX THIS LATER
     GP.air()
     s_air2 = GP.s(T=T_comb2, p=1)
     s_stoich2 = s
