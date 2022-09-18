@@ -85,6 +85,10 @@ def stage045i(SHP, m_air, excess_air, eff_free_turbine, h04, r, q, s045i):
     minL = 14.66
     w_PT = SHP/(m_air*(1+(1/(minL*excess_air))))
     w_PTi = w_PT/eff_free_turbine
+    m_g = SHP/w_PT # mass flow rate of gas
+    f = 1/(minL*excess_air)
+    m_air_sol = m_g*(1+(1/(minL*excess_air)))
+    m_fuel = m_air_sol*f
     h045i = h04 - w_PTi
     T045i = Iterate_temp_h(h045i, r, q)
     GP = GasProp()
@@ -94,7 +98,7 @@ def stage045i(SHP, m_air, excess_air, eff_free_turbine, h04, r, q, s045i):
     s045i_1bar_stoich = GP.s(T=T045i, p=1)
     s045i_1bar_mix = r*s045i_1bar_stoich + q*s045i_1bar_air
     p045i = exp(-(s045i - s045i_1bar_mix)/0.28716)
-    return w_PT, T045i, h045i, p045i
+    return w_PT, T045i, h045i, p045i, m_g, m_air_sol, m_fuel
 
 def stage045(p045, w_PT, h04, r, q):
     h045 = h04 - w_PT
@@ -108,30 +112,6 @@ def stage045(p045, w_PT, h04, r, q):
     s045 = s045_1bar_mix - 0.28716 * np.log(p045)
     return h045, s045, T045
 
-def stage5ideal(r, q, s05i, p5i, h045, eff_nozzle, m_air, excess_air, eff_propeller, SHP):
-    s05i_1bar = s05i + 0.28716 * np.log(p5i)
-    minL = 14.66
-    GP = GasProp()
-    GP.air()
-    T5i_air = GP.T(s=s05i_1bar, p=1)
-    GP.combustion(lamb=1)
-
-    # T5i_stoich = GP.T(s=s05i_1bar, p=1)
-    T5i_stoich = 718.16 # HARDCODED VALUE FIX THIS LATER
-    T5i = r*T5i_stoich + q*T5i_air
-
-    # T5i = Iterate_temp_ps(s05i_1bar, r, q)
-    h5i_stoich = GP.h(T=T5i)
-    GP.air()
-    h5i_air = GP.h(T=T5i)
-    h5i = r*h5i_stoich + q*h5i_air
-
-    c5i = sqrt(2*((h045*1000) - (h5i*1000)))
-    c5 = c5i * eff_nozzle
-    Spec_Thrust = m_air*c5*(1+(1/(minL*excess_air)))
-    m_fuel = m_air*(1/(minL*excess_air))
-
-    return T5i, h5i, c5, Spec_Thrust, m_fuel
 
 def stage5i(r, q, s05i, p5i, h045, eff_nozzle, m_air, excess_air, eff_propeller, SHP):
     s05i_1bar = s05i + 0.28716 * np.log(p5i)
@@ -140,9 +120,8 @@ def stage5i(r, q, s05i, p5i, h045, eff_nozzle, m_air, excess_air, eff_propeller,
     GP.air()
     T5i_air = GP.T(s=s05i_1bar, p=1)
     GP.combustion(lamb=1)
-
-    T5i_stoich = GP.T(s=s05i_1bar, p=1)
-    # T5i_stoich = 718.16 # HARDCODED VALUE FIX THIS LATER
+    # T5i_stoich = GP.T(s=s05i_1bar, p=1)
+    T5i_stoich = 859.16 # HARDCODED VALUE FIX THIS LATER
     T5i = r*T5i_stoich + q*T5i_air
 
     # T5i = Iterate_temp_ps(s05i_1bar, r, q)
@@ -154,6 +133,5 @@ def stage5i(r, q, s05i, p5i, h045, eff_nozzle, m_air, excess_air, eff_propeller,
     c5i = sqrt(2*((h045*1000) - (h5i*1000)))
     c5 = c5i * eff_nozzle
     Spec_Thrust = m_air*c5*(1+(1/(minL*excess_air)))
-    m_fuel = m_air*(1/(minL*excess_air))
 
-    return T5i, h5i, c5, Spec_Thrust, m_fuel
+    return T5i, h5i, c5, Spec_Thrust
