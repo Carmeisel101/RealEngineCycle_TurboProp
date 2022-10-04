@@ -57,13 +57,52 @@ def Iterate_temp_ps(s, r, q):
 
     return T
 
+def stoich_tabs(s):
+     s=s
+     import pandas as pd
+     table = pd.read_csv('stoich_tab.csv', index_col=0)
+
+     # find the closest value to s
+     # find the index of the closest value to s
+     idx = (table['s']-s).abs().idxmin()
+     # find the closest value to s
+     s_closest = table['s'][idx]
+     T_closest = table['T '][idx]
+     T_up = table['T '][idx+1]
+     s_up = table['s'][idx+1]
+     T_down = table['T '][idx-1]
+     s_down = table['s'][idx-1]
+     T = T_down + (s - s_down) * (T_up - T_down) / (s_up - s_down)
+     return T
+
+
+def stoich_tabh(h):
+    h=h
+    import pandas as pd
+    table = pd.read_csv('stoich_tab.csv', index_col=0)
+
+    # find the closest value to h
+    # find the index of the closest value to h
+    idx = (table['h']-h).abs().idxmin()
+    # find the closest value to h
+    h_closest = table['h'][idx]
+    T_closest = table['T '][idx]
+    T_up = table['T '][idx+1]
+    h_up = table['h'][idx+1]
+    T_down = table['T '][idx-1]
+    h_down = table['h'][idx-1]
+    T = T_down + (h - h_down) * (T_up - T_down) / (h_up - h_down)
+    return T
 
 # p = 1
 # s = 7.8622
-# r = 0.35
-# q = 0.65
-#
-# T = Iterate_temp_ps(s, r, q)
+# # r = 0.35
+# # q = 0.65
+# h = 765.675
+# T = stoich_tabs(s)
+# T_h = stoich_tabh(h)
+# # T = Iterate_temp_ps(s, r, q)
 # print(T)
+# print(T_h)
 
 
