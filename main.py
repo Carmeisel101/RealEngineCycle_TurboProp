@@ -76,6 +76,7 @@ if __name__ == '__main__':
     print('m_fuel = ', m_fuel, 'kg/s')
     print('Specific Thrust = ', Spec_Thrust, 'N')
     print('EBSFC = ', EBSFC)
+    print('TIT = ', TIT, 'K')
 
     df = pd.DataFrame({'Stage': stages, 'Pressure [Pa]': p, 'Enthalpy [kJ/kg]': h, 'Entropy [kJ/kg-K]': s})
     print(df)
