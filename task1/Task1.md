@@ -8,15 +8,9 @@ This folder contains the code for the engine, as well as the engine specs. The c
 * `stages.py` is the code for the engine stages. This code is called in the main code to calculate the engine stages.
 * `Iterations.py` is the code for the iterations. This code is called in the main code to calculate the iterations. This code performs linear interpolation to find the values of the gas properties at the specified conditions from the stoich tables and it iterates gas properties to solve for Temperture.
     * Temperature iteration algorithm is based on the algorithm provided by Dr. Cizmas in his textbook _Example 5.2.4_. The Temperature is the root of the equations (For entropy and enthalpy, respectively):
-    $$ 
-    f(T) = h_{\lambda}-rh_{\lambda=1}(T) -qh_{a}(T) = 0
-    $$
-    $$
-
-    f(T) = s_{\lambda}-rs_{\lambda=1}(T) -qs_{a}(T) = 0 
-       
-    $$ 
-    Where;
+    $$ f(T) = h_{\lambda}-rh_{\lambda=1}(T) -qh_{a}(T) = 0$$
+    $$f(T) = s_{\lambda}-rs_{\lambda=1}(T) -qs_{a}(T) = 0$$ 
+    Where,
     $$r = \frac{1+minL}{1+\lambda minL}$$
     $$q = \frac{1+maxL}{1+\lambda maxL}$$
 * `BasicSpecs.csv` contains the basic engine specs for the PT6A-114 engine. Users are to change the values in this file to perform the full cycle analysis for different engine specs. This file is read by the `main.py` file.
