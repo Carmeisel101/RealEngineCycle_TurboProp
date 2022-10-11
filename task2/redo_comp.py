@@ -107,11 +107,16 @@ ca_4, cu_4, P_4, real_alpha, r_prime4 = comp_stages(ca_3, delta_ca_list, cu_3, d
 
 
 df = pd.DataFrame({'stage': [1,2,3,4], 'ca': [ca1, ca_2, ca_3, ca_4], 'cu': [cu1, cu_2, cu_3, cu_4], 'P': [p01, P_2, P_3, P_4], 'alpha': [alpha_bar_m, real_alpha, real_alpha, real_alpha], 'r_prime': [r_prime, r_prime2, r_prime3, r_prime4]})
-print(df)
+
 
 # to csv
-df.to_csv('comp_stages.csv', index=False)
 
+
+df_2 = pd.DataFrame({'u1m': [u1_m], 'c1a': [c1a_m], 'c1u': [c1u_m], 'w1': [w1], 'w1u': [w1_u], 'D1_m': [D1_m], 'n': [n], 'D1_t': [D1_t], 'D1_h': [D1_h] })
+# concatinate w to df_2
+df= pd.concat([df, df_2], axis=1)
+df.to_csv('comp_stages.csv', index=False)
+print(df)
 # stage_3_values = comp_stages(ca,delta_ca, cu,delta_cu ,enthalpy, w,T0, nabla,P,gamma ,287.16, m_f_rate, D1_t, n,2)
 #
 #
