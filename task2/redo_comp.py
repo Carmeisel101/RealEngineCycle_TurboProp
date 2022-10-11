@@ -117,31 +117,4 @@ df_2 = pd.DataFrame({'u1m': [u1_m], 'c1a': [c1a_m], 'c1u': [c1u_m], 'w1': [w1], 
 df= pd.concat([df, df_2], axis=1)
 df.to_csv('comp_stages.csv', index=False)
 print(df)
-# stage_3_values = comp_stages(ca,delta_ca, cu,delta_cu ,enthalpy, w,T0, nabla,P,gamma ,287.16, m_f_rate, D1_t, n,2)
-#
-#
-#
-#
-# ca = stage_3_values[0]
-# delta_cu = stage_3_values[1]
-# delta_ca = stage_3_values[2]
-# cu = stage_3_values[3]
-# enthalpy = stage_3_values[4]
-# P = stage_3_values[5]
-#
-# stage_4_values = comp_stages(ca,delta_ca, cu,delta_cu ,enthalpy, w,T0, nabla,P,gamma ,287.16, m_f_rate, D1_t, n,3)
-# #print(comp_stages(ca1,delta_ca1,cu1,delta_cu1,h01,w,T0,nabla,p01,gamma,287.16,m_f_rate,D1_t,n,1))
-#
-# print(stage_2_values)
-# print(stage_3_values)
-# print(stage_4_values)
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
+
