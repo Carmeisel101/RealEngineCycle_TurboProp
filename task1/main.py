@@ -27,6 +27,7 @@ if __name__ == '__main__':
     # Stage 02
     eff_c = specs['eff_compressor'].values[0]
     s02, w_c, h02, p02 = stage02(p02i, w_ci, h01, eff_c)
+    print('Compressor Work:', w_c)
 
     # Stage 03
     comb_pLoss = specs['pres_drop_combustor'].values[0]
@@ -83,6 +84,9 @@ if __name__ == '__main__':
 
 #     df to csv
     df.to_csv('results.csv')
+
+    df2 = pd.DataFrame({'w_c': w_c, 'w_t': w_t, 'w_PT': w_PT, 'SHP': SHP, 'm_air': m_air, 'm_fuel': m_fuel, 'Spec_Thrust': Spec_Thrust, 'EBSFC': EBSFC, 'TIT': TIT}, index=[0])
+    df2.to_csv('results2.csv')
     
 
 
