@@ -7,8 +7,8 @@ This folder contains the code for the engine, as well as the engine specs. The c
 * `stoich_tab.csv` is the stoichiometric table for the engine. There are parts of the `winGasProp.py` code that through an error due to a translation issue from Fortran to Python for stoichmetric combustion. This file is a workaround for that issue.
 * `stages.py` is the code for the engine stages. This code is called in the main code to calculate the engine stages.
 * `Iterations.py` is the code for the iterations. This code is called in the main code to calculate the iterations. This code performs linear interpolation to find the values of the gas properties at the specified conditions from the stoich tables and it iterates gas properties to solve for Temperture.
-    * Temperature iteration algorithm is based on the algorithm provided by Dr. Cizmas in his textbook _Example 5.2.4_. The Temperature is the root of the equations (For entropy and enthalpy, respectively):
-    $$ f(T) = h_{\lambda}-rh_{\lambda=1}(T) -qh_{a}(T) = 0$$
+    * Temperature iteration algorithm is based on the algorithm provided by Dr. Cizmas in his textbook _Example 5.2.4_. The Temperature is the root of the equations (For entropy and enthalpy, respectively),
+    $$f(T) = h_{\lambda}-rh_{\lambda=1}(T) -qh_{a}(T) = 0$$
     $$f(T) = s_{\lambda}-rs_{\lambda=1}(T) -qs_{a}(T) = 0$$ 
     Where,
     $$r = \frac{1+minL}{1+\lambda minL}$$
