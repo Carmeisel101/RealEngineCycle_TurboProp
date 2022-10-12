@@ -17,7 +17,7 @@ def step2(w1u_m, c1a_m, delta_w_u_m):
 
 def step3(Beta_1_m, Beta_2_m):
     '''' Calculate t_m '''
-    Beta_til_1_m = 90 -Beta_1_m  # deg
+    Beta_til_1_m = 90 - Beta_1_m  # deg
     Beta_til_2_m = 90 - Beta_2_m # deg
 
     tbar_m = 3 - (1.15*(Beta_til_2_m - Beta_til_1_m)/((0.2*Beta_til_2_m)-2)) # deg
@@ -51,11 +51,49 @@ def step7(Beta_til_1_f, Beta_til_2_f, a_bar, tbar_m):
 
 def step9(deviation_ang, incidence, theta_r, Beta_til_1_m, Beta_til_2_m, Beta_til_2_n):
     '''' Calculate the delta_beta1 '''
-    delta_beta1 = theta_r + incidence - deviation_ang
-    Beta_til_1_n = Beta_til_2_n - delta_beta1
-    return delta_beta1, Beta_til_1_n
+    delta_beta1_til = theta_r + incidence - deviation_ang
+    Beta_til_1_n = Beta_til_2_n - delta_beta1_til
+    return delta_beta1_til, Beta_til_1_n
 
-def step10(theta_r, Beta_til_2_n):
+def step10(theta_r, Beta_til_2_n, delta_beta1_til, incidence, deviation_ang):
     '''' Calculate the theta_s '''
     theta_s = Beta_til_2_n - 0.4*theta_r
-    return theta_s
+    delta_alpha_til = theta_s - incidence + deviation_ang
+    return theta_s, delta_alpha_til
+
+def step13(alpha_til_1_m, cu_1_m, w_s_m, r_vane, r_blade, Beta_til_1_m, delta_w_u_m):
+    c_U1 = []
+    U_1 = []
+    W_U_1 = []
+    alpha_til = []
+    alpha = []
+    Beta_til = []
+    Beta = []
+    c1a = []
+
+    for x in range(len(r_blade)):
+        if x ==0:
+            c_U1.append(0)
+            U_1.append((w_s_m * r_blade[x]) / ((0.5) * (delta_w_u_m)))
+            W_U_1.append(U_1[x] - c_U1[x])
+            alpha_til.append(np.arctan((r_blade[x] / 0.5) * np.tan(alpha_til_1_m * np.pi / 180)) * 180 / np.pi)
+            alpha.append(90 - alpha_til[x])
+            Beta_til.append(np.arctan((r_blade[x] / 0.5) * np.tan(Beta_til_1_m * np.pi / 180)) * 180 / np.pi)
+            c1a.append(c_U1[x] / np.tan(alpha[x] * np.pi / 180))
+        else:
+            c_U1.append((0.5/r_blade[x])*cu_1_m)
+            U_1.append((w_s_m*r_blade[x])/((0.5)*(delta_w_u_m)))
+            W_U_1.append(U_1[x]-c_U1[x])
+            alpha_til.append(np.arctan((r_blade[x]/0.5)*np.tan(alpha_til_1_m*np.pi/180))*180/np.pi)
+            alpha.append(90-alpha_til[x])
+            Beta_til.append(np.arctan((r_blade[x]/0.5)*np.tan(Beta_til_1_m*np.pi/180))*180/np.pi)
+            c1a.append(c_U1[x]/np.tan(alpha[x]*np.pi/180))
+    return c_U1, U_1, W_U_1, alpha_til, Beta_til, c1a, alpha
+
+def step14(incidence, Beta_til, r_blade):
+    Beta_til_f_r = []
+    Beta = []
+    for x in range(len(r_blade)):
+        Beta_til_f_r.append(incidence+Beta_til[x])
+        Beta.append(90-Beta_til[x])
+    return Beta_til_f_r, Beta
