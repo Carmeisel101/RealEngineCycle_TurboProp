@@ -5,17 +5,23 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-dir = '../task2/comp_stages.csv'
-task2_df = pd.read_csv(dir)
-# print(task2_df)
+dir1 = '../task2/comp_stages.csv'
+task2_df = pd.read_csv(dir1)
+dir2 = '../task1/results.csv'
+dir3 = '../task1/results2.csv'
+task1_df = pd.read_csv(dir2)
+cycle_results = pd.read_csv(dir3)
 w = [28000.0, 34000.0, 43955.1250000000, 36000.0]
 
 ''' Task 3 is a multiply step process consisting of 24 parts'''
 
 # Part 1: Calculate delta_w_u_m
+m_air = cycle_results['m_air'][0]
+print('m_air = ', m_air)
 D1_m = task2_df['D1_m'][0]
 n = task2_df['n'][0]
 w_s_m = w[0]
+h_01 = 1000 * task1_df['Enthalpy [kJ/kg]'][0] # J/kg
 cu_1_m = task2_df['cu'][0]
 U_m, delta_w_u_m = step1(D1_m, n, w_s_m)
 print('U_m = ', U_m)
@@ -64,15 +70,12 @@ print('Metal Turning angle of the vane =', delta_alpha_til)
 alpha_til_1_m = 90-delta_alpha_til
 r_blade = np.linspace(0, 1, 5)
 r_vane = np.linspace(0, 1, 3)
-c_U1, U_1, W_U_1, alpha_til, Beta_til, c1a, alpha= step13(alpha_til_1_m, cu_1_m, w_s_m, r_vane, r_blade, Beta_til_1_m, delta_w_u_m)
-Beta_til_f_r, Beta = step14(incidence, Beta_til, r_blade)
-# print('Beta_til', Beta_til)
-# print('Beta', Beta)
-# print('Beta_til_f_r', Beta_til_f_r)
-print('c_U1', c_U1)
-print('alpha_til', alpha_til)
-print('alpha', alpha)
-print('ca', c1a)
+c_U1, U_1, W_U_1, alpha_til, Beta_til, c_a1, alpha= step13(alpha_til_1_m, cu_1_m, w_s_m, r_vane, r_blade, Beta_til_1_m, delta_w_u_m)
+Beta_til_f_r, Beta = step14(incidence, Beta_til, r_blade, U_1, c_a1)
+
+# Part 15: c(r), p(r), h(r), and rho(r)
+c_r, h_r, rho_r = step15(r_blade, c_a1, c_U1, h_01, m_air)
+print('rho_r', rho_r)
 
 
 

@@ -87,13 +87,26 @@ def step13(alpha_til_1_m, cu_1_m, w_s_m, r_vane, r_blade, Beta_til_1_m, delta_w_
             alpha_til.append(np.arctan((r_blade[x]/0.5)*np.tan(alpha_til_1_m*np.pi/180))*180/np.pi)
             alpha.append(90-alpha_til[x])
             Beta_til.append(np.arctan((r_blade[x]/0.5)*np.tan(Beta_til_1_m*np.pi/180))*180/np.pi)
-            c1a.append(c_U1[x]/np.tan(alpha[x]*np.pi/180))
+            c1a.append(c_U1[x]*np.tan(alpha_til[x]*np.pi/180))
     return c_U1, U_1, W_U_1, alpha_til, Beta_til, c1a, alpha
 
-def step14(incidence, Beta_til, r_blade):
+def step14(incidence, Beta_til, r_blade, U_1, c1a):
     Beta_til_f_r = []
     Beta = []
+    Beta_2 = []
     for x in range(len(r_blade)):
         Beta_til_f_r.append(incidence+Beta_til[x])
         Beta.append(90-Beta_til[x])
     return Beta_til_f_r, Beta
+
+def step15(r_blade, ca1, c_U1, h_01, m_air):
+    c_r = []
+    h_r = []
+    rho_r = []
+    p_r = []
+    for x in range(len(r_blade)):
+        c_r.append(np.sqrt((ca1[x]**2)+(c_U1[x]**2)))
+        h_r.append(h_01 - c_r[x]/2) # J/kg
+        rho_r.append(m_air/(np.pi*r_blade[x]**2*ca1[x])) # kg/m^3
+        # p_r.append((c_U1**2)*rho_r[x]*np.log(r_blade[x]))
+    return c_r, h_r, rho_r
