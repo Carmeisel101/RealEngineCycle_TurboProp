@@ -94,19 +94,21 @@ def comp_stages(ca,delta_ca_list,cu, delta_cu_list,h, w,T0,nabla,p01, gamma,R,mf
     r_prime = iteration(cu_new, Wu_new, w, U_new, ca_new, delta_ca_list, i, delta_cu_list)
 
 
-    return ca_new, cu_new, P_new,real_alpha,r_prime
+    return ca_new, cu_new, P_new,real_alpha,r_prime, U_new
 
 #stage 2
-ca_2, cu_2, P_2, real_alpha, r_prime2  = comp_stages(ca1,delta_ca_list,cu1,delta_cu_list,h,w,T0,nabla,p01,gamma,287.16,m_f_rate,D1_t,n,1)
+ca_2, cu_2, P_2, real_alpha, r_prime2, U_2  = comp_stages(ca1,delta_ca_list,cu1,delta_cu_list,h,w,T0,nabla,p01,gamma,287.16,m_f_rate,D1_t,n,1)
 
 # stage 3
-ca_3, cu_3, P_3, real_alpha3, r_prime3 = comp_stages(ca_2, delta_ca_list, cu_2, delta_cu_list, h, w, T0, nabla, P_2, gamma, 287.16, m_f_rate, D1_t, n, 2)
+ca_3, cu_3, P_3, real_alpha3, r_prime3, U_3 = comp_stages(ca_2, delta_ca_list, cu_2, delta_cu_list, h, w, T0, nabla, P_2, gamma, 287.16, m_f_rate, D1_t, n, 2)
 
 # stage 4
-ca_4, cu_4, P_4, real_alpha4, r_prime4 = comp_stages(ca_3, delta_ca_list, cu_3, delta_cu_list, h, w, T0, nabla, P_3, gamma, 287.16, m_f_rate, D1_t, n, 3)
+ca_4, cu_4, P_4, real_alpha4, r_prime4, U_4 = comp_stages(ca_3, delta_ca_list, cu_3, delta_cu_list, h, w, T0, nabla, P_3, gamma, 287.16, m_f_rate, D1_t, n, 3)
 
 
-df = pd.DataFrame({'stage': [1,2,3,4], 'ca': [ca1, ca_2, ca_3, ca_4], 'cu': [cu1, cu_2, cu_3, cu_4], 'P': [p01, P_2, P_3, P_4], 'alpha': [alpha_bar_m, real_alpha, real_alpha3, real_alpha4], 'r_prime': [r_prime, r_prime2, r_prime3, r_prime4]})
+df = pd.DataFrame({'stage': [1,2,3,4], 'ca': [ca1, ca_2, ca_3, ca_4], 'cu': [cu1, cu_2, cu_3, cu_4],
+                   'P': [p01, P_2, P_3, P_4], 'alpha': [alpha_bar_m, real_alpha, real_alpha3, real_alpha4],
+                   'r_prime': [r_prime, r_prime2, r_prime3, r_prime4], 'U': [U1, U_2, U_3, U_4]})
 
 
 # to csv
