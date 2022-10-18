@@ -98,6 +98,15 @@ def step15(r, ca1, c_U1, h_01, m_air):
         p_r.append(abs((c_U1[x]**2)*rho_r[x]*(np.log(r[x]))))
     return c_r, h_r, rho_r, p_r
 
-# def step16(r, delta_w_u_m , h_01, r_m, cu_1_m):
-#      cu_2_m = delta_w_u_m+cu_1_m
-#
+def step16(r, delta_w_u_m , h_02, r_m, cu_1_m, w_s_m, c1a):
+     cu_2_m = delta_w_u_m+cu_1_m
+     c_u_2 = []
+     U_2 = []
+     W_U_2 = []
+     for x in range(len(r)):
+         c_u_2.append((r_m/r[x])*cu_2_m)
+         U_2.append((w_s_m*r[x])/(r_m*delta_w_u_m))
+         W_U_2.append(U_2[x]-c_u_2[x])
+         alpha_2 = (np.arctan(c_u_2[x]/c1a[x]))*180/np.pi
+     return  c_u_2, U_2, alpha_2
+

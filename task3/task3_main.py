@@ -90,13 +90,13 @@ print('W_U_1', W_U_1)
 # Part 15: c(r), p(r), h(r), and rho(r)
 c_r, h_r, rho_r, p_r = step15(r, c_a1, c_U1, h_01, m_air)
 r_column = ['hub', 'r_tip/4', 'r_mid', '3r_tip/4', 'tip']
-Table = pd.DataFrame({ 'r' : r_column,'c_U': c_U1, 'U': U_1, 'W_U': W_U_1,
+Table = pd.DataFrame({ 'r' : r_column,'c_U': c_U1, 'U': U_1, 'W_U': W_U_1, 'c_a': c_a1,
                       'alpha_til': alpha_til, 'Beta_til': Beta_til, 'Beta_til_f_r': Beta_til_f_r,
                       'c': c_r, 'h_r': h_r, 'p_r': p_r, 'rho_r': rho_r, })
 Table.to_csv('Station1Task3.csv', index=False)
 
-
-
+h_02 = 1000 * task1_df['Enthalpy [kJ/kg]'][1] # J/kg
+c_u_2, U_2, alpha_2 = step16(r, delta_w_u_m, h_02, r_m, cu_1_m, w_s_m, c_a1)
 
 
 
