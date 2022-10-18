@@ -129,7 +129,7 @@ def step17(r_m, r, r_prime1):
     return degreeOfReact
 
 # def stage18(r, tbar_m, r_hub):
-    # tbar_r = []
-    # for x in range(len(r)):
-    #     tbar_r.append(tbar_m*(r[x]
-    # return tbar_r
+#     tbar_r = []
+#     for x in range(len(r)):
+#         tbar_r.append(tbar_m*(r[x]/r_hub
+#     return tbar_r
