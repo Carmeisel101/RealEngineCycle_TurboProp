@@ -85,7 +85,7 @@ print('Beta', Beta)
 print('c1a', c_a1)
 print('W_U_1', W_U_1)
 
-
+print('z', z)
 
 # Part 15: c(r), p(r), h(r), and rho(r)
 c_r, h_r, rho_r, p_r = step15(r, c_a1, c_U1, h_01, m_air)
@@ -126,5 +126,15 @@ Table3 = pd.DataFrame({ 'r' : r_column, 'rho_c': degreeOfReaction, 't_bar_r': t_
 
 Table3.to_csv('Station3Task3.csv', index=False)
 
+# Part 22
+c_u_3_m = cu_2_m
+U_3_m = 0
+delta_ca = 1
+c_u_3, U_3, W_U_3, c_a3, alpha_3, Beta3, Beta_til_3, Beta_3_f_r, c_r3, h_r3, rho_r3, p_r3 = \
+    step22(r, r_m, c_u_3_m, U_3_m, delta_ca, c_a1, incidence, m_air, h_02)
 
-
+Table4 = pd.DataFrame({ 'r' : r_column,'c_U': c_u_3, 'U': U_3, 'W_U': W_U_3,
+                        'c_a': c_a3, 'alpha': alpha_3, 'Beta': Beta3, 'Beta_3_f': Beta_3_f_r,
+                        'c': c_r3, 'h_r': h_r3,
+                        'p_r': p_r3, 'rho_r': rho_r3, })
+Table4.to_csv('Station4Task3.csv', index=False)
