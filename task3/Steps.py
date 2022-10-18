@@ -106,21 +106,30 @@ def step16(r, delta_w_u_m , h_02, r_m, cu_1_m, w_s_m, c1a, m_air, incidence):
      Beta2 = []
      Beta_2_f_r = []
      Beta_til_2 = []
+     alpha_2 = []
+     h_r2 = []
+     rho_r2 = []
+     p_r2 = []
      for x in range(len(r)):
          c_u_2.append((r_m/r[x])*cu_2_m)
          U_2.append((w_s_m*r[x])/(r_m*delta_w_u_m))
          W_U_2.append(U_2[x]-c_u_2[x])
-         alpha_2 = (np.arctan(c_u_2[x]/c1a[x]))*180/np.pi
+         alpha_2.append(np.arctan(c_u_2[x]/c1a[x]))*180/np.pi
          Beta2.append((np.arctan(W_U_2[x]/c1a[x]))*180/np.pi)
          Beta_til_2.append(90-Beta2[x])
          Beta_2_f_r.append(incidence+Beta_til_2[x])
          c_r2 = np.sqrt((c1a[x]**2)+(c_u_2[x]**2))
-         h_r2 = h_02+c_r2/2
-         rho_r2 = m_air/(np.pi*r[x]**2*c1a[x])
-         p_r2 = abs((c_u_2[x]**2)*rho_r2*(np.log(r[x])))
+         h_r2.append(h_02+c_r2/2)
+         rho_r2.append(m_air/(np.pi*r[x]**2*c1a[x]))
+         p_r2.append(abs((c_u_2[x]**2)*rho_r2*(np.log(r[x]))))
      return  c_u_2, U_2, alpha_2, c_r2, h_r2, rho_r2, p_r2, W_U_2, Beta2, Beta_til_2, Beta_2_f_r
 
 def step17(r_m, r, r_prime1):
     degreeOfReact = 1- (1-r_prime1)*((r_m/r)**2)
     return degreeOfReact
 
+# def stage18(r, tbar_m, r_hub):
+    # tbar_r = []
+    # for x in range(len(r)):
+    #     tbar_r.append(tbar_m*(r[x]
+    # return tbar_r

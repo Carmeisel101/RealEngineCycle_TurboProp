@@ -107,7 +107,10 @@ Table2 = pd.DataFrame({ 'r' : r_column,'c_U': c_u_2, 'U': U_2, 'W_U': W_U_2,
                         'c': c_r2, 'h_r': h_r2,
                         'p_r': p_r2, 'rho_r': rho_r2, })
 Table2.to_csv('Station2Task3.csv', index=False)
+# print('c_r2', c_r2)
 
+# # Part 18
+# t_bar_r = step18(r, tbar_m, r_hub)
 
 
 
