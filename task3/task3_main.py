@@ -101,6 +101,7 @@ c_u_2, U_2, alpha_2, c_r2, h_r2, rho_r2, p_r2, W_U_2, Beta2, Beta_til_2, Beta_2_
 
 r_prime1 = 0.685840121844214
 degreeOfReaction = step17(r_m, r, r_prime1)
+# print('degreeOfReaction', degreeOfReaction)
 
 Table2 = pd.DataFrame({ 'r' : r_column,'c_U': c_u_2, 'U': U_2, 'W_U': W_U_2,
                         'c_a': c_a1, 'alpha': alpha_2, 'Beta': Beta2, 'Beta_2_f': Beta_2_f_r,
