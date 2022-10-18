@@ -129,8 +129,26 @@ def step17(r_m, r, r_prime1):
     degreeOfReact = 1- (1-r_prime1)*((r_m/r)**2)
     return degreeOfReact
 
-# def stage18(r, tbar_m, r_hub):
-#     tbar_r = []
-#     for x in range(len(r)):
-#         tbar_r.append(tbar_m*(r[x]/r_hub
-#     return tbar_r
+def step18(r, tbar_m, r_hub):
+    tbar_r = []
+    for x in range(len(r)):
+        tbar_r.append(tbar_m*(r[x]/r_hub)*(1/(1-(r[x]/2))))
+    return tbar_r
+
+def step19(r, a_bar, t_bar_r, Beta_2_f_r, Beta_til_f_r):
+    Delta_n_r = []
+    for x in range(len(r)):
+        Delta_n_r.append(((0.92*(a_bar**2))-(0.002*Beta_2_f_r[x])+
+                          (0.18))/((1/((Beta_2_f_r[x]-Beta_til_f_r[x])*np.sqrt(t_bar_r[x])))-0.002))
+    return Delta_n_r
+
+def step20(r, Beta_til_f_r,  Beta_2_f_r, Delta_n_r):
+    Theta_r = []
+    Beta_2_n_r = []
+    Theta_s_r = []
+    for x in range(len(r)):
+        Theta_r.append(Beta_2_f_r[x] - Beta_til_f_r[x])
+        Beta_2_n_r.append(Beta_2_f_r[x] - Delta_n_r[x])
+        Theta_s_r.append(Beta_2_n_r[x] - 0.4*Theta_r[x])
+    return Theta_r, Beta_2_n_r, Theta_s_r
+

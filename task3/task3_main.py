@@ -110,12 +110,21 @@ Table2 = pd.DataFrame({ 'r' : r_column,'c_U': c_u_2, 'U': U_2, 'W_U': W_U_2,
 Table2.to_csv('Station2Task3.csv', index=False)
 # print('c_r2', c_r2)
 
-# # Part 18
-# t_bar_r = step18(r, tbar_m, r_hub)
+# Part 18
+t_bar_r = step18(r, tbar_m, r_hub)
 
+# Part 19
+Delta_n_r = step19(r, a_bar, t_bar_r, Beta_2_f_r, Beta_til_f_r)
 
+# Part 20
+Theta_r, Beta_2_n_r, Theta_s = step20(r, Beta_til_f_r, Beta_2_f_r, Delta_n_r)
 
+# Part 21
 
+Table3 = pd.DataFrame({ 'r' : r_column, 'rho_c': degreeOfReaction, 't_bar_r': t_bar_r, 'Delta_n_r': Delta_n_r,
+                        'Beta_2_f_r': Beta_2_f_r, 'Theta_r': Theta_r, 'Theta_s': Theta_s })
+
+Table3.to_csv('Station3Task3.csv', index=False)
 
 
 
