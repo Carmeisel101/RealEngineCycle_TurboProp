@@ -96,8 +96,17 @@ Table = pd.DataFrame({ 'r' : r_column,'c_U': c_U1, 'U': U_1, 'W_U': W_U_1, 'c_a'
 Table.to_csv('Station1Task3.csv', index=False)
 
 h_02 = 1000 * task1_df['Enthalpy [kJ/kg]'][1] # J/kg
-c_u_2, U_2, alpha_2 = step16(r, delta_w_u_m, h_02, r_m, cu_1_m, w_s_m, c_a1)
+c_u_2, U_2, alpha_2, c_r2, h_r2, rho_r2, p_r2, W_U_2, Beta2, Beta_til_2, Beta_2_f_r =\
+    step16(r, delta_w_u_m, h_02, r_m, cu_1_m, w_s_m, c_a1, m_air, incidence)
 
+r_prime1 = 0.685840121844214
+degreeOfReaction = step17(r_m, r, r_prime1)
+
+Table2 = pd.DataFrame({ 'r' : r_column,'c_U': c_u_2, 'U': U_2, 'W_U': W_U_2,
+                        'c_a': c_a1, 'alpha': alpha_2, 'Beta': Beta2, 'Beta_2_f': Beta_2_f_r,
+                        'c': c_r2, 'h_r': h_r2,
+                        'p_r': p_r2, 'rho_r': rho_r2, })
+Table2.to_csv('Station2Task3.csv', index=False)
 
 
 
