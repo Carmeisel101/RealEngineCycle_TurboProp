@@ -58,8 +58,8 @@ if __name__ == '__main__':
 
     # Stage 5i
     s5i = s045
-    # print('s5i = ', s5i)
-    p5i = p01/1e5
+    # p5i = p01/1e5
+    p5i = 1.128  # calculated the critical pressure
     eff_nozzle = specs['eff_nozzle'].values[0]
     eff_propeller = specs['eff_propeller'].values[0]
     T5i, h5i, c5, Spec_Thrust, EBSFC = stage5i(r, q, s5i, p5i, h045, eff_nozzle, m_air,

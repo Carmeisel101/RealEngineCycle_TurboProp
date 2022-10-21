@@ -35,7 +35,6 @@ def step5(D1_t, D1_h, tbar_m, D1_m, Beta_til_1_m, Beta_til_2_m, a_bar, r):
     chi_1 = (turn_ang/2)*(1+2*(1-2*a_bar))
     chi_2 = (turn_ang/2)*(1-2*(1-2*a_bar))
     y = np.linspace(0, 1, 11)
-    print(y)
     z = []
     # for each r, calculate z
     for x in y:
@@ -133,7 +132,7 @@ def step17(r_m, r, r_prime1):
 def step18(r, tbar_m, r_hub):
     tbar_r = []
     for x in range(len(r)):
-        tbar_r.append(tbar_m*(r[x]/r_hub)*(1/(1-(r[x]/2))))
+        tbar_r.append(tbar_m*(r[x]/r_hub))
     return tbar_r
 
 def step19(r, a_bar, t_bar_r, Beta_2_f_r, Beta_til_f_r):
@@ -153,9 +152,9 @@ def step20(r, Beta_til_f_r,  Beta_2_f_r, Delta_n_r):
         Theta_s_r.append(Beta_2_n_r[x] - 0.4*Theta_r[x])
     return Theta_r, Beta_2_n_r, Theta_s_r
 
-def step22(r, r_m, c_u_3_m, U_3_m, delta_ca, c_a1, incidence, m_air, h_02):
+def step22(r, r_m, c_u_3_m, U_3_m, delta_ca, c_a1, incidence, m_air, h_02, U_2):
     c_u_3 = []
-    U_3 = []
+    U_3 = U_2
     W_U_3 = []
     c_a3 = []
     alpha_3 = []
@@ -169,7 +168,6 @@ def step22(r, r_m, c_u_3_m, U_3_m, delta_ca, c_a1, incidence, m_air, h_02):
 
     for x in range(len(r)):
         c_u_3.append((r_m/r[x])*c_u_3_m)
-        U_3.append(0)
         W_U_3.append(U_3[x]-c_u_3[x])
         c_a3.append(c_a1[x] + delta_ca)
         alpha_3.append((np.arctan(c_u_3[x]/c_a3[x]))*180/np.pi)

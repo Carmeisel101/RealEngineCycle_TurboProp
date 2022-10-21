@@ -1,5 +1,7 @@
 import pandas as pd
 from winGasProp import GasProp
+import numpy as np
+from sympy import Eq, var, solve
 
 
 
@@ -93,6 +95,18 @@ def stoich_tabh(h):
     h_down = table['h'][idx-1]
     T = T_down + (h - h_down) * (T_up - T_down) / (h_up - h_down)
     return T
+
+
+# def m_dot_air(p04):
+#
+#     )
+#
+#     return gamma
+#
+# gamma = m_dot_air(4.506)
+
+
+
 
 # p = 1
 # s = 7.8622
