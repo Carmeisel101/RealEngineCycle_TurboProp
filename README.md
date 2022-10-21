@@ -14,6 +14,11 @@ This folder contains the code for designing the axial component of a mixed compr
         RealEngineCycle_TurboProp/task2/
 
 ### Task 3:
-THis folder contains the code for designing the radial variation of a mixed compressor's velocity triangles and airfoil geometry. The code is written in Python. Readers can find codes relevant to the engine in the:
+This folder contains the code for designing the radial variation of a mixed compressor's velocity triangles and airfoil geometry. The code is written in Python. Readers can find codes relevant to the engine in the:
 
         RealEngineCycle_TurboProp/task3/
+
+### Task 4:
+This folder contains the code for drawing the Axial Compressor Map. The code is written in Python. Readers can find codes relevant to the engine in the:
+
+        RealEngineCycle_TurboProp/task4/
