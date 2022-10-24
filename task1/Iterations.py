@@ -6,6 +6,14 @@ from sympy import Eq, var, solve
 
 
 def Iterate_temp_h(h, r, q):
+    '''
+    Iterates to find the temperature given the enthalpy and the stoichiometric ratio
+    :param h: enthalpy
+    :param r: stoichiometric ratio weighting factor
+    :param q: air ratio weighting factor
+
+    :return T: temperature
+    '''
 
     # i = 1
     GP = GasProp()
@@ -29,6 +37,14 @@ def Iterate_temp_h(h, r, q):
 
 
 def Iterate_temp_ps(s, r, q):
+    '''
+    Iterates to find the temperature given the entropy and the stoichiometric ratio
+    :param s: entropy
+    :param r: stoichiometric ratio weighting factor
+    :param q: air ratio weighting factor
+
+    :return T: temperature
+    '''
     # i = 1
     GP = GasProp()
     GP.air()
@@ -60,25 +76,36 @@ def Iterate_temp_ps(s, r, q):
     return T
 
 def stoich_tabs(s):
-     s=s
-     import pandas as pd
-     table = pd.read_csv('stoich_tab.csv', index_col=0)
+    '''
+    This function replaces the GP code provided by the professor, given the entropy
+    :param s: entropy
+    :return T: temperature
+    '''
 
-     # find the closest value to s
-     # find the index of the closest value to s
-     idx = (table['s']-s).abs().idxmin()
-     # find the closest value to s
-     s_closest = table['s'][idx]
-     T_closest = table['T '][idx]
-     T_up = table['T '][idx+1]
-     s_up = table['s'][idx+1]
-     T_down = table['T '][idx-1]
-     s_down = table['s'][idx-1]
-     T = T_down + (s - s_down) * (T_up - T_down) / (s_up - s_down)
-     return T
+    s=s
+    import pandas as pd
+    table = pd.read_csv('stoich_tab.csv', index_col=0)
+
+    # find the closest value to s
+    # find the index of the closest value to s
+    idx = (table['s']-s).abs().idxmin()
+    # find the closest value to s
+    s_closest = table['s'][idx]
+    T_closest = table['T '][idx]
+    T_up = table['T '][idx+1]
+    s_up = table['s'][idx+1]
+    T_down = table['T '][idx-1]
+    s_down = table['s'][idx-1]
+    T = T_down + (s - s_down) * (T_up - T_down) / (s_up - s_down)
+    return T
 
 
 def stoich_tabh(h):
+    '''
+    This function replaces the GP code provided by the professor, given the enthalpy
+    :param h: enthalpy
+    :return T: temperature
+    '''
     h=h
     import pandas as pd
     table = pd.read_csv('stoich_tab.csv', index_col=0)

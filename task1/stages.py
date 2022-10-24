@@ -2,12 +2,30 @@ import pandas as pd
 import numpy as np
 from math import *
 from winGasProp import GasProp
-from Iterations import Iterate_temp_h
-from Iterations import Iterate_temp_ps
-from Iterations import stoich_tabs
+from Iterations import *
+
+def stagea(Ta, pa):
+    '''
+    :param Ta: inlet temperature of air (K)
+    :param pa: inlet pressure of air (Pa)
+
+    :return: h_a the enthaply of the air (J/kg)
+    :return: s_a the entropy of the air (J/kg-K)
+    '''
+    GP = GasProp()
+    GP.air()
+    ha = GP.h(T=Ta)
+    sa_1bar = GP.s(T=Ta, p=1) # s01 at 1 bar (p is in units of bar)
+    sa = sa_1bar - 0.28716* np.log(pa/1e5) # s01 at p01
+    return ha, sa
 
 def stage01(T01, p01):
-    # This is a demo of the winGasProp module
+    '''
+    :param T01: pressure at stage 01
+    :param p01: pressure at stage 01
+    :return h01: Enthalpy at stage 01
+    :return s01: Entropy at stage 01
+    '''
     GP = GasProp()
     GP.air()
     h01 = GP.h(T=T01)
@@ -16,6 +34,16 @@ def stage01(T01, p01):
     return h01, s01
 
 def stage02i(pi_0c, p01, s01, h01):
+    '''
+    :param pi_0c: pressure ratio of stage 02
+    :param p01: pressure at stage 01
+    :param s01: entropy at stage 01
+    :param h01: enthalpy at stage 01
+    :return: h02i: enthalpy at stage 02i
+    :return: s02i: entropy at stage 02i
+    :return: p02i: pressure at stage 02i
+    :return: w_ci: ideal work done by compressor
+    '''
     p01 = p01/1e5 # p01 in units of bar
     p02i = pi_0c * p01
     s02i = s01
@@ -26,6 +54,17 @@ def stage02i(pi_0c, p01, s01, h01):
     return h02i, w_ci, p02i, s02i
 
 def stage02(p02i, w_ci, h01, eff_c):
+    '''
+    :param p02i: pressure at stage 02i
+    :param w_ci: ideal work done by compressor
+    :param h01: enthalpy at stage 01
+    :param eff_c: efficiency of compressor
+
+    :return: s02: entropy at stage 02
+    :return: h02: enthalpy at stage 02
+    :return: p02: pressure at stage 02
+    :return: w_c: actual work done by compressor
+    '''
     GP = GasProp()
     GP.air()
     w_c = w_ci / eff_c
@@ -36,6 +75,18 @@ def stage02(p02i, w_ci, h01, eff_c):
     return s02, w_c, h02, p02
 
 def stage03( TIT, h02, eff_comb, p03):
+    '''
+    :param TIT: turbine inlet temperature (K)
+    :param h02: enthalpy at stage 02
+    :param eff_comb: efficiency of combustion
+    :param p03: pressure at stage 03
+
+    :return: h03: enthalpy at stage 03
+    :return: s03: entropy at stage 03
+    :return: excess_air: excess air ratio
+    :return: r: stoichiometric air ratio weighting factor
+    :return: q: air ratio weighting factor
+    '''
     minL = 14.66
     LHV = 43.5e3
     GP = GasProp()
@@ -55,6 +106,20 @@ def stage03( TIT, h02, eff_comb, p03):
     return h03, s03, excess_air, r, q
 
 def stage04i(h03, w_c, excess_air, eff_turbine, r, q, s04i):
+    '''
+    :param h03: enthalpy at stage 03
+    :param w_c: actual work done by compressor
+    :param excess_air: excess air ratio
+    :param eff_turbine: efficiency of turbine
+    :param r: stoichiometric air ratio weighting factor
+    :param q: air ratio weighting factor
+    :param s04i: entropy at stage 04i
+
+    :return: h04i: enthalpy at stage 04i
+    :return: p04i: pressure at stage 04i
+    :return: T_04i: temperature at stage 04i
+    :return: w_t: work done by turbine
+    '''
     minL = 14.66
     w_t = w_c*(1/(1+(1/(minL*excess_air))))
     w_ti = w_t/eff_turbine
@@ -71,6 +136,17 @@ def stage04i(h03, w_c, excess_air, eff_turbine, r, q, s04i):
     return h04i, w_t, T04i, p04i
 
 def stage04(p04, w_t, h03, r, q):
+    '''
+    :param p04: pressure at stage 04
+    :param w_t: work done by turbine
+    :param h03: enthalpy at stage 03
+    :param r: stoichiometric air ratio weighting factor
+    :param q: air ratio weighting factor
+
+    :return: s04: entropy at stage 04
+    :return: h04: enthalpy at stage 04
+    :return: T04: temperature at stage 04
+    '''
     h04 = h03 - w_t
     T04 = Iterate_temp_h(h04, r, q)
     GP = GasProp()
@@ -83,6 +159,23 @@ def stage04(p04, w_t, h03, r, q):
     return s04, T04, h04
 
 def stage045i(SHP, m_air, excess_air, eff_free_turbine, h04, r, q, s045i):
+    '''
+    :param SHP: shaft horse power
+    :param m_air: mass flow rate of air
+    :param excess_air: excess air ratio
+    :param eff_free_turbine: efficiency of free turbine
+    :param h04: enthalpy at stage 04
+    :param r: stoichiometric air ratio weighting factor
+    :param q: air ratio weighting factor
+    :param s045i: entropy at stage 045i
+
+    :return: w_PT: work done by power turbine
+    :return: T045i: temperature at stage 045i
+    :return: h045i: enthalpy at stage 045i
+    :return: p045i: pressure at stage 045i
+    :return: m_g: mass flow rate of gas
+    :return: m_fuel: mass flow rate of fuel
+    '''
     minL = 14.66
     f = 1 / (minL * excess_air)
     w_PT = SHP/(m_air*(1+(1/(minL*excess_air))))
@@ -121,6 +214,25 @@ def stage045(p045, w_PT, h04, r, q):
 
 
 def stage5i(r, q, s05i, p5i, h045, eff_nozzle, m_air, excess_air, eff_propeller, SHP, m_fuel):
+    '''
+    :param r: stoichiometric air ratio weighting factor
+    :param q: air ratio weighting factor
+    :param s05i: entropy at stage 05i
+    :param p5i: pressure at stage 05i
+    :param h045: enthalpy at stage 045
+    :param eff_nozzle: efficiency of nozzle
+    :param m_air: mass flow rate of air
+    :param excess_air: excess air ratio
+    :param eff_propeller: efficiency of propeller
+    :param SHP: shaft horse power
+    :param m_fuel: mass flow rate of fuel
+
+    :return: T5i: temperature at stage 5i
+    :return: h5i: enthalpy at stage 5i
+    :return: c5: speed of sound at stage 5
+    :return: Spec_Thrust: specific thrust
+    :return: EBSFC: equivalent brake specific fuel consumption
+    '''
     s05i_1bar = s05i + 0.28716 * np.log(p5i)
     minL = 14.66
     GP = GasProp()

@@ -2,22 +2,27 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from winGasProp import GasProp
-from stages import stage01
-from stages import stage02i
-from stages import stage02
-from stages import stage03
-from stages import stage04i
-from stages import stage04
-from stages import stage045i
-from stages import stage045
-from stages import stage5i
+from stages import *
 
 
 if __name__ == '__main__':
+
+    # Stage a
+    Ta = 288.16  # K
+    pa = 101325  # Pa
+    ha, sa = stagea(Ta, pa)
+
+    # Stage 0a
+    T0a = Ta
+    p0a = pa
+    h0a, s0a = ha, sa
+
+
     # Stage 01
     specs = pd.read_csv('BasicSpecs.csv')
-    T01 = 288.16  # K
-    p01 = 101325  # Pa
+    eff_diffuser = specs['eff_diffuser'][0]
+    T01 = T0a  # K
+    p01 = p0a*eff_diffuser  # Pa
     h01, s01 = stage01(T01, p01)
 
     # Stage 02i
@@ -65,18 +70,21 @@ if __name__ == '__main__':
     T5i, h5i, c5, Spec_Thrust, EBSFC = stage5i(r, q, s5i, p5i, h045, eff_nozzle, m_air,
                                                       excess_air, eff_propeller, SHP, m_fuel)
 
+    # Stage 5
+    p5 = p5i
+    h5 = h5i
+    s5 = s5i
+    T5 = T5i
 
 
     # Make a Table of the results for each stage
-    stages = ['01', '02i', '02', '03', '04i', '04', '045i', '045', '5i']
-    p = [p01/1e5, p02i, p02, p03, p04i, p04, p045i, p045, p5i]
-    h = [h01, h02i, h02, h03, h04i, h04, h045i, h045, h5i]
-    s = [s01, s02i, s02, s03, s04i, s04, s045i, s045, s5i]
+    stages = ['a', '0a', '01', '02i', '02', '03', '04i', '04', '045i', '045', '5i', '5']
+    p = [pa, p0a, p01/1e5, p02i, p02, p03, p04i, p04, p045i, p045, p5i, p5]
+    h = [ha, h0a, h01, h02i, h02, h03, h04i, h04, h045i, h045, h5i, h5]
+    s = [sa, s0a, s01, s02i, s02, s03, s04i, s04, s045i, s045, s5i, s5]
 
     print('m_air = ', m_air, 'kg/s')
     print('m_fuel = ', m_fuel, 'kg/s')
-    print('Specific Thrust = ', Spec_Thrust, 'N')
-    print('EBSFC = ', EBSFC)
     print('TIT = ', TIT, 'K')
 
     df = pd.DataFrame({'Stage': stages, 'Pressure [Pa]': p, 'Enthalpy [kJ/kg]': h, 'Entropy [kJ/kg-K]': s})
