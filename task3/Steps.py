@@ -1,7 +1,6 @@
 import numpy as np
 
 def step1(D1_m, n, w_s_m):
-    '''' Calculate delta_w_u_m '''
     U_m = (D1_m/2)*(2*np.pi)*(n/60) # m/s
     delta_w_u_m = w_s_m / U_m # m/s
     return U_m, delta_w_u_m
