@@ -23,11 +23,11 @@ Where,
 
 $\bar{n}$ = $\frac{n}{n_{ref}}$
 
-$\bar{\eta}_{base}$ = $\frac{\eta_{base}}{\eta_{ref}}$
+$\bar{\eta}_{base} = \frac{\eta_{base}}{\eta_{ref}}$
 
-$\bar{\dot{m}}_{base}$ = $\frac{\dot{m}_{base}}{\dot{m}_{ref}}$
+$\bar{\dot{m}}_{base} = \frac{\dot{m}_{base}}{\dot{m}_{ref}}$
 
-$\bar{\pi}_{base}$ = $\frac{\pi^*_{base}}{\pi^*_{ref}}$
+$\bar{\pi}_{base} = \frac{\pi^*_{base}}{\pi^*_{ref}}$
 
 </div>
 
@@ -48,7 +48,7 @@ Where,
 
 $w = \frac{h^*_{1}}{\eta}(\pi^{* \frac{\gamma-1}{\gamma}} - 1)$
 
-$h^{*}_1 = \frac{w\eta}{\pi^{* \frac{\gamma-1}{\gamma}} - 1}$
+$h^{*}_{1} = \frac{w\eta}{\pi^{* \frac{\gamma-1}{\gamma}} - 1}$
 
 </div>
 
@@ -87,14 +87,14 @@ $\pi^{*} = \left[ 1+(\pi^{* \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \eta}{
 
 | $\frac{\bar{C_{a}}}{\bar{C}_{a_{base}}}$ | 0.8 | 0.9 | 1.0 | 1.1 | 1.2 | $\bar{n}$ |
 |:----------------------------------------:|:---:|:---:|:---:|:----:|:---:|:---------:|
-| $\frac{\pi^{*}}{\pi^{*}_{base}}$ | ||||| 0.5 |
-| $\frac{\pi^{*}}{\pi^{*}_{base}}$ | ||||| 0.6 |
-| $\frac{\pi^{*}}{\pi^{*}_{base}}$ | ||||| 0.7 |
-| $\frac{\pi^{*}}{\pi^{*}_{base}}$ | ||||| 0.8 |
-| $\frac{\pi^{*}}{\pi^{*}_{base}}$ | ||||| 0.9 |
-| $\frac{\pi^{*}}{\pi^{*}_{base}}$ | ||||| 1.0 |
-| $\frac{\pi^{*}}{\pi^{*}_{base}}$ | ||||| 1.05 |
-| $\frac{\pi^{*}}{\pi^{*}_{base}}$ | ||||| 1.1 |
+| $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ | ||||| 0.5 |
+| $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ | ||||| 0.6 |
+| $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ | ||||| 0.7 |
+| $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ | ||||| 0.8 |
+| $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ | ||||| 0.9 |
+| $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ | ||||| 1.0 |
+| $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ | ||||| 1.05 |
+| $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ | ||||| 1.1 |
 
 
 
@@ -145,4 +145,4 @@ Where $\bar{\dot{m}}_{base}$ comes from `Table2.1.csv` and $\frac{\bar{\dot{m}}}
 
 4. Calculate $\eta = \eta (\bar{n}, \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$ using tables `Table2.1.csv` and `Table2.3.csv`.
 
-5. Lastly we are to draw the compressor map, qith axes $\dot{m}\frac{\sqrt{T^{*}_{1}}}{p^{*}_{1}}$.
+5. Lastly we are to draw the compressor map, with axes $\dot{m}\frac{\sqrt{T^{ * }_{1}}}{p^{ * }_{1}}$.
