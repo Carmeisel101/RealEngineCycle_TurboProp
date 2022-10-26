@@ -70,7 +70,7 @@ $\pi^{ * } = \left[ 1+(\pi^{ * \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \et
 
 `steps.py` contains the 4 different steps that Dr. Cizmas has outlined in his notes. The steps are as follows:
 
-1. Calculate $\pi^{ * } = \pi^{*}(\bar{n}, \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$ and $\frac{\pi^{*}}{\pi^{ * }_{base}} = f(\bar{n}, \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$, where $\bar{n} \in (0.5, 1.1)$ and $\frac{\bar{C_{a}}}{\bar{C}_{a_{base}}} \in (0.8, 1.2)$ producing a table as shown in Table 2.4.1 & Table 2.4.2. (Tables are in `Table_2_4_1.csv` and `Table_2_4_2.csv` respectively)
+1. Calculate $\pi^{ * } = \pi^{ * } (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ and $\frac{\pi^{ * }}{\pi^{ * }_{base}} = f(\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$, where $\bar{n} \in (0.5, 1.1)$ and $\frac{\bar{C_a}}{\bar{C_a}_{base}} \in (0.8, 1.2)$ producing a table as shown in Table 2.4.1 & Table 2.4.2. (Tables are in `Table_2_4_1.csv` and `Table_2_4_2.csv` respectively)
 
 <div align="center">
 
@@ -100,11 +100,11 @@ $\pi^{ * } = \left[ 1+(\pi^{ * \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \et
 
 </div>
 
-2. Calculate $\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}} = f(\frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$ by making use of:
+2. Calculate $\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}} = f(\frac{\bar{C_a}}{\bar{C_a}_{base}})$ by making use of:
 
 <div align="center">
 
-$\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}} = \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}}\left[\frac{\pi^{*}}{\pi^{ * }_{base}}\right]^{\frac{1}{3}}$
+$\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}} =\frac{\bar{C_a}}{\bar{C_a}_{base}}\left[\frac{\pi^{ * }}{\pi^{ * }_{base}}\right]^{\frac{1}{3}}$
 
 </div>
 
@@ -129,7 +129,7 @@ Simarly to step 1, Table 2.5 is produced. (Table is in `Table_2_5.csv`)
 
 <div align="center">
 
-$\bar{\pi} = \bar{\pi}_{base} \frac{\pi^{ * }}{\pi^{ * }_{base}}$
+$\bar{\pi}=\bar{\pi}_{base}\frac{\pi^{ * }}{\pi^{ * }_{base}}$
 
 </div>
 
@@ -137,7 +137,7 @@ Where $\bar{\pi}_{base}$ comes from `Table2.1.csv` and $\frac{\pi^{*}}{\pi^{*}_{
 
 <div align="center">
 
-$\bar{\dot{m}} = \bar{\dot{m}}_{base} \frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}}$
+$\bar{\dot{m}}=\bar{\dot{m}}_{base}\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}}$
 
 </div>
 
@@ -145,4 +145,4 @@ Where $\bar{\dot{m}}_{base}$ comes from `Table2.1.csv` and $\frac{\bar{\dot{m}}}
 
 4. Calculate $\eta = \eta (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ using tables `Table2.1.csv` and `Table2.3.csv`.
 
-5. Lastly we are to draw the compressor map, with axes $\dot{m} \frac{\sqrt{T^{ * }_{1}}}{p^{ * }_{1}}$.
+5. Lastly we are to draw the compressor map, with axes $\dot{m}$.
