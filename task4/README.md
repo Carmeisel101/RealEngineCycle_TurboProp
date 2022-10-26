@@ -27,19 +27,19 @@ $\bar{n}$ = $\frac{n}{n_{ref}}$
 
 <div align="center">
 
-$\bar{\eta}_{base} = \frac{{\eta}_{base}}{{\eta}_{ref}}$
+$\bar{\eta}_{base}$ = $\frac{{\eta}_{base}}{{\eta}_{ref}}$
 
 </div>
 
 <div align="center">
 
-$\bar{\dot{m}}_{base} = \frac{{\dot{m}}_{base}}{{\dot{m}}_{ref}}$
+$\bar{\dot{m}}_{base}$ = $\frac{{\dot{m}}_{base}}{{\dot{m}}_{ref}}$
 
 </div>
 
 <div align="center">
 
-$\bar{\pi}_{base} = \frac{\pi^{ * }_{base}}{\pi^{ * }_{ref}}$
+$\bar{\pi}_{base}$ = $\frac{\pi^{ * }_{base}}{\pi^{ * }_{ref}}$
 
 </div>
 
@@ -76,7 +76,7 @@ Making use of these equations, we can write the following:
 
 <div align="center">
 
-$\pi^{ * } = \left[ 1+(\pi^{ * \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \eta}{w_{base}\eta_{base}}\right]^{\frac{\gamma}{\gamma - 1}}$
+$\pi^{ * } = \left[ 1+(\pi^{ * \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \eta}{w_{base} \eta_{base}}\right]^{\frac{\gamma}{\gamma - 1}}$
 
 </div>
 
