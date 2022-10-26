@@ -23,9 +23,21 @@ Where,
 
 $\bar{n}$ = $\frac{n}{n_{ref}}$
 
+</div>
+
+<div align="center">
+
 $\bar{\eta}_{base} = \frac{{\eta}_{base}}{{\eta}_{ref}}$
 
+</div>
+
+<div align="center">
+
 $\bar{\dot{m}}_{base} = \frac{{\dot{m}}_{base}}{{\dot{m}}_{ref}}$
+
+</div>
+
+<div align="center">
 
 $\bar{\pi}_{base} = \frac{\pi^{ * }_{base}}{\pi^{ * }_{ref}}$
 
