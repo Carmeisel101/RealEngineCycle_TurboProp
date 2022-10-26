@@ -27,19 +27,19 @@ $\bar{n}$ = $\frac{n}{n_{ref}}$
 
 <div align="center">
 
-$\bar{\eta}_{base}$ = $\frac{{\eta}_{base}}{{\eta}_{ref}}$
+$\bar{\eta_{base}}$ = $\frac{{\eta_{base}}}{{\eta_{ref}}}$
 
 </div>
 
 <div align="center">
 
-$\bar{\dot{m}}_{base}$ = $\frac{{\dot{m}}_{base}}{{\dot{m}}_{ref}}$
+$\bar{\dot{m_{base}}}$ = $\frac{{\dot{m_{base}}}}{{\dot{m_{ref}}}}$
 
 </div>
 
 <div align="center">
 
-$\bar{\pi}_{base}$ = $\frac{\pi^{ * }_{base}}{\pi^{ * }_{ref}}$
+$\bar{\pi_{base}}$ = $\frac{(\pi^{ * })_{base}}{(\pi^{ * })_{ref}}$
 
 </div>
 
@@ -82,7 +82,7 @@ $\pi^{ * } = \left[ 1 + ((\pi^{ * \frac{\gamma - 1}{\gamma}})_{base} -1) \frac{w
 
 `steps.py` contains the 4 different steps that Dr. Cizmas has outlined in his notes. The steps are as follows:
 
-1. Calculate $\pi^{ * } = \pi^{ * } (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ and $\frac{\pi^{ * }}{\pi^{ * }_{base}} = f(\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$, where $\bar{n} \in (0.5, 1.1)$ and $\frac{\bar{C_a}}{\bar{C_a}_{base}} \in (0.8, 1.2)$ producing a table as shown in Table 2.4.1 & Table 2.4.2. (Tables are in `Table_2_4_1.csv` and `Table_2_4_2.csv` respectively)
+1. Calculate $\pi^{ * } = \pi^{ * } (\bar{n}, \frac{\bar{C_a}}{\bar{C_{a base}}})$ and $\frac{\pi^{ * }}{\pi^{ * }_{base}} = f(\bar{n}, \frac{\bar{C_a}}{\bar{C_{a base}}})$, where $\bar{n} \in (0.5, 1.1)$ and $\frac{\bar{C_a}}{\bar{C_{a base}}} \in (0.8, 1.2)$ producing a table as shown in Table 2.4.1 & Table 2.4.2. (Tables are in `Table_2_4_1.csv` and `Table_2_4_2.csv` respectively)
 
 <div align="center">
 
