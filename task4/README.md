@@ -46,9 +46,9 @@ Where,
 
 <div align="center">
 
-$w = \frac{h^*_{1}}{\eta}(\pi^{* \frac{\gamma-1}{\gamma}} - 1)$
+$w = \frac{h^{ * }_{1}}{\eta}(\pi^{ * \frac{\gamma-1}{\gamma}} - 1)$
 
-$h^{*}_{1} = \frac{w\eta}{\pi^{* \frac{\gamma-1}{\gamma}} - 1}$
+$h^{ * }_{1} = \frac{w\eta}{\pi^{ * \frac{\gamma-1}{\gamma}} - 1}$
 
 </div>
 
@@ -56,7 +56,7 @@ Similarly we can say,
 
 <div align="center">
 
-$h^{*}_1 = \frac{w_{base}\eta_{base}}{\pi^{* \frac{\gamma-1}{\gamma}}_{base} - 1}$
+$h^{ * }_1 = \frac{w_{base}\eta_{base}}{\pi^{ * \frac{\gamma-1}{\gamma}}_{base} - 1}$
 
 </div>
 
@@ -64,13 +64,13 @@ Making use of these equations, we can write the following:
 
 <div align="center">
 
-$\pi^{*} = \left[ 1+(\pi^{* \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \eta}{w_{base}\eta_{base}}\right]^{\frac{\gamma}{\gamma - 1}}$
+$\pi^{ * } = \left[ 1+(\pi^{ * \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \eta}{w_{base}\eta_{base}}\right]^{\frac{\gamma}{\gamma - 1}}$
 
 </div>
 
 `steps.py` contains the 4 different steps that Dr. Cizmas has outlined in his notes. The steps are as follows:
 
-1. Calculate $\pi^{*} = \pi^{*}(\bar{n}, \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$ and $\frac{\pi^{*}}{\pi^{*}_{base}} = f(\bar{n}, \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$, where $\bar{n} \in (0.5, 1.1)$ and $\frac{\bar{C_{a}}}{\bar{C}_{a_{base}}} \in (0.8, 1.2)$ producing a table as shown in Table 2.4.1 & Table 2.4.2. (Tables are in `Table_2_4_1.csv` and `Table_2_4_2.csv` respectively)
+1. Calculate $\pi^{ * } = \pi^{*}(\bar{n}, \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$ and $\frac{\pi^{*}}{\pi^{ * }_{base}} = f(\bar{n}, \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$, where $\bar{n} \in (0.5, 1.1)$ and $\frac{\bar{C_{a}}}{\bar{C}_{a_{base}}} \in (0.8, 1.2)$ producing a table as shown in Table 2.4.1 & Table 2.4.2. (Tables are in `Table_2_4_1.csv` and `Table_2_4_2.csv` respectively)
 
 <div align="center">
 
@@ -104,7 +104,7 @@ $\pi^{*} = \left[ 1+(\pi^{* \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \eta}{
 
 <div align="center">
 
-$\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}} = \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}}\left[\frac{\pi^{*}}{\pi^{*}_{base}}\right]^{\frac{1}{3}}$
+$\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}} = \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}}\left[\frac{\pi^{*}}{\pi^{ * }_{base}}\right]^{\frac{1}{3}}$
 
 </div>
 
@@ -129,7 +129,7 @@ Simarly to step 1, Table 2.5 is produced. (Table is in `Table_2_5.csv`)
 
 <div align="center">
 
-$\bar{\pi} = \bar{\pi}_{base} \frac{\pi^{*}}{\pi^{*}_{base}}$
+$\bar{\pi} = \bar{\pi}_{base} \frac{\pi^{ * }}{\pi^{ * }_{base}}$
 
 </div>
 
@@ -145,4 +145,4 @@ Where $\bar{\dot{m}}_{base}$ comes from `Table2.1.csv` and $\frac{\bar{\dot{m}}}
 
 4. Calculate $\eta = \eta (\bar{n}, \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$ using tables `Table2.1.csv` and `Table2.3.csv`.
 
-5. Lastly we are to draw the compressor map, with axes $\dot{m}\frac{\sqrt{T^{ * }_{1}}}{p^{ * }_{1}}$.
+5. Lastly we are to draw the compressor map, with axes $\dot{m}\frac{\sqrt{T^{ * }_{ 1 }}}{p^{ * }_{1}}$.
