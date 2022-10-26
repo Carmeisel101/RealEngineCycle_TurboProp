@@ -76,13 +76,13 @@ Making use of these equations, we can write the following:
 
 <div align="center">
 
-$\pi^{ * } = \left[ 1+(\pi^{ * \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \eta}{w_{base} \eta_{base}}\right]^{\frac{\gamma}{\gamma - 1}}$
+$\pi^{ * } = \left[ 1 + ((\pi^{ * \frac{\gamma - 1}{\gamma}})_{base} -1) \frac{w \eta}{w_{base} \eta_{base}} \right] ^{\frac{\gamma}{\gamma - 1}}$
 
 </div>
 
 `steps.py` contains the 4 different steps that Dr. Cizmas has outlined in his notes. The steps are as follows:
 
-1. Calculate $\pi^{ * } = \pi^{ * } (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ and $\frac{\pi^{ * }}{\pi^{ * }_{base}} = f(\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$, where $\bar{n} \in (0.5, 1.1)$ and $\frac{\bar{C_a}}{\bar{C_a}_{base}}\in (0.8, 1.2)$ producing a table as shown in Table 2.4.1 & Table 2.4.2. (Tables are in `Table_2_4_1.csv` and `Table_2_4_2.csv` respectively)
+1. Calculate $\pi^{ * } = \pi^{ * } (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ and $\frac{\pi^{ * }}{\pi^{ * }_{base}} = f(\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$, where $\bar{n} \in (0.5, 1.1)$ and $\frac{\bar{C_a}}{\bar{C_a}_{base}} \in (0.8, 1.2)$ producing a table as shown in Table 2.4.1 & Table 2.4.2. (Tables are in `Table_2_4_1.csv` and `Table_2_4_2.csv` respectively)
 
 <div align="center">
 
@@ -116,7 +116,7 @@ $\pi^{ * } = \left[ 1+(\pi^{ * \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \et
 
 <div align="center">
 
-$\frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}} =\frac{\bar{C_a}}{\bar{C_a}_{base}}\left[\frac{\pi^{ * }}{(\pi^{ * })_{base}}\right]^{\frac{1}{3}}$
+$\frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}} = \frac{\bar{C_a}}{\bar{C_a}_{base}} \left[ \frac{\pi^{ * }}{(\pi^{ * })_{base}} \right] ^{\frac{1}{3}}$
 
 </div>
 
@@ -137,7 +137,7 @@ Simarly to step 1, Table 2.5 is produced. (Table is in `Table_2_5.csv`)
 
 </div>
 
-3. Calculate $\bar{\pi} = \bar{\pi}(\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ and $\bar{\dot{m}} = \bar{\dot{m}} (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$. Note that:
+3. Calculate $\bar{\pi} = \bar{\pi} (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ and $\bar{\dot{m}} = \bar{\dot{m}} (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$. Note that:
 
 <div align="center">
 
