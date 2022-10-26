@@ -145,7 +145,7 @@ $\bar{\pi}= \bar{\pi_{base}} \frac{\pi^{ * }}{(\pi^{ * })_{base}}$
 
 </div>
 
-Where $\bar{\pi}_{base}$ comes from `Table2.1.csv` and $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ comes from `Table_2_4_2.csv`. Similarly:
+Where $\bar{\pi_{base}}$ comes from `Table2.1.csv` and $\frac{\pi^{ * }}{(\pi^{ * })_{base}}$ comes from `Table_2_4_2.csv`. Similarly:
 
 <div align="center">
 
@@ -153,7 +153,7 @@ $\bar{\dot{m}}= (\bar{\dot{m_{base}}}) \frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}
 
 </div>
 
-Where $\bar{\dot{m}}_{base}$ comes from `Table2.1.csv` and 
+Where $\bar{\dot{m_{base}}}$ comes from `Table2.1.csv` and 
 $\frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}}$ comes from `Table_2_5.csv`.
 
 4. Calculate $\eta = \eta (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ using tables `Table2.1.csv` and `Table2.3.csv`.
