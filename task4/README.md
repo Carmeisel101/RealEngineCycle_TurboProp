@@ -23,11 +23,11 @@ Where,
 
 $\bar{n}$ = $\frac{n}{n_{ref}}$
 
-$\bar{\eta}_{base} = \frac{\eta_{base}}{\eta_{ref}}$
+$\bar{\eta}_{base} = \frac{{\eta}_{base}}{{\eta}_{ref}}$
 
-$\bar{\dot{m}}_{base} = \frac{\dot{m}_{base}}{\dot{m}_{ref}}$
+$\bar{\dot{m}}_{base} = \frac{{\dot{m}}_{base}}{{\dot{m}}_{ref}}$
 
-$\bar{\pi}_{base} = \frac{\pi^*_{base}}{\pi^*_{ref}}$
+$\bar{\pi}_{base} = \frac{\pi^{ * }_{base}}{\pi^{ * }_{ref}}$
 
 </div>
 
@@ -143,6 +143,6 @@ $\bar{\dot{m}} = \bar{\dot{m}}_{base} \frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}}
 
 Where $\bar{\dot{m}}_{base}$ comes from `Table2.1.csv` and $\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}}$ comes from `Table_2_5.csv`.
 
-4. Calculate $\eta = \eta (\bar{n}, \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$ using tables `Table2.1.csv` and `Table2.3.csv`.
+4. Calculate $\eta = \eta (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ using tables `Table2.1.csv` and `Table2.3.csv`.
 
-5. Lastly we are to draw the compressor map, with axes $\dot{m}\frac{\sqrt{T^{ * }_{ 1 }}}{p^{ * }_{1}}$.
+5. Lastly we are to draw the compressor map, with axes $ \dot{m} \frac{ \sqrt{T^{ * }_{ 1 }}}{p^{ * }_{1}}$.
