@@ -68,7 +68,7 @@ Similarly we can say,
 
 <div align="center">
 
-$h^{ * }_{1} = \frac{w_{base} \eta_{base}}{\pi^{ * \frac{\gamma-1}{\gamma}}_{base} - 1}$
+$h^{ * }_{1} = \frac{w_{base} \eta_{base}}{(\pi^{ * \frac{\gamma-1}{\gamma}})_{base} - 1}$
 
 </div>
 
@@ -112,11 +112,11 @@ $\pi^{ * } = \left[ 1+(\pi^{ * \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \et
 
 </div>
 
-2. Calculate $\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}} = f(\frac{\bar{C_a}}{\bar{C_a}_{base}})$ by making use of:
+2. Calculate $\frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}} = f(\frac{\bar{C_a}}{\bar{C_a}_{base}})$ by making use of:
 
 <div align="center">
 
-$\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}} =\frac{\bar{C_a}}{\bar{C_a}_{base}}\left[\frac{\pi^{ * }}{\pi^{ * }_{base}}\right]^{\frac{1}{3}}$
+$\frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}} =\frac{\bar{C_a}}{\bar{C_a}_{base}}\left[\frac{\pi^{ * }}{(\pi^{ * })_{base}}\right]^{\frac{1}{3}}$
 
 </div>
 
@@ -137,24 +137,25 @@ Simarly to step 1, Table 2.5 is produced. (Table is in `Table_2_5.csv`)
 
 </div>
 
-3. Calculate $\bar{\pi} = \bar{\pi}(\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ and $\bar{\dot{m}} = \bar{\dot{m}}(\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$. Note that:
+3. Calculate $\bar{\pi} = \bar{\pi}(\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ and $\bar{\dot{m}} = \bar{\dot{m}} (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$. Note that:
 
 <div align="center">
 
-$\bar{\pi}=\bar{\pi}_{base}\frac{\pi^{ * }}{\pi^{ * }_{base}}$
+$\bar{\pi}= \bar{\pi_{base}} \frac{\pi^{ * }}{(\pi^{ * })_{base}}$
 
 </div>
 
-Where $\bar{\pi}_{base}$ comes from `Table2.1.csv` and $\frac{\pi^{*}}{\pi^{*}_{base}}$ comes from `Table_2_4_2.csv`. Similarly:
+Where $\bar{\pi}_{base}$ comes from `Table2.1.csv` and $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ comes from `Table_2_4_2.csv`. Similarly:
 
 <div align="center">
 
-$\bar{\dot{m}}=\bar{\dot{m}}_{base}\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}}$
+$\bar{\dot{m}}= (\bar{\dot{m_{base}}}) \frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}}$
 
 </div>
 
-Where $\bar{\dot{m}}_{base}$ comes from `Table2.1.csv` and $\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}}$ comes from `Table_2_5.csv`.
+Where $\bar{\dot{m}}_{base}$ comes from `Table2.1.csv` and 
+$\frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}}$ comes from `Table_2_5.csv`.
 
 4. Calculate $\eta = \eta (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ using tables `Table2.1.csv` and `Table2.3.csv`.
 
-5. Lastly we are to draw the compressor map, with axes $\dot{m}$.
+5. Lastly we are to draw the compressor map, with axes $\dot{m}$ $\frac{\sqrt{(T_{1})^{ * }}}{(p_{1})^{ * }}$.
