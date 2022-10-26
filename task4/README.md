@@ -56,7 +56,7 @@ Similarly we can say,
 
 <div align="center">
 
-$h^{ * }_1 = \frac{w_{base}\eta_{base}}{\pi^{ * \frac{\gamma-1}{\gamma}}_{base} - 1}$
+$h^{ * }_{1} = \frac{w_{base} \eta_{base}}{\pi^{ * \frac{\gamma-1}{\gamma}}_{base} - 1}$
 
 </div>
 
@@ -145,4 +145,4 @@ Where $\bar{\dot{m}}_{base}$ comes from `Table2.1.csv` and $\frac{\bar{\dot{m}}}
 
 4. Calculate $\eta = \eta (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ using tables `Table2.1.csv` and `Table2.3.csv`.
 
-5. Lastly we are to draw the compressor map, with axes $ \dot{m} \frac{ \sqrt{T_1^{ * }}{p_1^{ * }}$.
+5. Lastly we are to draw the compressor map, with axes $\dot{m} \frac{\sqrt{T^{ * }_{1}}}{p^{ * }_{1}}$.
