@@ -35,7 +35,7 @@ $\bar{\pi}_{base} = \frac{\pi^{ * }_{base}}{\pi^{ * }_{ref}}$
 
 <div align="center">
 
-| $\frac{\bar{C_{a}}}{\bar{C}_{a_{base}}}$ | 0.8 | 0.9 | 1.0 | 1.1 | 1.2 |
+| $\frac{\bar{C_a}}{\bar{C_a}_{base}}$ | 0.8 | 0.9 | 1.0 | 1.1 | 1.2 |
 |:----------------------------------------:|:---:|:---:|:---:|:----:|:---:|
 | $\frac{\eta}{\eta_{base}}$ | 0.92 | 0.98 | 1 | 0.97 | 0.885 | 
 | $\frac{w}{w_{base}}$ | 1.25 | 1.12 | 1 | 0.9 | 0.82 |
@@ -74,7 +74,7 @@ $\pi^{ * } = \left[ 1+(\pi^{ * \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \et
 
 <div align="center">
 
-| $\frac{\bar{C_{a}}}{\bar{C}_{a_{base}}}$ | 0.8 | 0.9 | 1.0 | 1.1 | 1.2 | $\bar{n}$ |
+| $\frac{\bar{C_a}}{\bar{C_a}_{base}}$ | 0.8 | 0.9 | 1.0 | 1.1 | 1.2 | $\bar{n}$ |
 |:----------------------------------------:|:---:|:---:|:---:|:----:|:---:|:---------:|
 | $\pi^{*}$ | ||||| 0.5 |
 | $\pi^{*}$ | ||||| 0.6 |
@@ -85,7 +85,7 @@ $\pi^{ * } = \left[ 1+(\pi^{ * \frac{\gamma - 1}{\gamma}}_{base} -1) \frac{w \et
 | $\pi^{*}$ | ||||| 1.05 |
 | $\pi^{*}$ | ||||| 1.1 |
 
-| $\frac{\bar{C_{a}}}{\bar{C}_{a_{base}}}$ | 0.8 | 0.9 | 1.0 | 1.1 | 1.2 | $\bar{n}$ |
+| $\frac{\bar{C_a}}{\bar{C_a}_{base}}$ | 0.8 | 0.9 | 1.0 | 1.1 | 1.2 | $\bar{n}$ |
 |:----------------------------------------:|:---:|:---:|:---:|:----:|:---:|:---------:|
 | $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ | ||||| 0.5 |
 | $\frac{\pi^{ * }}{\pi^{ * }_{base}}$ | ||||| 0.6 |
@@ -112,7 +112,7 @@ Simarly to step 1, Table 2.5 is produced. (Table is in `Table_2_5.csv`)
 
 <div align="center">
 
-| $\frac{\bar{C_{a}}}{\bar{C}_{a_{base}}}$ | 0.8 | 0.9 | 1.0 | 1.1 | 1.2 | $\bar{n}$ |
+| $\frac{\bar{C_a}}{\bar{C_a}_{base}}$ | 0.8 | 0.9 | 1.0 | 1.1 | 1.2 | $\bar{n}$ |
 |:----------------------------------------:|:---:|:---:|:---:|:----:|:---:|:---------:|
 | $\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}}$ | ||||| 0.5 |
 | $\frac{\bar{\dot{m}}}{\bar{\dot{m}}_{base}}$ | ||||| 0.6 |
@@ -125,7 +125,7 @@ Simarly to step 1, Table 2.5 is produced. (Table is in `Table_2_5.csv`)
 
 </div>
 
-3. Calculate $\bar{\pi} = \bar{\pi}(\bar{n}, \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$ and $\bar{\dot{m}} = \bar{\dot{m}}(\bar{n}, \frac{\bar{C_{a}}}{\bar{C}_{a_{base}}})$. Note that:
+3. Calculate $\bar{\pi} = \bar{\pi}(\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ and $\bar{\dot{m}} = \bar{\dot{m}}(\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$. Note that:
 
 <div align="center">
 
@@ -145,4 +145,4 @@ Where $\bar{\dot{m}}_{base}$ comes from `Table2.1.csv` and $\frac{\bar{\dot{m}}}
 
 4. Calculate $\eta = \eta (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ using tables `Table2.1.csv` and `Table2.3.csv`.
 
-5. Lastly we are to draw the compressor map, with axes $ \dot{m} \frac{ \sqrt{T^{ * }_{ 1 }}}{p^{ * }_{1}}$.
+5. Lastly we are to draw the compressor map, with axes $ \dot{m} \frac{ \sqrt{T_1^{ * }}{p_1^{ * }}$.
