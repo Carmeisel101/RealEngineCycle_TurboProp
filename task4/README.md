@@ -64,7 +64,7 @@ $h^{ * }_{1} = \frac{w\eta}{\pi^{ * \frac{\gamma-1}{\gamma}} - 1}$
 
 </div>
 
-Similarly we can say, 
+<!-- Similarly we can say, 
 
 <div align="center">
 
@@ -78,7 +78,7 @@ Making use of these equations, we can write the following:
 
 $\pi^{ * } = \left[ 1 + ((\pi^{ * \frac{\gamma - 1}{\gamma}})_{base} -1) \frac{w \eta}{w_{base} \eta_{base}} \right] ^{\frac{\gamma}{\gamma - 1}}$
 
-</div>
+</div> -->
 
 `steps.py` contains the 4 different steps that Dr. Cizmas has outlined in his notes. The steps are as follows:
 
@@ -116,7 +116,7 @@ $\pi^{ * } = \left[ 1 + ((\pi^{ * \frac{\gamma - 1}{\gamma}})_{base} -1) \frac{w
 
 <div align="center">
 
-$\frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}} = \frac{\bar{C_a}}{\bar{C_a}_{base}} \left[ \frac{\pi^{ * }}{(\pi^{ * })_{base}} \right] ^{\frac{1}{3}}$
+$\frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}} = \frac{\bar{C_a}}{\bar{C_{a base}}} \left[ \frac{\pi^{ * }}{(\pi^{ * })_{base}} \right] ^{\frac{1}{3}}$
 
 </div>
 
@@ -137,7 +137,7 @@ Simarly to step 1, Table 2.5 is produced. (Table is in `Table_2_5.csv`)
 
 </div>
 
-3. Calculate $\bar{\pi} = \bar{\pi} (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$ and $\bar{\dot{m}} = \bar{\dot{m}} (\bar{n}, \frac{\bar{C_a}}{\bar{C_a}_{base}})$. Note that:
+3. Calculate $\bar{\pi} = \bar{\pi} (\bar{n}, \frac{\bar{C_a}}{\bar{C_{a base}}})$ and $\bar{\dot{m}} = \bar{\dot{m}} (\bar{n}, \frac{\bar{C_a}}{\bar{C_{a base}}})$. Note that:
 
 <div align="center">
 
