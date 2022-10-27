@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.17)  26 OCT 2022 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.17)  27 OCT 2022 03:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -113,6 +113,24 @@ Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 )) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
 ) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count273
@@ -120,53 +138,92 @@ File: l3backend-pdftex.def 2022-04-20 L3 backend support: PDF output (pdfTeX)
 ) (task4_report.aux)
 \openout1 = `task4_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count274
+\scratchdimen=\dimen151
+\scratchbox=\box54
+\nofMPsegments=\count275
+\nofMParguments=\count276
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count277
+\MPscratchDim=\dimen152
+\MPnumerator=\count278
+\makeMPintoPDFobject=\count279
+\everyMPtoPDFconversion=\toks23
+) (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 39.
  (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1
 
 {C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (31.0897pt too wide) in paragraph at lines 115--116
+Overfull \hbox (31.0897pt too wide) in paragraph at lines 117--118
 \T1/cmr/m/n/12 2.4.1 and Ta-ble 2.4.2. (Ta-bles are in [][]\T1/cmtt/m/n/12 Table_2_4_1.csv []\T1/cmr/m/n/12 and [][]\T1/cmtt/m/n/12 Table_2_4_2.csv
  []
 
 [2] [3]
-Overfull \hbox (43.05368pt too wide) in paragraph at lines 171--172
+Overfull \hbox (43.05368pt too wide) in paragraph at lines 173--174
 []\T1/cmr/m/n/12 Where $[]$ comes from [][]\T1/cmtt/m/n/12 Table2.1.csv []\T1/cmr/m/n/12 and $[]$ comes from [][]\T1/cmtt/m/n/12 Table_2_4_2.csv[]\T1/cmr/m/n/12 .
  []
 
 
-Overfull \hbox (33.71631pt too wide) in paragraph at lines 176--177
+Overfull \hbox (33.71631pt too wide) in paragraph at lines 178--179
 []\T1/cmr/m/n/12 Where $[]\OML/cmm/m/it/12 m[]$ \T1/cmr/m/n/12 comes from [][]\T1/cmtt/m/n/12 Table2.1.csv []\T1/cmr/m/n/12 and $[]$ comes from [][]\T1/cmtt/m/n/12 Table_2_5.csv[]\T1/cmr/m/n/12 . 
  []
 
-[4] (task4_report.aux) ) 
+<../images//CompressorMap1.png, id=26, 1387.584pt x 705.3552pt>
+File: ../images//CompressorMap1.png Graphic file (type png)
+<use ../images//CompressorMap1.png>
+Package pdftex.def Info: ../images//CompressorMap1.png  used on input line 186.
+(pdftex.def)             Requested size: 390.0pt x 198.2515pt.
+
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 186--187
+ [] 
+ []
+
+<../images//CompressorMap2.png, id=28, 1387.584pt x 705.3552pt>
+File: ../images//CompressorMap2.png Graphic file (type png)
+<use ../images//CompressorMap2.png>
+Package pdftex.def Info: ../images//CompressorMap2.png  used on input line 189.
+(pdftex.def)             Requested size: 390.0pt x 198.2515pt.
+
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 189--190
+ [][] 
+ []
+
+[4 <../images//CompressorMap1.png>] [5 <../images//CompressorMap2.png>] (task4_report.aux) ) 
 Here is how much of TeX's memory you used:
- 2406 strings out of 478354
- 39399 string characters out of 2837118
- 375898 words of memory out of 3000000
- 20841 multiletter control sequences out of 15000+600000
+ 3271 strings out of 478354
+ 53294 string characters out of 2837118
+ 390773 words of memory out of 3000000
+ 21668 multiletter control sequences out of 15000+600000
  478195 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 54i,13n,62p,556b,280s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 55i,13n,62p,556b,280s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on task4_report.pdf (4 pages, 151813 bytes).
+Output written on task4_report.pdf (5 pages, 302068 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
+ 213 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

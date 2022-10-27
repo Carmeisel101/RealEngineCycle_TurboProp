@@ -50,3 +50,8 @@ def part4(table_2_1, table_2_2, pi_star_n, eta_n, n_tostart, ca_cabase_start, ga
     eta = eta_etabase * eta_base_barless
 
     return eta
+
+def part5(table_2_1, m_mbase):
+    m_dot = table_2_1['m_base'] * m_mbase
+
+    return m_dot

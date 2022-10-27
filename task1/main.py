@@ -79,7 +79,7 @@ if __name__ == '__main__':
 
     # Make a Table of the results for each stage
     stages = ['a', '0a', '01', '02i', '02', '03', '04i', '04', '045i', '045', '5i', '5']
-    p = [pa, p0a, p01/1e5, p02i, p02, p03, p04i, p04, p045i, p045, p5i, p5]
+    p = [pa/1e5, p0a/1e5, p01/1e5, p02i, p02, p03, p04i, p04, p045i, p045, p5i, p5]
     h = [ha, h0a, h01, h02i, h02, h03, h04i, h04, h045i, h045, h5i, h5]
     s = [sa, s0a, s01, s02i, s02, s03, s04i, s04, s045i, s045, s5i, s5]
 
@@ -87,7 +87,7 @@ if __name__ == '__main__':
     print('m_fuel = ', m_fuel, 'kg/s')
     print('TIT = ', TIT, 'K')
 
-    df = pd.DataFrame({'Stage': stages, 'Pressure [Pa]': p, 'Enthalpy [kJ/kg]': h, 'Entropy [kJ/kg-K]': s})
+    df = pd.DataFrame({'Stage': stages, 'Pressure [bar]': p, 'Enthalpy [kJ/kg]': h, 'Entropy [kJ/kg-K]': s})
     print(df)
 
 #     df to csv
