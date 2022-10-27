@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f573cdd5-7707-47fc-8841-b34f3f6ca265" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/redo_comp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task2/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../task2/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../task2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../task2/redo_comp.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../task4/Report/task4_report.fdb_latexmk" beforeDir="false" afterPath="$PROJECT_DIR$/../task4/Report/task4_report.fdb_latexmk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../task4/Report/task4_report.log" beforeDir="false" afterPath="$PROJECT_DIR$/../task4/Report/task4_report.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../task4/Report/task4_report.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../task4/Report/task4_report.pdf" afterDir="false" />

@@ -91,27 +91,64 @@ if __name__ == '__main__':
     plot_fun4 = m_dot_4*((np.sqrt(T_01))/p_01)
     plot_fun5 = m_dot_5*((np.sqrt(T_01))/p_01)
 
+    plot_real_fun1 = [plot_fun1[0], plot_fun2[0], plot_fun3[0], plot_fun4[0], plot_fun5[0]]
+    plot_real_fun2 = [plot_fun1[1], plot_fun2[1], plot_fun3[1], plot_fun4[1], plot_fun5[1]]
+    plot_real_fun3 = [plot_fun1[2], plot_fun2[2], plot_fun3[2], plot_fun4[2], plot_fun5[2]]
+    plot_real_fun4 = [plot_fun1[3], plot_fun2[3], plot_fun3[3], plot_fun4[3], plot_fun5[3]]
+    plot_real_fun5 = [plot_fun1[4], plot_fun2[4], plot_fun3[4], plot_fun4[4], plot_fun5[4]]
+    plot_real_fun6 = [plot_fun1[5], plot_fun2[5], plot_fun3[5], plot_fun4[5], plot_fun5[5]]
+    plot_real_fun7 = [plot_fun1[6], plot_fun2[6], plot_fun3[6], plot_fun4[6], plot_fun5[6]]
+    plot_real_fun8 = [plot_fun1[7], plot_fun2[7], plot_fun3[7], plot_fun4[7], plot_fun5[7]]
+
+    eta_line1 = [eta[0], eta2[0], eta3[0], eta4[0], eta5[0]]
+    eta_line2 = [eta[1], eta2[1], eta3[1], eta4[1], eta5[1]]
+    eta_line3 = [eta[2], eta2[2], eta3[2], eta4[2], eta5[2]]
+    eta_line4 = [eta[3], eta2[3], eta3[3], eta4[3], eta5[3]]
+    eta_line5 = [eta[4], eta2[4], eta3[4], eta4[4], eta5[4]]
+    eta_line6 = [eta[5], eta2[5], eta3[5], eta4[5], eta5[5]]
+    eta_line7 = [eta[6], eta2[6], eta3[6], eta4[6], eta5[6]]
+    eta_line8 = [eta[7], eta2[7], eta3[7], eta4[7], eta5[7]]
+
+    pi_line1 = [pi_star[0], pi_star2[0], pi_star3[0], pi_star4[0], pi_star5[0]]
+    pi_line2 = [pi_star[1], pi_star2[1], pi_star3[1], pi_star4[1], pi_star5[1]]
+    pi_line3 = [pi_star[2], pi_star2[2], pi_star3[2], pi_star4[2], pi_star5[2]]
+    pi_line4 = [pi_star[3], pi_star2[3], pi_star3[3], pi_star4[3], pi_star5[3]]
+    pi_line5 = [pi_star[4], pi_star2[4], pi_star3[4], pi_star4[4], pi_star5[4]]
+    pi_line6 = [pi_star[5], pi_star2[5], pi_star3[5], pi_star4[5], pi_star5[5]]
+    pi_line7 = [pi_star[6], pi_star2[6], pi_star3[6], pi_star4[6], pi_star5[6]]
+    pi_line8 = [pi_star[7], pi_star2[7], pi_star3[7], pi_star4[7], pi_star5[7]]
+
     # Plot all five curves on the same plot
-    plt.plot(plot_fun1, eta, label='0.8')
-    plt.plot(plot_fun2, eta2, label='0.9')
-    plt.plot(plot_fun3, eta3, label='1.0')
-    plt.plot(plot_fun4, eta4, label='1.1')
-    plt.plot(plot_fun5, eta5, label='1.2')
+    plt.plot(plot_real_fun1, eta_line1)
+    plt.plot(plot_real_fun2, eta_line2)
+    plt.plot(plot_real_fun3, eta_line3)
+    plt.plot(plot_real_fun4, eta_line4)
+    plt.plot(plot_real_fun5, eta_line5)
+    plt.plot(plot_real_fun6, eta_line6)
+    plt.plot(plot_real_fun7, eta_line7)
+    plt.plot(plot_real_fun8, eta_line8)
+
+
     plt.xlabel('$\dot{m}\dfrac{\sqrt{T^{*}_{1}}}{p^{*}_{1}}$')
     plt.ylabel('$\eta$')
-    plt.legend()
     plt.title('Compressor Map $\eta$ vs $\dot{m}\dfrac{\sqrt{T^{*}_{1}}}{p^{*}_{1}}$')
     plt.show()
 
     # plt.savefig('CompressorMap1.png', dpi=300)
 
-    # plot_fun_n = table_2_1['n']/np.sqrt(T_01)
 
-    plt.plot(plot_fun1, pi_star, label='0.8')
-    plt.plot(plot_fun2, pi_star2, label='0.9')
-    plt.plot(plot_fun3, pi_star3, label='1.0')
-    plt.plot(plot_fun4, pi_star4, label='1.1')
-    plt.plot(plot_fun5, pi_star5, label='1.2')
+    plt.plot(plot_fun1, pi_star, label='Surge Line')
+
+    plt.plot(plot_real_fun1, pi_line1)
+    plt.plot(plot_real_fun2, pi_line2)
+    plt.plot(plot_real_fun3, pi_line3)
+    plt.plot(plot_real_fun4, pi_line4)
+    plt.plot(plot_real_fun5, pi_line5)
+    plt.plot(plot_real_fun6, pi_line6)
+    plt.plot(plot_real_fun7, pi_line7)
+    plt.plot(plot_real_fun8, pi_line8)
+
+
     plt.xlabel('$\dot{m}\dfrac{\sqrt{T^{*}_{1}}}{p^{*}_{1}}$')
     plt.ylabel('$\pi^{*}$')
     plt.legend()
