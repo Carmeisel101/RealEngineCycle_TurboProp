@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.17)  27 OCT 2022 10:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.6.17)  14 NOV 2022 01:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Coursework/Senior/Fall 22'/Aero417/gasprop/RealCycle/RealEngineCycle_TurboProp/task4/Report/task4_report.tex"
-(c:/Coursework/Senior/Fall 22'/Aero417/gasprop/RealCycle/RealEngineCycle_TurboProp/task4/Report/task4_report.tex
+**"c:/Users/Admin/OneDrive - Texas A&M University/Course Work/Senior/Fall 22'/Aero417/RealEngineCycle_TurboProp/task4/Report/task4_report.tex"
+(c:/Users/Admin/OneDrive - Texas A&M University/Course Work/Senior/Fall 22'/Aero417/RealEngineCycle_TurboProp/task4/Report/task4_report.tex
 LaTeX2e <2022-06-01> pre-release-0 (develop 2022-6-17 branch)
 L3 programming layer <2022-06-02> (C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -211,19 +211,30 @@ Overfull \hbox (29.3747pt too wide) in paragraph at lines 189--190
  [][] 
  []
 
-[4 <../images//CompressorMap1.png>] [5 <../images//CompressorMap2.png>] (task4_report.aux) ) 
+[4 <../images//CompressorMap1.png>]
+<../images//CompressorMap3.png, id=33, 462.528pt x 346.896pt>
+File: ../images//CompressorMap3.png Graphic file (type png)
+<use ../images//CompressorMap3.png>
+Package pdftex.def Info: ../images//CompressorMap3.png  used on input line 191.
+(pdftex.def)             Requested size: 390.0pt x 292.5128pt.
+
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 191--192
+ [][] 
+ []
+
+[5 <../images//CompressorMap2.png>] [6 <../images//CompressorMap3.png>] (task4_report.aux) ) 
 Here is how much of TeX's memory you used:
- 3271 strings out of 478354
- 53294 string characters out of 2837118
+ 3280 strings out of 478354
+ 53754 string characters out of 2837118
  390773 words of memory out of 3000000
- 21668 multiletter control sequences out of 15000+600000
+ 21676 multiletter control sequences out of 15000+600000
  478195 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,13n,62p,556b,280s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 55i,13n,62p,583b,280s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Admin\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on task4_report.pdf (5 pages, 257133 bytes).
+Output written on task4_report.pdf (6 pages, 277179 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
+ 220 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -164,7 +164,7 @@ if __name__ == '__main__':
 
     plt.xlabel('$\dot{m}\dfrac{\sqrt{T^{*}_{1}}}{p^{*}_{1}}$')
     plt.ylabel('$\pi^{*}$')
-    plt.legend()
+    # plt.legend()
     plt.title('Compressor Map $\pi^{*}$ vs $\dot{m}\dfrac{\sqrt{T^{*}_{1}}}{p^{*}_{1}}$')
     plt.show()
     # save the image with a big size
@@ -173,10 +173,10 @@ if __name__ == '__main__':
     plt.plot(table_2_2['m_dot_bar'], table_2_2['pi_bar'], label='Surge Line')
     plt.xlabel('non-dimensional mass flow rate')
     plt.ylabel('non-dim pressure ratio')
-    plt.title('Compressor Map ')
+    plt.title('Surge Line')
     plt.legend()
     plt.show()
-
+    # plt.savefig('./images/CompressorMap3.png', dpi=300)
 
 
 
