@@ -130,3 +130,6 @@ Table4 = pd.DataFrame({ 'r' : r_column,'c_U': c_u_3, 'U': U_3, 'W_U': W_U_3,
                         'c': c_r3, 'h_r': h_r3,
                         'p_r': p_r3, 'rho_r': rho_r3, })
 Table4.to_csv('Station4Task3.csv', index=False)
+
+z_df = pd.DataFrame({'z': z})
+z_df.to_csv('z.csv', index=False)

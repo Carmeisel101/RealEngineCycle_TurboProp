@@ -33,7 +33,7 @@ def step5(D1_t, D1_h, tbar_m, D1_m, Beta_til_1_m, Beta_til_2_m, a_bar, r):
     turn_ang = Beta_til_2_m - Beta_til_1_m
     chi_1 = (turn_ang/2)*(1+2*(1-2*a_bar))
     chi_2 = (turn_ang/2)*(1-2*(1-2*a_bar))
-    y = np.linspace(0, 1, 11)
+    y = np.linspace(0, 1, 201)
     z = []
     # for each r, calculate z
     for x in y:
