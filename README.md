@@ -22,3 +22,9 @@ This folder contains the code for designing the radial variation of a mixed comp
 This folder contains the code for drawing the Axial Compressor Map. The code is written in Python. Readers can find codes relevant to the engine in the:
 
         RealEngineCycle_TurboProp/task4/
+
+### Task 5:
+
+This folder contains the work for task 5, the Computational Fluid Dynamics (CFD) analysis of the engine. Readers can find codes relevant to the engine in the:
+
+        RealEngineCycle_TurboProp/task5/
