@@ -90,15 +90,18 @@ if __name__ == '__main__':
                                 'pi_bar':[0.425, 0.5, 0.57, 0.64, 0.73, 0.83, 0.95, 1.09, 1.25, 1.37]})
 
 
-    m_dot = 1.64
+    m_ref = 1.6087157
+    pi_ref = 9.2/1.1
+    m_dot_plot = m_ref * table_2_2['m_dot_bar']
+    pi_star_surge = pi_ref * table_2_2['pi_bar']
 
 
-    plot_fun1 = m_dot_1*((np.sqrt(T_01))/p_01)
-    plot_fun2 = m_dot_2*((np.sqrt(T_01))/p_01)
-    plot_fun3 = m_dot_3*((np.sqrt(T_01))/p_01)
-    plot_fun4 = m_dot_4*((np.sqrt(T_01))/p_01)
-    plot_fun5 = m_dot_5*((np.sqrt(T_01))/p_01)
-
+    plot_fun1 = m_dot_1*((np.sqrt(T_01))/p_01)*1e4
+    plot_fun2 = m_dot_2*((np.sqrt(T_01))/p_01)*1e4
+    plot_fun3 = m_dot_3*((np.sqrt(T_01))/p_01)*1e4
+    plot_fun4 = m_dot_4*((np.sqrt(T_01))/p_01)*1e4
+    plot_fun5 = m_dot_5*((np.sqrt(T_01))/p_01)*1e4
+    surge_plot = m_dot_plot
 
 
     plot_real_fun1 = [plot_fun1[0], plot_fun2[0], plot_fun3[0], plot_fun4[0], plot_fun5[0]]
@@ -146,8 +149,22 @@ if __name__ == '__main__':
 
     # plt.savefig('CompressorMap1.png', dpi=300)
 
+    # # convert pi_star to list
+    # pi_star = pi_star.tolist()
+    # pi_star_list = [4.55]
+    # pi_star_list.extend(pi_star)
+    # pi_star_list.extend([14.25])
+    # pi_star_list[1] = pi_star_list[1] + 0.3
+    # pi_star_list[3] = pi_star_list[3] - 0.1
+    # pi_star_list[4] = pi_star_list[4] - 0.1
+    # pi_star_list[5] = pi_star_list[5] - 0.3
+    # pi_star_list[6] = pi_star_list[6] - 0.3
+    # pi_star_list[8] = pi_star_list[8] + 0.3
+    #
+    # print(pi_star_list)
 
-    # plt.plot(plot_fun1, pi_star, label='Surge Line')
+
+    # print(type(plot_fun1))
 
 
 
@@ -160,11 +177,16 @@ if __name__ == '__main__':
     plt.plot(plot_real_fun7, pi_line7)
     plt.plot(plot_real_fun8, pi_line8)
 
-    # plt.plot(table_2_2['m_dot_bar'], table_2_2['pi_bar'], label='Surge Line')
-
+    plt.plot(surge_plot, pi_star_surge, label='Surge Line')
+    plot_fun1 = plot_fun1.tolist()
+    plot_fun1_list = [0.0000475]
+    plot_fun1_list.extend(plot_fun1)
+    plot_fun1_list.extend([0.000157])
+    print(plot_fun1_list)
+    # plt.plot(plot_fun1_list, pi_star_list, label='Surge Line')
     plt.xlabel('$\dot{m}\dfrac{\sqrt{T^{*}_{1}}}{p^{*}_{1}}$')
     plt.ylabel('$\pi^{*}$')
-    # plt.legend()
+    plt.legend()
     plt.title('Compressor Map $\pi^{*}$ vs $\dot{m}\dfrac{\sqrt{T^{*}_{1}}}{p^{*}_{1}}$')
     plt.show()
     # save the image with a big size
