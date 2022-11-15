@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  15 NOV 2022 00:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  15 NOV 2022 01:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/carlosmeisel/Library/CloudStorage/OneDrive-TexasA&MUniversity/Course Work/Senior/Fall 22'/Aero417/RealEngineCycle_TurboProp/task4/Report/task4_report.tex"
-(/Users/carlosmeisel/Library/CloudStorage/OneDrive-TexasA&MUniversity/Course Work/Senior/Fall 22'/Aero417/RealEngineCycle_TurboProp/task4/Report/task4_report.tex
+**"/Users/carlosmeisel/Library/CloudStorage/OneDrive-TexasA&MUniversity/Course Work/Senior/Fall 22'/Aero417/RealEngineCycle_TurboProp/task5/report/task5.tex"
+(/Users/carlosmeisel/Library/CloudStorage/OneDrive-TexasA&MUniversity/Course Work/Senior/Fall 22'/Aero417/RealEngineCycle_TurboProp/task5/report/task5.tex
 LaTeX2e <2022-11-01>
 L3 programming layer <2022-11-02> (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -22,6 +22,8 @@ File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen140
+) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2022/04/08 v2.17n AMS math features
 \@mathmargin=\skip49
@@ -86,8 +88,6 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/local/texlive/2022basic/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2022/10/23 3.82 The Babel package
 \babel@savecnt=\count271
@@ -129,23 +129,30 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count273
 \l__pdf_internal_box=\box53
-) (./task4_report.aux)
-\openout1 = `task4_report.aux'.
+) (./task5.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Warning: Label `eq:total pressure' multiply defined.
+
+
+LaTeX Warning: Label `eq:total density' multiply defined.
+
+)
+\openout1 = `task5.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
  (/usr/local/texlive/2022basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count274
@@ -164,72 +171,72 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2022basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 39.
+)) [1
+
+{/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 124.
  (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [1
-
-{/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (31.0897pt too wide) in paragraph at lines 117--118
-\T1/cmr/m/n/12 2.4.1 and Ta-ble 2.4.2. (Ta-bles are in [][]\T1/cmtt/m/n/12 Table_2_4_1.csv []\T1/cmr/m/n/12 and [][]\T1/cmtt/m/n/12 Table_2_4_2.csv
- []
-
-[2] [3]
-Overfull \hbox (43.05368pt too wide) in paragraph at lines 173--174
-[]\T1/cmr/m/n/12 Where $[]$ comes from [][]\T1/cmtt/m/n/12 Table2.1.csv []\T1/cmr/m/n/12 and $[]$ comes from [][]\T1/cmtt/m/n/12 Table_2_4_2.csv[]\T1/cmr/m/n/12 .
- []
+)
+<../images////airfoil.jpeg, id=24, 1764.5925pt x 1363.0925pt>
+File: ../images////airfoil.jpeg Graphic file (type jpg)
+<use ../images////airfoil.jpeg>
+Package pdftex.def Info: ../images////airfoil.jpeg  used on input line 145.
+(pdftex.def)             Requested size: 390.0pt x 301.25401pt.
 
 
-Overfull \hbox (33.71631pt too wide) in paragraph at lines 178--179
-[]\T1/cmr/m/n/12 Where $[]\OML/cmm/m/it/12 m[]$ \T1/cmr/m/n/12 comes from [][]\T1/cmtt/m/n/12 Table2.1.csv []\T1/cmr/m/n/12 and $[]$ comes from [][]\T1/cmtt/m/n/12 Table_2_5.csv[]\T1/cmr/m/n/12 . 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images//CompressorMap1.png, id=27, 802.197pt x 521.7894pt>
-File: ../images//CompressorMap1.png Graphic file (type png)
-<use ../images//CompressorMap1.png>
-Package pdftex.def Info: ../images//CompressorMap1.png  used on input line 186.
-(pdftex.def)             Requested size: 390.0pt x 253.67265pt.
+<../images////compgrid.jpeg, id=25, 1790.69pt x 1365.1pt>
+File: ../images////compgrid.jpeg Graphic file (type jpg)
+<use ../images////compgrid.jpeg>
+Package pdftex.def Info: ../images////compgrid.jpeg  used on input line 152.
+(pdftex.def)             Requested size: 390.0pt x 297.30261pt.
 
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 186--187
- [] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images//CompressorMap2.png, id=29, 925.056pt x 718.3638pt>
-File: ../images//CompressorMap2.png Graphic file (type png)
-<use ../images//CompressorMap2.png>
-Package pdftex.def Info: ../images//CompressorMap2.png  used on input line 189.
-(pdftex.def)             Requested size: 390.0pt x 302.86168pt.
+<../images////velocityvectors.jpeg, id=26, 1784.6675pt x 1359.0775pt>
+File: ../images////velocityvectors.jpeg Graphic file (type jpg)
+<use ../images////velocityvectors.jpeg>
+Package pdftex.def Info: ../images////velocityvectors.jpeg  used on input line 159.
+(pdftex.def)             Requested size: 390.0pt x 296.9864pt.
 
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 189--190
- [][] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4 <../images//CompressorMap1.png>]
-<../images//CompressorMap3.png, id=34, 462.528pt x 346.896pt>
-File: ../images//CompressorMap3.png Graphic file (type png)
-<use ../images//CompressorMap3.png>
-Package pdftex.def Info: ../images//CompressorMap3.png  used on input line 191.
-(pdftex.def)             Requested size: 390.0pt x 292.5128pt.
+<../images////surfacepressurecof.jpeg, id=27, 1772.6225pt x 1365.1pt>
+File: ../images////surfacepressurecof.jpeg Graphic file (type jpg)
+<use ../images////surfacepressurecof.jpeg>
+Package pdftex.def Info: ../images////surfacepressurecof.jpeg  used on input line 166.
+(pdftex.def)             Requested size: 390.0pt x 300.34377pt.
 
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 191--192
- [][] 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5 <../images//CompressorMap2.png>] [6 <../images//CompressorMap3.png>] (./task4_report.aux) ) 
+<../images////surfaceMachnum.jpeg, id=28, 1792.6975pt x 1355.0625pt>
+File: ../images////surfaceMachnum.jpeg Graphic file (type jpg)
+<use ../images////surfaceMachnum.jpeg>
+Package pdftex.def Info: ../images////surfaceMachnum.jpeg  used on input line 173.
+(pdftex.def)             Requested size: 390.0pt x 294.78575pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3] [4 <../images////airfoil.jpeg>] [5 <../images////compgrid.jpeg>] [6 <../images////velocityvectors.jpeg>] [7 <../images////surfacepressurecof.jpeg>] [8 <../images////surfaceMachnum.jpeg>] (./task5.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3280 strings out of 476422
- 52948 string characters out of 5810349
- 432525 words of memory out of 5000000
- 24559 multiletter control sequences out of 15000+600000
- 478195 words of font info for 51 fonts, out of 8000000 for 9000
+ 3326 strings out of 476422
+ 53978 string characters out of 5810349
+ 410706 words of memory out of 5000000
+ 24601 multiletter control sequences out of 15000+600000
+ 479216 words of font info for 53 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,13n,62p,605b,286s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on task4_report.pdf (6 pages, 276862 bytes).
+ 55i,6n,62p,365b,233s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+Output written on task5.pdf (8 pages, 948242 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 259 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
