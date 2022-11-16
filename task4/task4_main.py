@@ -132,50 +132,33 @@ if __name__ == '__main__':
     pi_line8 = [pi_star[7], pi_star2[7], pi_star3[7], pi_star4[7], pi_star5[7]]
 
     # Plot all five curves on the same plot
-    plt.plot(plot_real_fun1, eta_line1)
-    plt.plot(plot_real_fun2, eta_line2)
-    plt.plot(plot_real_fun3, eta_line3)
-    plt.plot(plot_real_fun4, eta_line4)
-    plt.plot(plot_real_fun5, eta_line5)
-    plt.plot(plot_real_fun6, eta_line6)
-    plt.plot(plot_real_fun7, eta_line7)
-    plt.plot(plot_real_fun8, eta_line8)
+    plt.plot(plot_real_fun1, eta_line1, label = 'n = 0.5')
+    plt.plot(plot_real_fun2, eta_line2, label = 'n = 0.6')
+    plt.plot(plot_real_fun3, eta_line3, label = 'n = 0.7')
+    plt.plot(plot_real_fun4, eta_line4, label = 'n = 0.8')
+    plt.plot(plot_real_fun5, eta_line5, label = 'n = 0.9')
+    plt.plot(plot_real_fun6, eta_line6, label = 'n = 1.0')
+    plt.plot(plot_real_fun7, eta_line7, label = 'n = 1.1')
+    plt.plot(plot_real_fun8, eta_line8, label = 'n = 1.2')
 
 
     plt.xlabel('$\dot{m}\dfrac{\sqrt{T^{*}_{1}}}{p^{*}_{1}}$')
     plt.ylabel('$\eta$')
+    plt.legend()
     plt.title('Compressor Map $\eta$ vs $\dot{m}\dfrac{\sqrt{T^{*}_{1}}}{p^{*}_{1}}$')
     plt.show()
 
     # plt.savefig('CompressorMap1.png', dpi=300)
 
-    # # convert pi_star to list
-    # pi_star = pi_star.tolist()
-    # pi_star_list = [4.55]
-    # pi_star_list.extend(pi_star)
-    # pi_star_list.extend([14.25])
-    # pi_star_list[1] = pi_star_list[1] + 0.3
-    # pi_star_list[3] = pi_star_list[3] - 0.1
-    # pi_star_list[4] = pi_star_list[4] - 0.1
-    # pi_star_list[5] = pi_star_list[5] - 0.3
-    # pi_star_list[6] = pi_star_list[6] - 0.3
-    # pi_star_list[8] = pi_star_list[8] + 0.3
-    #
-    # print(pi_star_list)
 
-
-    # print(type(plot_fun1))
-
-
-
-    plt.plot(plot_real_fun1, pi_line1)
-    plt.plot(plot_real_fun2, pi_line2)
-    plt.plot(plot_real_fun3, pi_line3)
-    plt.plot(plot_real_fun4, pi_line4)
-    plt.plot(plot_real_fun5, pi_line5)
-    plt.plot(plot_real_fun6, pi_line6)
-    plt.plot(plot_real_fun7, pi_line7)
-    plt.plot(plot_real_fun8, pi_line8)
+    plt.plot(plot_real_fun1, pi_line1, label = 'n = 0.5')
+    plt.plot(plot_real_fun2, pi_line2, label = 'n = 0.6')
+    plt.plot(plot_real_fun3, pi_line3, label = 'n = 0.7')
+    plt.plot(plot_real_fun4, pi_line4, label = 'n = 0.8')
+    plt.plot(plot_real_fun5, pi_line5, label = 'n = 0.9')
+    plt.plot(plot_real_fun6, pi_line6, label = 'n = 1.0')
+    plt.plot(plot_real_fun7, pi_line7, label = 'n = 1.1')
+    plt.plot(plot_real_fun8, pi_line8, label = 'n = 1.2')
 
     plt.plot(surge_plot, pi_star_surge, label='Surge Line')
     plot_fun1 = plot_fun1.tolist()
