@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  15 NOV 2022 01:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  15 NOV 2022 21:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -178,65 +178,81 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 12
  (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-<../images////airfoil.jpeg, id=24, 1764.5925pt x 1363.0925pt>
-File: ../images////airfoil.jpeg Graphic file (type jpg)
-<use ../images////airfoil.jpeg>
-Package pdftex.def Info: ../images////airfoil.jpeg  used on input line 145.
-(pdftex.def)             Requested size: 390.0pt x 301.25401pt.
+<../images////airfoil1.jpeg, id=24, 1798.72pt x 1372.12625pt>
+File: ../images////airfoil1.jpeg Graphic file (type jpg)
+<use ../images////airfoil1.jpeg>
+Package pdftex.def Info: ../images////airfoil1.jpeg  used on input line 145.
+(pdftex.def)             Requested size: 390.0pt x 297.49289pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images////compgrid.jpeg, id=25, 1790.69pt x 1365.1pt>
+<../images////airfoil2.jpeg, id=25, 1002.74625pt x 774.895pt>
+File: ../images////airfoil2.jpeg Graphic file (type jpg)
+<use ../images////airfoil2.jpeg>
+Package pdftex.def Info: ../images////airfoil2.jpeg  used on input line 152.
+(pdftex.def)             Requested size: 390.0pt x 301.38016pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../images////airfoil3.jpeg, id=26, 1793.70125pt x 1373.13pt>
+File: ../images////airfoil3.jpeg Graphic file (type jpg)
+<use ../images////airfoil3.jpeg>
+Package pdftex.def Info: ../images////airfoil3.jpeg  used on input line 160.
+(pdftex.def)             Requested size: 390.0pt x 298.5486pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../images////compgrid.jpeg, id=27, 1800.7275pt x 1365.1pt>
 File: ../images////compgrid.jpeg Graphic file (type jpg)
 <use ../images////compgrid.jpeg>
-Package pdftex.def Info: ../images////compgrid.jpeg  used on input line 152.
-(pdftex.def)             Requested size: 390.0pt x 297.30261pt.
+Package pdftex.def Info: ../images////compgrid.jpeg  used on input line 168.
+(pdftex.def)             Requested size: 390.0pt x 295.63625pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images////velocityvectors.jpeg, id=26, 1784.6675pt x 1359.0775pt>
-File: ../images////velocityvectors.jpeg Graphic file (type jpg)
-<use ../images////velocityvectors.jpeg>
-Package pdftex.def Info: ../images////velocityvectors.jpeg  used on input line 159.
-(pdftex.def)             Requested size: 390.0pt x 296.9864pt.
+<../images////velocity.jpeg, id=28, 1787.67876pt x 1361.085pt>
+File: ../images////velocity.jpeg Graphic file (type jpg)
+<use ../images////velocity.jpeg>
+Package pdftex.def Info: ../images////velocity.jpeg  used on input line 175.
+(pdftex.def)             Requested size: 390.0pt x 296.92665pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images////surfacepressurecof.jpeg, id=27, 1772.6225pt x 1365.1pt>
-File: ../images////surfacepressurecof.jpeg Graphic file (type jpg)
-<use ../images////surfacepressurecof.jpeg>
-Package pdftex.def Info: ../images////surfacepressurecof.jpeg  used on input line 166.
-(pdftex.def)             Requested size: 390.0pt x 300.34377pt.
+<../images////Pressure.jpeg, id=29, 1786.675pt x 1360.08125pt>
+File: ../images////Pressure.jpeg Graphic file (type jpg)
+<use ../images////Pressure.jpeg>
+Package pdftex.def Info: ../images////Pressure.jpeg  used on input line 182.
+(pdftex.def)             Requested size: 390.0pt x 296.87369pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../images////surfaceMachnum.jpeg, id=28, 1792.6975pt x 1355.0625pt>
-File: ../images////surfaceMachnum.jpeg Graphic file (type jpg)
-<use ../images////surfaceMachnum.jpeg>
-Package pdftex.def Info: ../images////surfaceMachnum.jpeg  used on input line 173.
-(pdftex.def)             Requested size: 390.0pt x 294.78575pt.
+<../images////Mach.jpeg, id=30, 1811.76875pt x 1372.12625pt>
+File: ../images////Mach.jpeg Graphic file (type jpg)
+<use ../images////Mach.jpeg>
+Package pdftex.def Info: ../images////Mach.jpeg  used on input line 189.
+(pdftex.def)             Requested size: 390.0pt x 295.35733pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3] [4 <../images////airfoil.jpeg>] [5 <../images////compgrid.jpeg>] [6 <../images////velocityvectors.jpeg>] [7 <../images////surfacepressurecof.jpeg>] [8 <../images////surfaceMachnum.jpeg>] (./task5.aux)
+[3] [4 <../images////airfoil1.jpeg>] [5 <../images////airfoil2.jpeg>] [6 <../images////airfoil3.jpeg>] [7 <../images////compgrid.jpeg>] [8 <../images////velocity.jpeg>] [9 <../images////Pressure.jpeg>] [10 <../images////Mach.jpeg>] (./task5.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3326 strings out of 476422
- 53978 string characters out of 5810349
- 410706 words of memory out of 5000000
- 24601 multiletter control sequences out of 15000+600000
+ 3348 strings out of 476422
+ 54281 string characters out of 5810349
+ 410725 words of memory out of 5000000
+ 24621 multiletter control sequences out of 15000+600000
  479216 words of font info for 53 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  55i,6n,62p,365b,233s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-Output written on task5.pdf (8 pages, 948242 bytes).
+Output written on task5.pdf (10 pages, 1405796 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 267 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

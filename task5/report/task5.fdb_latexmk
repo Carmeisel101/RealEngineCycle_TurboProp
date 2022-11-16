@@ -1,11 +1,13 @@
 # Fdb version 3
-["pdflatex"] 1668498813 "/Users/carlosmeisel/Library/CloudStorage/OneDrive-TexasA&MUniversity/Course Work/Senior/Fall 22'/Aero417/RealEngineCycle_TurboProp/task5/report/task5.tex" "task5.pdf" "task5" 1668498813
-  "../images////airfoil.jpeg" 1668490952 137849 8af718200a985bae880512b188ba3e4e ""
-  "../images////compgrid.jpeg" 1668490994 183860 96b7c34f2a0dd7868ea4efcb1e31b2cd ""
-  "../images////surfaceMachnum.jpeg" 1668491198 134514 fe2bd8f2034f4a6ee0f207e3f76e54e9 ""
-  "../images////surfacepressurecof.jpeg" 1668491172 135921 e136e54f7e2f73e416f34ca7932e9198 ""
-  "../images////velocityvectors.jpeg" 1668491138 219788 8c1faf85b381ff6b042a23b75f9bb941 ""
-  "/Users/carlosmeisel/Library/CloudStorage/OneDrive-TexasA&MUniversity/Course Work/Senior/Fall 22'/Aero417/RealEngineCycle_TurboProp/task5/report/task5.tex" 1668498812 4462 46572c2c19470b138cf32cfe91332e88 ""
+["pdflatex"] 1668570065 "/Users/carlosmeisel/Library/CloudStorage/OneDrive-TexasA&MUniversity/Course Work/Senior/Fall 22'/Aero417/RealEngineCycle_TurboProp/task5/report/task5.tex" "task5.pdf" "task5" 1668570065
+  "../images////Mach.jpeg" 1668569141 153737 5bf022b1f4316416f944c3b11221df72 ""
+  "../images////Pressure.jpeg" 1668569096 143805 b1402312e76e113c33c0bafcd3458e50 ""
+  "../images////airfoil1.jpeg" 1668568966 136377 ee88eefa1e1e92c0ad16c38957b5fc84 ""
+  "../images////airfoil2.jpeg" 1668568926 93123 2658c30954eb810bb967209e2d5c21eb ""
+  "../images////airfoil3.jpeg" 1668568777 158060 4cc5a8b13912f92551afd76aa12a70fd ""
+  "../images////compgrid.jpeg" 1668569000 208716 d1e9c62ebbb39c7ad3564a4e95b42c79 ""
+  "../images////velocity.jpeg" 1668569052 374634 ff07411da22f31302bfe430bb13ab284 ""
+  "/Users/carlosmeisel/Library/CloudStorage/OneDrive-TexasA&MUniversity/Course Work/Senior/Fall 22'/Aero417/RealEngineCycle_TurboProp/task5/report/task5.tex" 1668570064 4821 eddb90a941697525491f18debcf5ffd2 ""
   "/Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk" 1668492857 49076 3ffd8d7b096c194f1a7f843386827f4f ""
   "/Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk" 1668492856 28416 12b1904124266daec4ccbda02837eb6c ""
   "/Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk" 1668492857 34296 1f21ef3173dfba7c7b879c17be16a129 ""
@@ -70,8 +72,8 @@
   "/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1668481210 79187 9cde33706e8333b615ba83b7b1d742a5 ""
   "/usr/local/texlive/2022basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1668481218 2371070 5c2fa632e339f402c14a00811018265d ""
   "/usr/local/texlive/2022basic/texmf.cnf" 1647274000 628 5a32b7ea7dd5bed632a871bee125276d ""
-  "task5.aux" 1668498813 1817 391fe01c0cb4c84b1acc11b1c9d4f39a "pdflatex"
-  "task5.tex" 1668498812 4462 46572c2c19470b138cf32cfe91332e88 ""
+  "task5.aux" 1668570065 2197 f523039fd6b5c362704ee246b1c535a3 "pdflatex"
+  "task5.tex" 1668570064 4821 eddb90a941697525491f18debcf5ffd2 ""
   (generated)
   "task5.aux"
   "task5.log"
