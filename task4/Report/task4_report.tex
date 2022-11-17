@@ -27,6 +27,20 @@ This folder contains the code for designing a row of the Compressor map for the 
 
 \vspace*{3pt}
 
+Input values:
+
+\begin{equation}
+    \dot{m} = 1.64089 \frac{kg}{s} 
+\end{equation}
+
+\begin{equation}
+    \pi^{*}_{n} = 9.2
+\end{equation}
+
+\begin{equation}
+    \eta = 0.89 
+\end{equation}
+
 \verb|task4_main.py| is the main file which calls the other files and runs the code. Readers are to run this code to perfom the analysis.
 
 \vspace*{3pt}
@@ -77,30 +91,31 @@ Where;
 \vspace*{3pt}
     
     Where;
-\begin{center}
-    $w = \frac{h^{*}_{1}}{\eta} (\pi^{* \frac{\gamma - 1}{\gamma}} - 1)$
-    
-    \vspace*{3pt}
-    
-    $h^{*}_{1} = \frac{w \eta}{\pi^{* \frac{\gamma - 1}{\gamma}} - 1}$
-\end{center}
+\begin{equation}
+    w = \frac{h^{*}_{1}}{\eta} (\pi^{* \frac{\gamma - 1}{\gamma}} - 1)
+\end{equation}
+
+\vspace*{3pt}
+
+\begin{equation}
+    h^{*}_{1} = \frac{w \eta}{\pi^{* \frac{\gamma - 1}{\gamma}} - 1}
+\end{equation}
 
 \vspace*{3pt}
 
 Similarly we can say,
 
-\begin{center}
-    $h^{*}_{1} = \frac{w_{base} \eta_{base}}{(\pi^{* \frac{\gamma-1}{\gamma}})_{base} - 1}$
-
-\end{center}
+\begin{equation}
+    h^{*}_{1} = \frac{w_{base} \eta_{base}}{(\pi^{* \frac{\gamma-1}{\gamma}})_{base} - 1}
+\end{equation}
 
 \vspace*{3pt}
 
 Making use of these equations, we can write the following:
 
-\begin{center}
-    $\pi^{ * } = \left[ 1 + ((\pi^{ * \frac{\gamma - 1}{\gamma}})_{base} -1) \frac{w \eta}{w_{base} \eta_{base}} \right] ^{\frac{\gamma}{\gamma - 1}}$
-\end{center}
+\begin{equation}
+    \pi^{ * } = \left[ 1 + ((\pi^{ * \frac{\gamma - 1}{\gamma}})_{base} -1) \frac{w \eta}{w_{base} \eta_{base}} \right] ^{\frac{\gamma}{\gamma - 1}}
+\end{equation}
 
 \verb|steps.py| contains the 4 different steps that Dr. Cizmas has outlined in his notes. The steps are as follows:
 
@@ -136,9 +151,9 @@ Making use of these equations, we can write the following:
 
     \item Calculate $\frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}} = f (\bar{n}, \frac{\bar{C_{a}}}{\bar{C_{a_{base}}}})$, by making use of:
     
-    \begin{center}
-        $\frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}} = \frac{\bar{C_{a}}}{\bar{C_{a_{base}}}} \left[ \frac{\bar{\pi^{*}}}{\bar{\pi^{*}_{base}}} \right] ^{\frac{1}{3}}$
-    \end{center}
+    \begin{equation}
+        \frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}} = \frac{\bar{C_{a}}}{\bar{C_{a_{base}}}} \left[ \frac{\bar{\pi^{*}}}{\bar{\pi^{*}_{base}}} \right] ^{\frac{1}{3}}
+    \end{equation}
 
     Similar to step 1. Table 2.5 is produced. (Table is in \verb|Table_2_5_csv|)
 
@@ -157,14 +172,14 @@ Making use of these equations, we can write the following:
     \end{center}
 
     \item Calculate $\bar{\pi} = \bar{\pi} (\bar{n}, \frac{\bar{C_{a}}}{\bar{C_{a_{base}}}})$ and $\bar{\dot{m}} = \bar{\dot{m}} (\bar{n}, \frac{\bar{C_{a}}}{\bar{C_{a_{base}}}})$, by making use of:
-    \begin{center}
-        $\bar{\pi} = \bar{\pi_{base}} \frac{\pi^{*}}{\pi^{*}_{base}}$
-    \end{center}
+    \begin{equation}
+        \bar{\pi} = \bar{\pi_{base}} \frac{\pi^{*}}{\pi^{*}_{base}}
+    \end{equation}
 
     Where $\bar{pi_{base}}$ comes from \verb|Table2.1.csv| and $\frac{\pi^{*}}{\pi^{*}_{base}}$ comes from \verb|Table_2_4_2.csv|. Similarly,
-    \begin{center}
-        $\bar{\dot{m}} = \bar{\dot{m_{base}}} \frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}}$
-    \end{center}
+    \begin{equation}
+        \bar{\dot{m}} = \bar{\dot{m_{base}}} \frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}}
+    \end{equation}
 
     Where $\bar{\dot{m_{base}}}$ comes from \verb|Table2.1.csv| and $\frac{\bar{\dot{m}}}{\bar{\dot{m_{base}}}}$ comes from \verb|Table_2_5.csv|. 
 

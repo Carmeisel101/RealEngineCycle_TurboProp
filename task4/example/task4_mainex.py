@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from steps import *
+from stepsex import *
 
 
 
@@ -9,20 +9,19 @@ if __name__ == '__main__':
 
     table_2_1 = pd.read_csv('Table2.1.csv')
     table_2_3 = pd.read_csv('Table2.3.csv')
-    task1_results = pd.read_csv('../task1/results.csv')
-    task1_results2 = pd.read_csv('../task1/results2.csv')
 
 
 
 
-    pi_star_n = 9.2
-    eta_n = 0.89 # true for real cycles
+    pi_star_n = 5
+    eta_n = 0.85 # true for real cycles
     n_tostart = 1.05
     eta_tostart = 0.98
     ca_cabase_start = 0.8
     eta_ref  = eta_n/ eta_tostart
     gamma = 1.4
-    m_air = task1_results2['m_air'][0] # kg/s
+    T_01 = 288.16 # K
+    m_air = 10 # kg/s
 
     pi_star_ratios, pi_star =  part1(table_2_1, table_2_3, pi_star_n, eta_n, n_tostart, ca_cabase_start, gamma)
     # print('pi_star_ratios = \n', pi_star_ratios) ####### deliveable
@@ -88,7 +87,7 @@ if __name__ == '__main__':
 
 
 
-    pi_ref = 9.2/1.1
+    pi_ref = 5/1.1
     m_dot_plot = m_ref * table_2_2['m_dot_bar']
     pi_star_surge = pi_ref * table_2_2['pi_bar']
 

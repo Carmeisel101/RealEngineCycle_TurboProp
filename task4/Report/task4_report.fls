@@ -209,11 +209,6 @@ INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm
 INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm
-INPUT /usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm
 INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
@@ -225,6 +220,11 @@ INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/local/texlive/2022basic/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm
 OUTPUT task4_report.pdf
 INPUT /usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT ../images//CompressorMap1.png

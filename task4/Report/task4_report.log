@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  16 NOV 2022 11:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  17 NOV 2022 16:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -165,71 +165,71 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2022basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 30.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 44.
  (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) [1
 
 {/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (31.0897pt too wide) in paragraph at lines 108--109
+Overfull \hbox (31.0897pt too wide) in paragraph at lines 123--124
 \T1/cmr/m/n/12 2.4.1 and Ta-ble 2.4.2. (Ta-bles are in [][]\T1/cmtt/m/n/12 Table_2_4_1.csv []\T1/cmr/m/n/12 and [][]\T1/cmtt/m/n/12 Table_2_4_2.csv
  []
 
 [2] [3]
-Overfull \hbox (43.05368pt too wide) in paragraph at lines 164--165
+Overfull \hbox (43.05368pt too wide) in paragraph at lines 179--180
 []\T1/cmr/m/n/12 Where $[]$ comes from [][]\T1/cmtt/m/n/12 Table2.1.csv []\T1/cmr/m/n/12 and $[]$ comes from [][]\T1/cmtt/m/n/12 Table_2_4_2.csv[]\T1/cmr/m/n/12 .
  []
 
 
-Overfull \hbox (33.71631pt too wide) in paragraph at lines 169--170
+Overfull \hbox (33.71631pt too wide) in paragraph at lines 184--185
 []\T1/cmr/m/n/12 Where $[]\OML/cmm/m/it/12 m[]$ \T1/cmr/m/n/12 comes from [][]\T1/cmtt/m/n/12 Table2.1.csv []\T1/cmr/m/n/12 and $[]$ comes from [][]\T1/cmtt/m/n/12 Table_2_5.csv[]\T1/cmr/m/n/12 . 
  []
 
-<../images//CompressorMap1.png, id=27, 686.565pt x 498.663pt>
+<../images//CompressorMap1.png, id=27, 589.7232pt x 408.3255pt>
 File: ../images//CompressorMap1.png Graphic file (type png)
 <use ../images//CompressorMap1.png>
-Package pdftex.def Info: ../images//CompressorMap1.png  used on input line 177.
-(pdftex.def)             Requested size: 390.0pt x 283.2593pt.
+Package pdftex.def Info: ../images//CompressorMap1.png  used on input line 192.
+(pdftex.def)             Requested size: 390.0pt x 270.0377pt.
 
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 177--178
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 192--193
  [] 
  []
 
-<../images//CompressorMap2.png, id=29, 878.8032pt x 489.9906pt>
+[4]
+<../images//CompressorMap2.png, id=32, 656.2116pt x 440.847pt>
 File: ../images//CompressorMap2.png Graphic file (type png)
 <use ../images//CompressorMap2.png>
-Package pdftex.def Info: ../images//CompressorMap2.png  used on input line 180.
-(pdftex.def)             Requested size: 390.0pt x 217.45073pt.
+Package pdftex.def Info: ../images//CompressorMap2.png  used on input line 195.
+(pdftex.def)             Requested size: 390.0pt x 262.00787pt.
 
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 180--181
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 195--196
  [][] 
  []
 
-[4 <../images//CompressorMap1.png>]
-<../images//CompressorMap3.png, id=34, 462.528pt x 346.896pt>
+<../images//CompressorMap3.png, id=33, 694.5147pt x 450.2421pt>
 File: ../images//CompressorMap3.png Graphic file (type png)
 <use ../images//CompressorMap3.png>
-Package pdftex.def Info: ../images//CompressorMap3.png  used on input line 182.
-(pdftex.def)             Requested size: 390.0pt x 292.5128pt.
+Package pdftex.def Info: ../images//CompressorMap3.png  used on input line 197.
+(pdftex.def)             Requested size: 390.0pt x 252.8346pt.
 
-Overfull \hbox (29.3747pt too wide) in paragraph at lines 182--183
+Overfull \hbox (29.3747pt too wide) in paragraph at lines 197--198
  [][] 
  []
 
-[5 <../images//CompressorMap2.png> <../images//CompressorMap3.png>] (./task4_report.aux) ) 
+[5 <../images//CompressorMap1.png> <../images//CompressorMap2.png>] [6 <../images//CompressorMap3.png>] (./task4_report.aux) ) 
 Here is how much of TeX's memory you used:
  3280 strings out of 476422
  52948 string characters out of 5810349
- 432525 words of memory out of 5000000
+ 429525 words of memory out of 5000000
  24559 multiletter control sequences out of 15000+600000
  478195 words of font info for 51 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  55i,13n,62p,605b,286s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on task4_report.pdf (5 pages, 266252 bytes).
+Output written on task4_report.pdf (6 pages, 253124 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 223 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
