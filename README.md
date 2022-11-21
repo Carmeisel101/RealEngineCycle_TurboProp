@@ -28,3 +28,9 @@ This folder contains the code for drawing the Axial Compressor Map. The code is 
 This folder contains the work for task 5, the Computational Fluid Dynamics (CFD) analysis of the engine. Readers can find codes relevant to the engine in the:
 
         RealEngineCycle_TurboProp/task5/
+
+### Task 6:
+
+This folder contains the work for task 6, the Operating line and engine performance variation with wheel speed, and altitude and aircraft speed (OLVHN). Readers can find codes relevant to the engine in the:
+
+        RealEngineCycle_TurboProp/task6/
