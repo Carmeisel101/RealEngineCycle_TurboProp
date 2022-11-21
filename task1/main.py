@@ -93,7 +93,7 @@ if __name__ == '__main__':
 #     df to csv
     df.to_csv('results.csv')
 
-    df2 = pd.DataFrame({'w_c': w_c, 'w_t': w_t, 'w_PT': w_PT, 'SHP': SHP, 'm_air': m_air, 'm_fuel': m_fuel, 'Spec_Thrust': Spec_Thrust, 'EBSFC': EBSFC, 'TIT': TIT}, index=[0])
+    df2 = pd.DataFrame({'w_c': w_c, 'w_t': w_t, 'w_PT': w_PT, 'SHP': SHP, 'm_air': m_air, 'm_fuel': m_fuel, 'Spec_Thrust': Spec_Thrust, 'EBSFC': EBSFC, 'TIT': TIT, 'lambda': excess_air}, index=[0])
     df2.to_csv('results2.csv')
     
 
