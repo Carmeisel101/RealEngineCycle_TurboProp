@@ -20,6 +20,56 @@ This report contains the results and summary of the 12 step process described in
 Also included in this report is the engine performance vartiatio with wheel speed, altitude and aircraft speed.
 
 \section{Methodology for Computing the Operating Line}
+As  we determine the Operating Line of our engine, we first define our 
+operating parameters:
+
+\begin{equation}
+  \dot{m}_{air} = 1.64089 \left[\frac{kg}{s} \right]
+\end{equation}
+
+\begin{equation}
+  w_{c_{n}} = 283.91025 \left[\frac{kJ}{kg}\right]
+\end{equation}
+
+\begin{equation}
+  \eta_{n} = 0.90
+\end{equation}
+
+\begin{equation}
+  \sigma_{comb} = 1.00
+\end{equation}
+
+\begin{equation}
+  \pi_{c_{n}} = 9.2
+\end{equation}
+
+\begin{equation}
+  \lambda = 2.85377
+\end{equation}
+
+\begin{equation}
+  T_{1_{n}}^{*} = 288.16 [K]
+\end{equation}
+
+\begin{equation}
+  T_{3_{n}}^{*} = 1410 [K]
+\end{equation}
+
+\begin{equation}
+  p_{1_{n}}^{*} =  1.01325 [bar]
+\end{equation}
+
+\begin{equation}
+  p_{3_{n}}^{*} =  9.042243 [bar]
+\end{equation}
+
+\begin{equation}
+  h_{3_{n}}^{*} =  1574.3477 \left[\frac{kJ}{kg}\right]
+\end{equation}
+
+\begin{equation}
+  N_{n} = 52612.464822 [rpm]
+\end{equation}
 
 \begin{enumerate}
   \item Calculate the compressor work $w_{c}$, given an angular speed calculated
@@ -30,6 +80,18 @@ Also included in this report is the engine performance vartiatio with wheel spee
   \end{equation}
   Usually $x \in [1.9, 2.1]$, for convience we will use $x = 2$.
 
+  Note: 
+
+  \begin{equation}
+    N = 1.1N_{r}
+  \end{equation}
+
+  Recall when at nominal conditions:
+
+  \begin{equation}
+    N_{r} = \frac{N_{n}}{1.05}
+  \end{equation}
+
   \item Estimate the compressor efficiency $\eta_{c}$, given an angular 
   speed calculated in Task2, as a function of nominal compressor efficiency and
   nominal angular speed. We start by calculated the pressure ratio $\pi_{c}^{*}$
@@ -38,6 +100,13 @@ Also included in this report is the engine performance vartiatio with wheel spee
     \pi_{c}^{*} = \left[ \left(\pi_{c_{n}}^{\frac{\gamma-1}{\gamma}}\right)
     \frac{\eta_{c}}{\eta_{c_{n}}} \left(\frac{N}{N_{n}}\right)^{x} +1 \right]^{\frac{\gamma}{\gamma-1}}
   \end{equation}
+
+  To begin the caluation we can start by assuming $\eta_{c} = \eta_{c_{n}}$. Once
+  the pressure ratio is calculated, read that $\pi_{c}^{*}$ from the compressor map, 
+  and find the corresponding $\dot{m}\frac{\sqrt{T_{1}^{*}}}{p_{1}^{*}}$. Once you have 
+  that, find the corresponding $\eta_{c}$ from the compressor map. If $\eta_{c} \neq \eta_{c_{n}}$ 
+  then iterate until the change is less than a allowed tolerance. For our engine,
+  we allowed a tolerance of $0.01$.
 
   \item Calculate the $T_{3}^{*}$ from:
   
@@ -50,7 +119,7 @@ Also included in this report is the engine performance vartiatio with wheel spee
     \frac{1+f}{\sigma_{comb}} \left( \frac{p_{3}^{*}}{\dot{m}\sqrt{T_{3}^{*}}} \right)_{n} = constant
   \end{equation}
   
-  From here, calculate $h_{3}^{3}$, assume $c_{p} = 1.0045 \frac{kJ}{kgK}$.
+  From here, calculate $h_{3}^{*}$, assume $c_{p} = 1.0045 \frac{kJ}{kgK}$.
   Check to see if the ratio $\frac{w_{c}}{h_{3}^{*}}$ is equal to the nominal ratio
   $\frac{w_{c_{n}}}{h_{3_{n}}^{*}}$. If not, iterate until it is. Allow a tolerance of $1\%$.
 \end{enumerate}
