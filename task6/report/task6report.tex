@@ -15,7 +15,44 @@
 \begin{document}
   \maketitle
 
+\section{Overview}
+This report contains the results and summary of the 12 step process described in Dr. Cizmas notes for computing the Operating Line. 
+Also included in this report is the engine performance vartiatio with wheel speed, altitude and aircraft speed.
 
+\section{Methodology for Computing the Operating Line}
 
+\begin{enumerate}
+  \item Calculate the compressor work $w_{c}$, given an angular speed calculated
+  in Task2, as a function of nominal compressor work and nominal angular speed.
+
+  \begin{equation}
+    w_{c} = w_{c_{n}} \left( \frac{N}{N_{n}} \right)^{x}
+  \end{equation}
+  Usually $x \in [1.9, 2.1]$, for convience we will use $x = 2$.
+
+  \item Estimate the compressor efficiency $\eta_{c}$, given an angular 
+  speed calculated in Task2, as a function of nominal compressor efficiency and
+  nominal angular speed. We start by calculated the pressure ratio $\pi_{c}^{*}$
+
+  \begin{equation}
+    \pi_{c}^{*} = \left[ \left(\pi_{c_{n}}^{\frac{\gamma-1}{\gamma}}\right)
+    \frac{\eta_{c}}{\eta_{c_{n}}} \left(\frac{N}{N_{n}}\right)^{x} +1 \right]^{\frac{\gamma}{\gamma-1}}
+  \end{equation}
+
+  \item Calculate the $T_{3}^{*}$ from:
+  
+  \begin{equation}
+    \pi_{c}^{*} = \frac{1+f}{\sigma_{comb}} \left( \frac{p_{3}^{*}}{\dot{m}\sqrt{T_{3}^{*}}} \right)_{n}
+    \sqrt{\frac{T_{3}^{*}}{T_{1}^{*}}} \frac{\dot{m}\sqrt{T_{1}^{*}}}{p_{1}^{*}}
+  \end{equation}
+  Where:
+  \begin{equation}
+    \frac{1+f}{\sigma_{comb}} \left( \frac{p_{3}^{*}}{\dot{m}\sqrt{T_{3}^{*}}} \right)_{n} = constant
+  \end{equation}
+  
+  From here, calculate $h_{3}^{3}$, assume $c_{p} = 1.0045 \frac{kJ}{kgK}$.
+  Check to see if the ratio $\frac{w_{c}}{h_{3}^{*}}$ is equal to the nominal ratio
+  $\frac{w_{c_{n}}}{h_{3_{n}}^{*}}$. If not, iterate until it is. Allow a tolerance of $1\%$.
+\end{enumerate}
 
 \end{document}
