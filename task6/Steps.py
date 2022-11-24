@@ -1,7 +1,7 @@
 import numpy as np
 from sympy import Eq, solve, var
 
-def step1(N_n, w_c_n):
+def step1(N_n, w_c_n, x):
     '''
 
     :param N_n: Nominal angular speed
@@ -12,11 +12,11 @@ def step1(N_n, w_c_n):
 
     N_r = N_n /1.05
     N = N_r * 1.1
-    w_c = w_c_n * (N / N_n)**2
+    w_c = w_c_n * (N / N_n)**x
 
     return w_c, N
 
-def step2(N, gamma, N_n, pi_c, eff_com):
+def step2(N, gamma, N_n, pi_c, eff_com, x):
     '''
 
     :param N: Angular speed
@@ -25,37 +25,21 @@ def step2(N, gamma, N_n, pi_c, eff_com):
     :param pi_c: pressure ratio
     :param eff_com: combustion efficiency
     :return pi_c_star1: pressure ratio
-    :return eff_com_list: list of compressor efficiencies
-    :return pi_c_star_list: list of pressure ratios
+    :return eff_com_iter: compressor efficiency after iteration
     '''
 
-    tolerance = 0.01
+    tolerance = 0.000000009
     eff_com_list = []
     pi_c_star_list = []
+    eff_com_iter = eff_com - tolerance
 
-    pi_c_star = (((pi_c) ** ((gamma - 1) / gamma) - 1) * (eff_com/eff_com)*(N / N_n) ** 2 + 1) ** (gamma / (gamma - 1))
-    eff_com_list.append(eff_com)
-    pi_c_star_list.append(pi_c_star)
+    pi_c_star = ((((pi_c) ** ((gamma - 1) / gamma)) - 1) * (eff_com_iter/eff_com)*(N / N_n) ** x + 1) ** (gamma / (gamma - 1))
 
-    pi_c_star1 = (((pi_c) ** ((gamma - 1) / gamma) - 1) * ((eff_com-0.001) / eff_com) * (N / N_n) ** 2 + 1) ** (
-                gamma / (gamma - 1))
-    eff_com_list.append(eff_com-0.001)
-    pi_c_star_list.append(pi_c_star1)
-
-    while abs(pi_c_star - pi_c_star1) > tolerance:
-
-        eff_com = eff_com - 0.001
-        pi_c_star1 = (((pi_c) ** ((gamma - 1) / gamma) - 1) * ((eff_com) / eff_com) * (N / N_n) ** 2 + 1) ** (
-                    gamma / (gamma - 1))
-        eff_com_list.append(eff_com)
-        pi_c_star_list.append(pi_c_star1)
-
-    return pi_c_star1, eff_com_list, pi_c_star_list
-
-def step3(eff_com, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star):
+    return pi_c_star, eff_com_iter
+def step3(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star):
     '''
 
-    :param eff_com: combustion efficiency
+    :param eff_combust: combustion efficiency
     :param minL: minL
     :param lamb: excess air
     :param m_air: mass of air
@@ -67,7 +51,7 @@ def step3(eff_com, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star):
     :return sol : T_03
     '''
 
-    const = ((1+(1/(lamb*minL)))/eff_com)*((p_03)/(((m_air)*(1+(1/(lamb*minL))))*np.sqrt(TIT)))
+    const = ((1+(1/(lamb*minL)))/eff_combust)*((p_03)/(((m_air)*(1+(1/(lamb*minL))))*np.sqrt(TIT)))
     mass_const = m_air * (np.sqrt(T_01) / p_01)
 
     T = var('T')
@@ -79,3 +63,7 @@ def step3(eff_com, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star):
     return sol
 
 
+def step4(N_n, pi_d, eff_combust, gamma_g, ratio1, eff_turb):
+
+    pi_c_star_crt = (1/(pi_d*eff_combust))*((((gamma_g+1)/2))/(1-(ratio1*(1/eff_turb))))**((gamma_g)/((gamma_g-1)))
+    N_cr = N_n * np.sqrt(())
