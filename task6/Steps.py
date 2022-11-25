@@ -60,10 +60,58 @@ def step3(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star):
     sol = solve(eq, T)
     sol = float(sol[0])
 
+
     return sol
 
 
-def step4(N_n, pi_d, eff_combust, gamma_g, ratio1, eff_turb):
+def step4(N_n, pi_d, eff_combust, gamma_g, ratio1, eff_turb, T_01, N, eff_com, gamma, pi_c):
+    '''
 
+    :param N_n: Nominal angular speed
+    :param pi_d: efficiency of diffuser
+    :param eff_combust: efficiency of combustion
+    :param gamma_g: ratio of specific heats of the mixture
+    :param ratio1: ratio of work to enthalpy
+    :param eff_turb: efficiency of turbine
+    :param T_01: T_01
+    :param N: angular speed
+    :param eff_com: efficiency of compressor
+    :param gamma: ratio of specific heats
+    :param pi_c: pressure ratio
+    :return critical pressure ratio
+    :return eta_cr  critical efficiency
+    :return N_cr critical angular speed
+    '''
     pi_c_star_crt = (1/(pi_d*eff_combust))*((((gamma_g+1)/2))/(1-(ratio1*(1/eff_turb))))**((gamma_g)/((gamma_g-1)))
-    N_cr = N_n * np.sqrt(())
+    eta_cr = eff_com*(1.0093)
+    N_cr = N_n * ((eff_com / eta_cr) ** (1 / 2)) * (((pi_c_star_crt ** ((gamma - 1) / gamma)) - 1) /
+                                              ((pi_c**((gamma-1)/gamma))-1))
+
+    # N_lower = N*(1-0.15)
+    # N_upper = N*(1+0.15)
+    # N_list = np.linspace(N_lower, N_upper, 100)
+    # eta_list = []
+    # N_cr_list = []
+    #
+    # for i in N_list:
+    #     eta_cr = var('eta_cr')
+    #     N_cr = N_n*((eff_com/eta_cr)**(1/2))*(((pi_c_star_crt**((gamma-1)/gamma))-1)/
+    #                                           ((pi_c**((gamma-1)/gamma))-1))
+    #     eq = Eq(N_cr, i)
+    #     sol = solve(eq, eta_cr)
+    #     sol = float(sol[0])
+    #     eta_list.append(sol)
+    #     N_cr_list.append(i)
+    return pi_c_star_crt, eta_cr, N_cr
+
+
+def step5(AreaRatio):
+    '''
+
+    :param AreaRatio: Area ratio
+    :return AreaRatio: Area ratio
+    '''
+
+
+    return AreaRatio
+

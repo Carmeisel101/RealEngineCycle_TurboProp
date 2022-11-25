@@ -32,11 +32,15 @@ operating parameters:
 \end{equation}
 
 \begin{equation}
-  \eta_{n} = 0.90
+  \eta_{compressor_{n}} = 0.90
 \end{equation}
 
 \begin{equation}
-  \sigma_{comb} = 1.00
+  \sigma_{comb} = 0.90
+\end{equation}
+
+\begin{equation}
+  \eta_{turbine} = 0.94
 \end{equation}
 
 \begin{equation}
@@ -71,6 +75,14 @@ operating parameters:
   N_{n} = 52612.464822 [rpm]
 \end{equation}
 
+\begin{equation}
+  \pi_{D} = 0.99
+\end{equation}
+
+\begin{equation}
+  \gamma_{g} = 1.2804
+\end{equation}
+
 \begin{enumerate}
   \item Calculate the compressor work $w_{c}$, given an angular speed calculated
   in Task2, as a function of nominal compressor work and nominal angular speed.
@@ -78,7 +90,7 @@ operating parameters:
   \begin{equation}
     w_{c} = w_{c_{n}} \left( \frac{N}{N_{n}} \right)^{x}
   \end{equation}
-  Usually $x \in [1.9, 2.1]$, for convience we will use $x = 2$.
+  Usually $x \in [1.9, 2.1]$, for convience we will start with $x = 2$.
 
   Note: 
 
@@ -119,9 +131,31 @@ operating parameters:
     \frac{1+f}{\sigma_{comb}} \left( \frac{p_{3}^{*}}{\dot{m}\sqrt{T_{3}^{*}}} \right)_{n} = constant
   \end{equation}
   
-  From here, calculate $h_{3}^{*}$, assume $c_{p} = 1.0045 \frac{kJ}{kgK}$.
+  From here, calculate $h_{3}^{*}$ from:
+
+  \begin{equation}
+    h_{3}^{*} = \left(\frac{1+minL}{1+\lambda minL}\right) h_{\lambda =1} + \left(\frac{(\lambda -1) minL}{1+\lambda minL}\right) h_{air}
+  \end{equation}
+
+  Where:
+  \begin{itemize}
+    \item $h_{\lambda}$ - enthalpy of the combustion products for $\lambda$ excess air
+    \item $h_{\lambda =1}$ - enthalpy of the combustion products for stoichiometric combustion
+    \item $h_{air}$ - enthalpy of the air
+  \end{itemize}
+
   Check to see if the ratio $\frac{w_{c}}{h_{3}^{*}}$ is equal to the nominal ratio
-  $\frac{w_{c_{n}}}{h_{3_{n}}^{*}}$. If not, iterate until it is. Allow a tolerance of $1\%$.
+  $\frac{w_{c_{n}}}{h_{3_{n}}^{*}}$. If not, iterate x until it is, within a reasonable tolerance of about 1\%.
+
+  \item We are now to find the critical conditions by:
+  
+  \begin{equation}
+    \pi_{c_{cr}}^{*} = \frac{1}{\sigma_{comb} \pi_{D}} \left[ \frac{\frac{\gamma_{g}+1}{2}}{1 - \frac{w_{c}}{h_{3}^{*}} \frac{1}{\eta_{turbine}}} \right]^{\frac{\gamma_{g}}{\gamma_{g}-1}}
+  \end{equation}
+
+  \begin{equation}
+    N_{cr} = N_{n} \sqrt{\frac{\eta_{c_{n}}}{\eta_{c_{cr}}}} \frac{\pi_{c_{cr}}^{\frac{\gamma - 1}{\gamma}} -1}{\pi_{c_{n}}^{\frac{\gamma -1}{\gamma}} - 1}
+  \end{equation}
 \end{enumerate}
 
 \end{document}
