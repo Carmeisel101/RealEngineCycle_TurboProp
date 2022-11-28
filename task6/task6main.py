@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from Steps import *
+from macGasProp import GasProp
 
 
 if __name__ == '__main__':
@@ -54,17 +55,19 @@ if __name__ == '__main__':
 
     h_03 = r  * h_stoich + q * h_a
 
-    rato1 = w_c/h_03
-    rato2 = w_c_n/(h_03_n)
+    ratio1 = w_c/h_03
+    ratio2 = w_c_n/(h_03_n)
+    print('ratio1 = ', ratio1)
+    print('ratio2 = ', ratio2)
 #     percent difference in ratio 1 and 2
-    print('percent difference in ratio 1 and 2 = ', abs(rato1-rato2)/rato2*100, '%')
+    print('percent difference in ratio 1 and 2 = ', abs(ratio1-ratio2)/ratio2*100, '%')
 
     gamma_g_a = 1.260844
     gamma_g_stoich = 1.314339
 
     gamma_g = r * gamma_g_stoich + q * gamma_g_a
     print('gamma_g = ', gamma_g)
-    pi_c_star_crt, eta_cr, N_cr = step4(N_n, pi_d, eff_combust, gamma_g, rato1, eff_turb, T_01,
+    pi_c_star_crt, eta_cr, N_cr = step4(N_n, pi_d, eff_combust, gamma_g, ratio1, eff_turb, T_01,
                           N, eff_com, gamma, pi_c)
     print('pi_c_star_crt = ', pi_c_star_crt)
     print('eta_cr = ', eta_cr)
@@ -72,6 +75,20 @@ if __name__ == '__main__':
 
     # n_list = [N_cr*1.025, N_cr*1.05, N_cr*1.075]
 
+    pH_p03, K, ratio3 = step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio1, gamma_g)
+    print('pH_p03 = ', pH_p03)
+    print('K = ', K)
+    print('ratio3 = ', ratio3)
+
+    w_c_p6, N_p6 = step6(w_c, x, N_n, N_cr)
+    print('w_c_p6 = ', w_c_p6, 'kJ/kg')
+    print('N_p6 = ', N_p6, 'rpm')
+
+    h_03_p7 = step7(w_c_p6, ratio3)
+    print('h_03_p7 = ', h_03_p7, 'kJ/kg')
+
+    T_03_p8 = step8(h_03_p7, r, q)
+    print('T_03_p8 = ', T_03_p8, 'K')
 
 
 

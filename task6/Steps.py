@@ -1,5 +1,6 @@
 import numpy as np
 from sympy import Eq, solve, var
+from macGasProp import GasProp
 
 def step1(N_n, w_c_n, x):
     '''
@@ -105,13 +106,78 @@ def step4(N_n, pi_d, eff_combust, gamma_g, ratio1, eff_turb, T_01, N, eff_com, g
     return pi_c_star_crt, eta_cr, N_cr
 
 
-def step5(AreaRatio):
+def step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio1, gamma_g):
     '''
 
     :param AreaRatio: Area ratio
-    :return AreaRatio: Area ratio
+    :return pH_p03: pressure ratio
+    :return K: operating line constant
+    :return ratio3: ratio of work to enthalpy
     '''
 
+    pi_c_star = pi_c_star_crt*(0.60)
+    pH_p03 = 1/(eff_combust*pi_d*pi_c_star)
+    K = ((1/AreaRatio)**2)*((pH_p03)**(2/gamma_g))*(1-((pH_p03)**((gamma_g-1)/gamma_g))-ratio1*(1/eff_turb))
+    ratio3 = eff_turb*(1- ((pH_p03)**((gamma_g-1)/gamma_g)) - K*(AreaRatio**2)*(pH_p03**(2/gamma_g)))
 
-    return AreaRatio
+    return pH_p03, K, ratio3
 
+
+def step6(w_c, x, N_n, N_cr):
+    '''
+
+    :param w_c: compressor work
+    :param x: constant
+    :param N_n: nominal angular speed
+    :param N_cr: critical angular speed
+    :return w_c_p6: compressor work for part 6
+    :return N_p6: angular speed for part 6
+    '''
+    N_p6 = N_cr * 0.95
+    w_c_p6 = w_c * (N_p6/N_n) ** x
+
+    return w_c_p6, N_p6
+
+def step7(w_c_p6, ratio3):
+    '''
+    :param w_c_p6: compressor work for part 6
+    :param ratio3: ratio of work to enthalpy
+    :return h_03_p7: enthalpy at 03 for part 7
+    '''
+
+    h_03_p7 = w_c_p6/ratio3
+
+    return h_03_p7
+
+
+def step8(h_03_p7, r, q):
+
+
+    h_air1 = h_03_p7
+    T_air1 = 863.16 # from tables
+    h_stoich1 = 950.3
+    f1 = h_03_p7 - r*h_stoich1 - q*h_air1
+
+    T_stoich2 = 815.16 # from tables
+    h_stoich2 = h_03_p7
+    h_air2 = 839.6
+    f2 = h_03_p7 - r*h_stoich2 - q*h_air2
+
+    T = (T_air1*f2 - T_stoich2*f1)/(f2-f1)
+    return T
+
+
+# def testGP(h):
+#
+#     GP = GasProp()
+#     GP.air()
+#     T_air = GP.T(h=h)
+#     GP.combustion(lamb=1)
+#     T_comb = GP.T(h=h)
+#
+#     return T_air, T_comb
+#
+# h = 765.675
+# T_air, T_comb = testGP(h)
+# print('T_air = ', T_air)
+# print('T_comb = ', T_comb)
