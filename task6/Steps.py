@@ -1,6 +1,7 @@
 import numpy as np
 from sympy import Eq, solve, var
 from macGasProp import GasProp
+from Iterations import *
 
 def step1(N_n, w_c_n, x):
     '''
@@ -37,7 +38,7 @@ def step2(N, gamma, N_n, pi_c, eff_com, x):
     pi_c_star = ((((pi_c) ** ((gamma - 1) / gamma)) - 1) * (eff_com_iter/eff_com)*(N / N_n) ** x + 1) ** (gamma / (gamma - 1))
 
     return pi_c_star, eff_com_iter
-def step3(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star):
+def step3(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star, m_ref):
     '''
 
     :param eff_combust: combustion efficiency
@@ -53,8 +54,8 @@ def step3(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star):
     '''
 
     const = ((1+(1/(lamb*minL)))/eff_combust)*((p_03)/(((m_air)*(1+(1/(lamb*minL))))*np.sqrt(TIT)))
-    mass_const = m_air * (np.sqrt(T_01) / p_01)
-
+    mass_const = m_ref * (np.sqrt(T_01) / p_01) * 1.08
+    # mass_const =
     T = var('T')
     pi_c = const*mass_const*(((T/T_01)**(1/2)))
     eq = Eq(pi_c, pi_c_star)
@@ -106,7 +107,7 @@ def step4(N_n, pi_d, eff_combust, gamma_g, ratio1, eff_turb, T_01, N, eff_com, g
     return pi_c_star_crt, eta_cr, N_cr
 
 
-def step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio1, gamma_g):
+def step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio2, gamma_g):
     '''
 
     :param AreaRatio: Area ratio
@@ -115,12 +116,13 @@ def step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio1, gamma_g
     :return ratio3: ratio of work to enthalpy
     '''
 
-    pi_c_star = pi_c_star_crt*(0.60)
+    pi_c_star = pi_c_star_crt*(0.5)
+    print('pi_c_star step 5:', pi_c_star)
     pH_p03 = 1/(eff_combust*pi_d*pi_c_star)
-    K = ((1/AreaRatio)**2)*((pH_p03)**(2/gamma_g))*(1-((pH_p03)**((gamma_g-1)/gamma_g))-ratio1*(1/eff_turb))
+    K = ((1/AreaRatio)**2)*((pH_p03)**(2/gamma_g))*(1-((pH_p03)**((gamma_g-1)/gamma_g))-ratio2*(1/eff_turb))
     ratio3 = eff_turb*(1- ((pH_p03)**((gamma_g-1)/gamma_g)) - K*(AreaRatio**2)*(pH_p03**(2/gamma_g)))
 
-    return pH_p03, K, ratio3
+    return pH_p03, K, ratio3, pi_c_star
 
 
 def step6(w_c, x, N_n, N_cr):
@@ -133,7 +135,7 @@ def step6(w_c, x, N_n, N_cr):
     :return w_c_p6: compressor work for part 6
     :return N_p6: angular speed for part 6
     '''
-    N_p6 = N_cr * 0.95
+    N_p6 = N_cr * 0.99
     w_c_p6 = w_c * (N_p6/N_n) ** x
 
     return w_c_p6, N_p6
@@ -151,33 +153,39 @@ def step7(w_c_p6, ratio3):
 
 
 def step8(h_03_p7, r, q):
-
-
-    h_air1 = h_03_p7
-    T_air1 = 863.16 # from tables
-    h_stoich1 = 950.3
-    f1 = h_03_p7 - r*h_stoich1 - q*h_air1
-
-    T_stoich2 = 815.16 # from tables
-    h_stoich2 = h_03_p7
-    h_air2 = 839.6
-    f2 = h_03_p7 - r*h_stoich2 - q*h_air2
-
-    T = (T_air1*f2 - T_stoich2*f1)/(f2-f1)
+    '''
+    :param h_03_p7: enthalpy at 03 for part 7
+    :param r: weighting function r
+    :param q: weighting function q
+    :return T: temperature at 03 for part 8
+    '''
+    T = Iterate_temp_h(h_03_p7, r, q)
     return T
 
 
-# def testGP(h):
-#
-#     GP = GasProp()
-#     GP.air()
-#     T_air = GP.T(h=h)
-#     GP.combustion(lamb=1)
-#     T_comb = GP.T(h=h)
-#
-#     return T_air, T_comb
-#
-# h = 765.675
-# T_air, T_comb = testGP(h)
-# print('T_air = ', T_air)
-# print('T_comb = ', T_comb)
+def step10(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star, m_ref):
+    '''
+
+    :param eff_combust: combustion efficiency
+    :param minL: minL
+    :param lamb: excess air
+    :param m_air: mass of air
+    :param T_01: T_01
+    :param p_03: p_03
+    :param TIT: Turbine inlet temperature
+    :param p_01: p_01
+    :param pi_c_star: pressure ratio
+    :return sol : T_03
+    '''
+
+    const = ((1+(1/(lamb*minL)))/eff_combust)*((p_03)/(((m_air)*(1+(1/(lamb*minL))))*np.sqrt(TIT)))
+    mass_const = m_ref * (np.sqrt(T_01) / p_01) * 0.353
+    # mass_const =
+    T = var('T')
+    pi_c = const*mass_const*(((T/T_01)**(1/2)))
+    eq = Eq(pi_c, pi_c_star)
+    sol = solve(eq, T)
+    sol = float(sol[0])
+
+
+    return sol

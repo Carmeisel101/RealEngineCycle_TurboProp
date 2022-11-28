@@ -76,11 +76,19 @@ if __name__ == '__main__':
     Table_2_5.to_csv('Table_2_5.csv')
 
     m_ref = m_air/1.02
+    print('m_ref = ', m_ref)
     m_dot_1 = part5(table_2_1, m_mbase, m_ref)
     m_dot_2 = part5(table_2_1, m_mbase2, m_ref)
     m_dot_3 = part5(table_2_1, m_mbase3, m_ref)
     m_dot_4 = part5(table_2_1, m_mbase4, m_ref)
     m_dot_5 = part5(table_2_1, m_mbase5, m_ref)
+
+    ## corrected mass flow rate
+    cmfr_1 = m_ref*np.sqrt(288.16)/(101325)*m_dot_1/(m_ref*np.sqrt(288.16)/(101325))
+    cmfr_2 = m_ref*np.sqrt(288.16)/(101325)*m_dot_2/(m_ref*np.sqrt(288.16)/(101325))
+    cmfr_3 = m_ref*np.sqrt(288.16)/(101325)*m_dot_3/(m_ref*np.sqrt(288.16)/(101325))
+    cmfr_4 = m_ref*np.sqrt(288.16)/(101325)*m_dot_4/(m_ref*np.sqrt(288.16)/(101325))
+    cmfr_5 = (m_ref*np.sqrt(288.16)/(101325)*m_dot_5)/(m_ref*np.sqrt(288.16)/(101325))
 
 
     table_2_2 = pd.DataFrame({'m_dot_bar':[0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1],
@@ -109,6 +117,16 @@ if __name__ == '__main__':
     plot_real_fun6 = [plot_fun1[5], plot_fun2[5], plot_fun3[5], plot_fun4[5], plot_fun5[5]]
     plot_real_fun7 = [plot_fun1[6], plot_fun2[6], plot_fun3[6], plot_fun4[6], plot_fun5[6]]
     plot_real_fun8 = [plot_fun1[7], plot_fun2[7], plot_fun3[7], plot_fun4[7], plot_fun5[7]]
+
+    cmfr_plot1 = [cmfr_1[0], cmfr_2[0], cmfr_3[0], cmfr_4[0], cmfr_5[0]]
+    cmfr_plot2 = [cmfr_1[1], cmfr_2[1], cmfr_3[1], cmfr_4[1], cmfr_5[1]]
+    cmfr_plot3 = [cmfr_1[2], cmfr_2[2], cmfr_3[2], cmfr_4[2], cmfr_5[2]]
+    cmfr_plot4 = [cmfr_1[3], cmfr_2[3], cmfr_3[3], cmfr_4[3], cmfr_5[3]]
+    cmfr_plot5 = [cmfr_1[4], cmfr_2[4], cmfr_3[4], cmfr_4[4], cmfr_5[4]]
+    cmfr_plot6 = [cmfr_1[5], cmfr_2[5], cmfr_3[5], cmfr_4[5], cmfr_5[5]]
+    cmfr_plot7 = [cmfr_1[6], cmfr_2[6], cmfr_3[6], cmfr_4[6], cmfr_5[6]]
+    cmfr_plot8 = [cmfr_1[7], cmfr_2[7], cmfr_3[7], cmfr_4[7], cmfr_5[7]]
+
 
     eta_line1 = [eta[0], eta2[0], eta3[0], eta4[0], eta5[0]]
     eta_line2 = [eta[1], eta2[1], eta3[1], eta4[1], eta5[1]]
@@ -173,6 +191,22 @@ if __name__ == '__main__':
     plt.legend()
     plt.show()
     # plt.savefig('./images/CompressorMap3.png', dpi=300)
+
+    plt.plot(cmfr_plot1, pi_line1, label = 'n = 0.5')
+    plt.plot(cmfr_plot2, pi_line2, label = 'n = 0.6')
+    plt.plot(cmfr_plot3, pi_line3, label = 'n = 0.7')
+    plt.plot(cmfr_plot4, pi_line4, label = 'n = 0.8')
+    plt.plot(cmfr_plot5, pi_line5, label = 'n = 0.9')
+    plt.plot(cmfr_plot6, pi_line6, label = 'n = 1.0')
+    plt.plot(cmfr_plot7, pi_line7, label = 'n = 1.05')
+    plt.plot(cmfr_plot8, pi_line8, label = 'n = 1.1')
+
+    # plt.plot(surge_plot, pi_star_surge, label='Surge Line')
+    plt.xlabel('corrected mass flow rate')
+    plt.ylabel('$\pi^{*}$')
+    plt.title('Compressor Map $\pi^{*}$ vs corrected mass flow rate')
+    plt.legend()
+    plt.show()
 
 
 
