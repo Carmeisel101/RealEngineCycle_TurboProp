@@ -45,7 +45,7 @@ Check to see if the ratio $\frac{w_{c}}{h_{3}^{ * }}$ is equal to the nominal ra
 
 <div align="center">
 
-$$\pi_{c_{cr}}^{*} = \frac{1}{\sigma_{comb} \pi_{D}} \left[ \frac{\frac{\gamma_{g}+1}{2}}{1 - \frac{w_{c}}{h_{3}^{*}} \frac{1}{\eta_{turbine}}} \right]^{\frac{\gamma_{g}}{\gamma_{g}-1}}$$
+$$\pi_{c_{cr}}^{ * } = \frac{1}{\sigma_{comb} \pi_{D}} \left[ \frac{\frac{\gamma_{g}+1}{2}}{1 - \frac{w_{c}}{h_{3}^{ * }} \frac{1}{\eta_{turbine}}} \right]^{\frac{\gamma_{g}}{\gamma_{g}-1}}$$
 
 $$N_{cr} = N_{n} \sqrt{\frac{\eta_{c_{n}}}{\eta_{c_{cr}}}} \frac{\pi_{c_{cr}}^{\frac{\gamma - 1}{\gamma}} -1}{\pi_{c_{n}}^{\frac{\gamma -1}{\gamma}} - 1}$$
 
@@ -55,7 +55,7 @@ $$N_{cr} = N_{n} \sqrt{\frac{\eta_{c_{n}}}{\eta_{c_{cr}}}} \frac{\pi_{c_{cr}}^{\
 
 <div align="center">
 
-$$\frac{w_{c}}{h_{3}^{*}} = \eta_{turbine} \left[ 1 - \left(\frac{p_{H}}{p_{3}^{*}}\right)^{\frac{\gamma_{g}-1}{\gamma_{g}}} - K \left(\frac{A_{3.5}}{A_{5}}\right)^{2} \left(\frac{p_{3}^{*}}{p_{H}}\right)^{\frac{2}{\gamma_{g}}} \right]$$
+$$\frac{w_{c}}{h_{3}^{ * }} = \eta_{turbine} \left[ 1 - \left(\frac{p_{H}}{p_{3}^{*}}\right)^{\frac{\gamma_{g}-1}{\gamma_{g}}} - K \left(\frac{A_{3.5}}{A_{5}}\right)^{2} \left(\frac{p_{3}^{ * }}{p_{H}}\right)^{\frac{2}{\gamma_{g}}} \right]$$
 
 </div>
 
@@ -63,7 +63,7 @@ Where $K$ is calculated:
 
 <div align="center">
 
-$$K = \left(\frac{A_{5}}{A_{3.5}}\right)^{2} \left(\frac{p_{H}}{p_{3}^{*}}\right)^{\frac{2}{\gamma_{g}}}\left[1 - \left(\frac{p_{H}}{p_{3}^{*}}\right)^{\frac{\gamma_{g}-1}{\gamma_{g}}} \frac{w_{c}}{h_{3}^{*}} \frac{1}{\eta_{turbine}}\right]$$
+$$K = \left(\frac{A_{5}}{A_{3.5}}\right)^{2} \left(\frac{p_{H}}{p_{3}^{ * }}\right)^{\frac{2}{\gamma_{g}}}\left[1 - \left(\frac{p_{H}}{p_{3}^{ * }}\right)^{\frac{\gamma_{g}-1}{\gamma_{g}}} \frac{w_{c}}{h_{3}^{ * }} \frac{1}{\eta_{turbine}}\right]$$
 
 </div>
 
@@ -71,7 +71,7 @@ And $\frac{p_{H}}{{p_{3}^{ * }}}$ is calculated:
 
 <div align="center">
  
- $$\frac{p_{H}}{p_{3}^{*}} = \frac{1}{\sigma_{combustion}^{*} \pi_{c}^{*} \pi_{D}}$$
+ $$\frac{p_{H}}{p_{3}^{ * }} = \frac{1}{\sigma_{combustion}^{*} \pi_{c}^{*} \pi_{D}}$$
 
 </div>
 
@@ -83,7 +83,7 @@ $$\pi_{D} = \frac{p_{1}^{ * }}{p_{H}}$$
 
 </div>
 
-User's are to choose a $\pi_{c}^{*}$ that is less than the critical pressure ratio $\pi_{c_{cr}}^{*}$
+User's are to choose a $\pi_{c}^{ * }$ that is less than the critical pressure ratio $\pi_{c_{cr}}^{ * }$
 
 6. Now we are to choose an $N$ value smaller than the critical value $N_{cr}$, and calculate $w_{c}$.
   We chose a $N$ value that was 1\% less than the critical value.
@@ -133,10 +133,10 @@ $$f(T) = h - r h_{stoich} - q h_{air} = 0$$
 
 </div>
 
-9. For a known value of $\pi_{c}^{*}$ and $N$, read from the compressor map the value of the correctedmass flow rate.
+9. For a known value of $\pi_{c}^{ * }$ and $N$, read from the compressor map the value of the correctedmass flow rate.
 
 10. Now determine $T_{3}^{ * }$ from the same equation in step 3.
 
-11. Compare the values of $T_{3}^{*}$ from step 8 to $T_{3}^{*}$ from step 10, if they differ by more than 10 degrees K, then iterate until with different $N$ value.
+11. Compare the values of $T_{3}^{ * }$ from step 8 to $T_{3}^{ * }$ from step 10, if they differ by more than 10 degrees K, then iterate until with different $N$ value.
 
-12. Now choose another value of $\pi_{c}^{*}$ and go back to step 5 and repeat the process to get other points on the operating line at $\frac{p_{H}}{p_{3}^{*}}$ 
+12. Now choose another value of $\pi_{c}^{ * }$ and go back to step 5 and repeat the process to get other points on the operating line at $\frac{p_{H}}{p_{3}^{ * }}$ 
