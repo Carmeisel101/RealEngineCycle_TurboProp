@@ -78,7 +78,7 @@ if __name__ == '__main__':
 
     # n_list = [N_cr*1.025, N_cr*1.05, N_cr*1.075]
 
-    pH_p03, K, ratio3, pi_c_star_5= step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio1, gamma_g)
+    pH_p03, K, ratio3, pi_c_star_5= step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio1, gamma_g, 0.5)
     print('pH_p03 = ', pH_p03)
     print('K = ', K)
     print('ratio3 = ', ratio3)

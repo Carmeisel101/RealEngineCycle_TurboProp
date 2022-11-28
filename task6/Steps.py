@@ -107,7 +107,7 @@ def step4(N_n, pi_d, eff_combust, gamma_g, ratio1, eff_turb, T_01, N, eff_com, g
     return pi_c_star_crt, eta_cr, N_cr
 
 
-def step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio2, gamma_g):
+def step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio2, gamma_g, weight):
     '''
 
     :param AreaRatio: Area ratio
@@ -115,8 +115,8 @@ def step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio2, gamma_g
     :return K: operating line constant
     :return ratio3: ratio of work to enthalpy
     '''
-
-    pi_c_star = pi_c_star_crt*(0.5)
+    weight = weight
+    pi_c_star = pi_c_star_crt*weight
     print('pi_c_star step 5:', pi_c_star)
     pH_p03 = 1/(eff_combust*pi_d*pi_c_star)
     K = ((1/AreaRatio)**2)*((pH_p03)**(2/gamma_g))*(1-((pH_p03)**((gamma_g-1)/gamma_g))-ratio2*(1/eff_turb))

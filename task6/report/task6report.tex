@@ -1,7 +1,9 @@
-\documentclass[12pt,english]{article}
+% \documentclass[12pt,english]{article}
+\documentclass[titlepage]{article}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{babel}
+
 
 
 \author{
@@ -14,6 +16,8 @@
 \title{Task 6 - OLVHN}
 \begin{document}
   \maketitle
+
+  \tableofcontents
 
 \section{Overview}
 This report contains the results and summary of the 12 step process described in Dr. Cizmas notes for computing the Operating Line. 
@@ -36,7 +40,7 @@ operating parameters:
 \end{equation}
 
 \begin{equation}
-  \sigma_{comb} = 0.90
+  \sigma_{comb} = 0.95
 \end{equation}
 
 \begin{equation}
@@ -76,11 +80,15 @@ operating parameters:
 \end{equation}
 
 \begin{equation}
-  \pi_{D} = 0.97
+  \pi_{D} = 0.95
 \end{equation}
 
 \begin{equation}
   \gamma_{g} = 1.2804
+\end{equation}
+
+\begin{equation}
+  \frac{A_{3.5}}{A_{5}} = 1.2
 \end{equation}
 
 \begin{enumerate}
@@ -175,7 +183,7 @@ operating parameters:
       \hline
       $T_{3}^{*}$ & $h_{3}^{*}$ \\
       \hline
-      1509.17318 [K] & 1699.2605 $\frac{kJ}{kg}$ \\
+      1499.871673 [K] & 1683.418457 $\frac{kJ}{kg}$ \\
       \hline
     \end{tabular}
   \end{center}
@@ -198,7 +206,17 @@ operating parameters:
       \hline
       $\pi_{c_{cr}}^{*}$ & $N_{cr}$ & $\eta_{c_{cr}}$ \\
       \hline
-      5.44935 & 36870.050454 rpm & 0.90837 \\
+      5.335302882 & 36291.50575 rpm & 0.908370 \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      $\frac{w_{c}}{h_{3}^{*}}$ & $\left(\frac{w_{c}}{h_{3}^{*}}\right)_{n}$ & \% diff \\
+      \hline
+      0.1800005077 & 0.18033516 & 0.185573386 \% \\
       \hline
     \end{tabular}
   \end{center}
@@ -233,16 +251,16 @@ operating parameters:
       \hline
       $K$ & $\frac{p_{H}}{p_{3}^{*}}$ & $\frac{w_{c}}{h_{3}^{*}}$ \\
       \hline
-      0.00145412 & 0.3503485 & 0.192354 \\
+      -0.002897184 & 0.415359077 & 0.165524542\\
       \hline
     \end{tabular}
   \end{center}
 
   \item Now we are to choose an $N$ value smaller than the critical value $N_{cr}$, and calculate $w_{c}$ using equation (16)
-  We chose a $N$ value that was 5\% less than the critical value.
+  We chose a $N$ value that was 1\% less than the critical value.
 
   \begin{equation}
-    N = 0.95 N_{cr}
+    N = 0.99 N_{cr}
   \end{equation}
 
   Now we use equation (16) to calculate $w_{c}$. 
@@ -252,12 +270,12 @@ operating parameters:
       \hline
       $N$ & $w_{c}$ \\
       \hline
-      35025.92782 rpm & 171.430154 $\frac{kJ}{kg}$ \\
+      35928.59069586 rpm & 166.4459457889 $\frac{kJ}{kg}$ \\
       \hline
     \end{tabular}
   \end{center}
 
-  \item Now calculate $h_{3}^{*}$ from equation (25) and $w_{c} = 171.430154 \frac{kJ}{kg}$.
+  \item Now calculate $h_{3}^{*}$ from equation (26) and $w_{c} = 171.430154 \frac{kJ}{kg}$.
   
   \begin{equation}
     h_{3}^{*} = w_{c_{n}} \left( \frac{w_{c}}{h_{3}^{*}}\right)^{-1}
@@ -268,7 +286,7 @@ operating parameters:
       \hline
       $h_{3}^{*}$ \\
       \hline
-      891.221976 $\frac{kJ}{kg}$ \\
+      1005.56657035 $\frac{kJ}{kg}$ \\
       \hline
     \end{tabular}
   \end{center}
@@ -280,7 +298,7 @@ operating parameters:
       \hline
       $T_{3}^{*}$ \\
       \hline
-      844.086217 [K] \\
+      942.5127452 K \\
       \hline
     \end{tabular}
   \end{center}
@@ -288,7 +306,7 @@ operating parameters:
   \item For known value of $\pi_{c}^{*}$ and $N$ read from the the compressor map the value of the corrected mass flow rate
 
   \begin{equation}
-    \pi{_c}^{*} = 3.269531
+    \pi{_c}^{*} = 2.66765144
   \end{equation}
 
   Yields a corrected mass flow rate of:
@@ -298,10 +316,25 @@ operating parameters:
       \hline
       $m_{a}\frac{\sqrt{T_{1}^{*}}}{p_{1}^{*}}$ \\
       \hline
-      (1.02)(1.6087157)$\frac{\sqrt{288}}{101325}$ \\
+      (0.353)(1.6087157)$\frac{\sqrt{288}}{101325}$ \\
       \hline
     \end{tabular}
   \end{center}
+
+  \item Now determine $T_{3}^{*}$ using equation (21).
+  \item Compare the values of $T_{3}^{*}$ from step 8 to $T_{3}^{*}$ from step 10, if they differ by more than 10 degrees K, then iterate until with different $N$ value.
+  
+  \begin{center}
+    \begin{tabular}{|c|}
+      \hline
+      $T_{3}^{*}$ \\
+      \hline
+      949.41546057 K \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+\item Now choose another value of $\pi_{c}^{*}$ and go back to step 5 and repeat the process to get other points on the operating line at $\frac{p_{H}}{p_{3}^{*}}$ 
 
 
 \end{enumerate}
