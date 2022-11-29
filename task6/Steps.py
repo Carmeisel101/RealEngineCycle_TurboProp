@@ -16,7 +16,7 @@ def step1(N_n, w_c_n, x):
     N = N_r * 1.1
     w_c = w_c_n * (N / N_n)**x
 
-    return w_c, N
+    return w_c, N, N_r
 
 def step2(N, gamma, N_n, pi_c, eff_com, x):
     '''
@@ -30,10 +30,8 @@ def step2(N, gamma, N_n, pi_c, eff_com, x):
     :return eff_com_iter: compressor efficiency after iteration
     '''
 
-    tolerance = 0.000000009
-    eff_com_list = []
-    pi_c_star_list = []
-    eff_com_iter = eff_com - tolerance
+    # tolerance = 0.00009
+    eff_com_iter = 0.878213
 
     pi_c_star = ((((pi_c) ** ((gamma - 1) / gamma)) - 1) * (eff_com_iter/eff_com)*(N / N_n) ** x + 1) ** (gamma / (gamma - 1))
 
@@ -44,7 +42,7 @@ def step3(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star, m_re
     :param eff_combust: combustion efficiency
     :param minL: minL
     :param lamb: excess air
-    :param m_air: mass of air
+    :param m_air: mass flow rate of air
     :param T_01: T_01
     :param p_03: p_03
     :param TIT: Turbine inlet temperature
@@ -54,8 +52,8 @@ def step3(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star, m_re
     '''
 
     const = ((1+(1/(lamb*minL)))/eff_combust)*((p_03)/(((m_air)*(1+(1/(lamb*minL))))*np.sqrt(TIT)))
-    mass_const = m_ref * (np.sqrt(T_01) / p_01) * 1.08
-    # mass_const =
+    mass_const = m_ref * (np.sqrt(T_01) / p_01) *  1.03 #1.08
+    # mass_const = 0.00041
     T = var('T')
     pi_c = const*mass_const*(((T/T_01)**(1/2)))
     eq = Eq(pi_c, pi_c_star)
@@ -66,7 +64,7 @@ def step3(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star, m_re
     return sol
 
 
-def step4(N_n, pi_d, eff_combust, gamma_g, ratio1, eff_turb, T_01, N, eff_com, gamma, pi_c):
+def step4(N_n, pi_d, eff_combust, gamma_g, ratio2, eff_turb, T_01, N, eff_com, gamma, pi_c, N_r):
     '''
 
     :param N_n: Nominal angular speed
@@ -84,27 +82,15 @@ def step4(N_n, pi_d, eff_combust, gamma_g, ratio1, eff_turb, T_01, N, eff_com, g
     :return eta_cr  critical efficiency
     :return N_cr critical angular speed
     '''
-    pi_c_star_crt = (1/(pi_d*eff_combust))*((((gamma_g+1)/2))/(1-(ratio1*(1/eff_turb))))**((gamma_g)/((gamma_g-1)))
-    eta_cr = eff_com*(1.0093)
-    N_cr = N_n * ((eff_com / eta_cr) ** (1 / 2)) * (((pi_c_star_crt ** ((gamma - 1) / gamma)) - 1) /
-                                              ((pi_c**((gamma-1)/gamma))-1))
+    pi_c_star_crt = (1/(pi_d*eff_combust))*((((gamma_g+1)/2))/(1-(ratio2*(1/eff_turb))))**((gamma_g)/((gamma_g-1)))
+    N_lower = N_r *0.9 #different n
+    print('N_lower:', N_lower)
+    eta_cr = 0.879
+    N_cr = N_n * (((eff_com / eta_cr) ) * (((pi_c_star_crt ** ((gamma - 1) / gamma)) - 1) /
+                                              ((pi_c**((gamma-1)/gamma))-1)))** (1 / 2)
 
-    # N_lower = N*(1-0.15)
-    # N_upper = N*(1+0.15)
-    # N_list = np.linspace(N_lower, N_upper, 100)
-    # eta_list = []
-    # N_cr_list = []
-    #
-    # for i in N_list:
-    #     eta_cr = var('eta_cr')
-    #     N_cr = N_n*((eff_com/eta_cr)**(1/2))*(((pi_c_star_crt**((gamma-1)/gamma))-1)/
-    #                                           ((pi_c**((gamma-1)/gamma))-1))
-    #     eq = Eq(N_cr, i)
-    #     sol = solve(eq, eta_cr)
-    #     sol = float(sol[0])
-    #     eta_list.append(sol)
-    #     N_cr_list.append(i)
-    return pi_c_star_crt, eta_cr, N_cr
+
+    return pi_c_star_crt, eta_cr, N_cr, N_lower
 
 
 def step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio2, gamma_g, weight):
@@ -115,17 +101,16 @@ def step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio2, gamma_g
     :return K: operating line constant
     :return ratio3: ratio of work to enthalpy
     '''
-    weight = weight
     pi_c_star = pi_c_star_crt*weight
     print('pi_c_star step 5:', pi_c_star)
     pH_p03 = 1/(eff_combust*pi_d*pi_c_star)
     K = ((1/AreaRatio)**2)*((pH_p03)**(2/gamma_g))*(1-((pH_p03)**((gamma_g-1)/gamma_g))-ratio2*(1/eff_turb))
-    ratio3 = eff_turb*(1- ((pH_p03)**((gamma_g-1)/gamma_g)) - K*(AreaRatio**2)*(pH_p03**(2/gamma_g)))
+    ratio3 = eff_turb*(1- ((pH_p03)**((gamma_g-1)/gamma_g)) - K*(AreaRatio**2)*(1/(pH_p03)**(2/gamma_g)))
 
     return pH_p03, K, ratio3, pi_c_star
 
 
-def step6(w_c, x, N_n, N_cr):
+def step6(w_c, x, N_n, N_lower):
     '''
 
     :param w_c: compressor work
@@ -135,7 +120,8 @@ def step6(w_c, x, N_n, N_cr):
     :return w_c_p6: compressor work for part 6
     :return N_p6: angular speed for part 6
     '''
-    N_p6 = N_cr * 0.99
+    # N_p6 = N_lower
+    N_p6 = 44500
     w_c_p6 = w_c * (N_p6/N_n) ** x
 
     return w_c_p6, N_p6
@@ -179,7 +165,7 @@ def step10(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star, m_r
     '''
 
     const = ((1+(1/(lamb*minL)))/eff_combust)*((p_03)/(((m_air)*(1+(1/(lamb*minL))))*np.sqrt(TIT)))
-    mass_const = m_ref * (np.sqrt(T_01) / p_01) * 0.353
+    mass_const = m_ref * (np.sqrt(T_01) / p_01) * 0.63
     # mass_const =
     T = var('T')
     pi_c = const*mass_const*(((T/T_01)**(1/2)))

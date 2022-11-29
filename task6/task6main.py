@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from Steps import *
 from macGasProp import GasProp
 from Iterations import *
+from OL_repeater import *
 
 
 if __name__ == '__main__':
@@ -26,21 +27,24 @@ if __name__ == '__main__':
     lamb = task1_r2_df['lambda'][0]
     gamma = 1.4
     minL = 14.66
-    eff_combust = 0.95
+    eff_combust = 0.90
     m_ref = 1.6087156862745098
     p_03 = task1_r1_df['Pressure [bar]'][5]
+    p_03 = p_03 * 10**5
     p_01 = task1_r1_df['Pressure [bar]'][1]
+    p_01 = p_01 * 10**5
     h_03_n = task1_r1_df['Enthalpy [kJ/kg]'][5]
     # cp = 1.004516 # kJ/kgK
-    x = 1.4
-    pi_d = 0.95
+    x = 2.1
+    pi_d = 0.93
     AreaRatio = 1.2 # A3.5/A5
 
 
 
-    w_c, N = step1(N_n, w_c_n, x)
+    w_c, N, N_r = step1(N_n, w_c_n, x)
     print('w_c = ', w_c, 'kJ/kg')
     print('N = ', N, 'rpm')
+    print('N_r = ', N_r, 'rpm')
 
     pi_c_star, eff_com_iter = step2(N, gamma, N_n, pi_c, eff_com, x)
     print('pi_c_star = ', pi_c_star)
@@ -65,25 +69,25 @@ if __name__ == '__main__':
 #     percent difference in ratio 1 and 2
     print('percent difference in ratio 1 and 2 = ', abs(ratio1-ratio2)/ratio2*100, '%')
 
-    gamma_g_a = 1.260844
-    gamma_g_stoich = 1.314339
+    gamma_g_stoich = 1.27134999
+    gamma_g_a = 1.3232644
 
     gamma_g = r * gamma_g_stoich + q * gamma_g_a
     print('gamma_g = ', gamma_g)
-    pi_c_star_crt, eta_cr, N_cr = step4(N_n, pi_d, eff_combust, gamma_g, ratio2, eff_turb, T_01,
-                          N, eff_com, gamma, pi_c)
+    pi_c_star_crt, eta_cr, N_cr, N_lower = step4(N_n, pi_d, eff_combust, gamma_g, ratio2, eff_turb, T_01,
+                          N, eff_com, gamma, pi_c, N_r)
     print('pi_c_star_crt = ', pi_c_star_crt)
     print('eta_cr = ', eta_cr)
     print('N_cr = ', N_cr, 'rpm')
 
     # n_list = [N_cr*1.025, N_cr*1.05, N_cr*1.075]
 
-    pH_p03, K, ratio3, pi_c_star_5= step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio1, gamma_g, 0.5)
+    pH_p03, K, ratio3, pi_c_star_5 = step5(AreaRatio, eff_combust, pi_d, pi_c_star_crt, eff_turb, ratio2, gamma_g, 0.95)
     print('pH_p03 = ', pH_p03)
     print('K = ', K)
     print('ratio3 = ', ratio3)
 
-    w_c_p6, N_p6 = step6(w_c_n, x, N_n, N_cr)
+    w_c_p6, N_p6 = step6(w_c_n, x, N_n, N_lower)
     print('w_c_p6 = ', w_c_p6, 'kJ/kg')
     print('N_p6 = ', N_p6, 'rpm')
 
@@ -96,8 +100,10 @@ if __name__ == '__main__':
     #### Step 9 read
 
 
-    T_03_10 = step10(eff_combust, minL, lamb, m_air, T_01, p_03, TIT,p_01, pi_c_star_5, m_ref)
+    T_03_10 = step10(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star_5, m_ref)
     print('T_03_10 = ', T_03_10, 'K')
 
 
 
+    # loop_df = step1_3loop(w_c_n, x, N_cr, gamma, pi_c, eff_com)
+    # print(loop_df)

@@ -11,7 +11,6 @@ def Iterate_temp_h(h, r, q):
     :param h: enthalpy
     :param r: stoichiometric ratio weighting factor
     :param q: air ratio weighting factor
-
     :return T: temperature
     '''
 

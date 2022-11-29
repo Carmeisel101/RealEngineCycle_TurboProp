@@ -46,9 +46,11 @@ if __name__ == '__main__':
     eff_turbine = specs['eff_turbine'].values[0]
     h04i, w_t, T04i, p04i = stage04i(h03, w_c, excess_air, eff_turbine, r, q, s04i)
 
+
     # Stage 04
     p04 = p04i
     s04, T04, h04 = stage04(p04, w_t, h03, r, q)
+    print('T_04:', T04)
 
     # Stage 04.5i
     s045i = s04
