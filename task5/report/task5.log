@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  15 NOV 2022 21:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  29 NOV 2022 21:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -249,9 +249,9 @@ Here is how much of TeX's memory you used:
  319 hyphenation exceptions out of 8191
  55i,6n,62p,365b,233s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1440.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2074.600pk></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-Output written on task5.pdf (10 pages, 1405796 bytes).
+Output written on task5.pdf (10 pages, 1405615 bytes).
 PDF statistics:
- 267 PDF objects out of 1000 (max. 8388607)
+ 266 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)

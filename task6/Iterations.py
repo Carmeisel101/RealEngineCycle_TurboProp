@@ -2,6 +2,7 @@ import pandas as pd
 # from winGasProp import GasProp
 import numpy as np
 from sympy import Eq, var, solve
+from scipy.optimize import fsolve
 
 
 
@@ -182,13 +183,34 @@ def stoich_tabT(T):
     return h
 
 
-# def m_dot_air(p04):
-#
-#     )
-#
-#     return gamma
-#
-# gamma = m_dot_air(4.506)
+def lamb_solver(h_02_n, eff_combust, h_03_df, col):
+
+    LHV = 43500 *1e3 # J/kg
+    minL = 14.66
+
+    func1 = lambda lamb: ((1+(1/(lamb*minL)))*h_03_df['h_03_{}'.format(col)][0] - (h_02_n*1e3)) - (eff_combust*LHV)/(lamb*minL)
+    func2 = lambda lamb: ((1+(1/(lamb*minL)))*h_03_df['h_03_{}'.format(col)][1] - (h_02_n*1e3)) - (eff_combust*LHV)/(lamb*minL)
+    func3 = lambda lamb: ((1+(1/(lamb*minL)))*h_03_df['h_03_{}'.format(col)][2] - (h_02_n*1e3)) - (eff_combust*LHV)/(lamb*minL)
+    func4 = lambda lamb: ((1+(1/(lamb*minL)))*h_03_df['h_03_{}'.format(col)][3] - (h_02_n*1e3)) - (eff_combust*LHV)/(lamb*minL)
+    func5 = lambda lamb: ((1+(1/(lamb*minL)))*h_03_df['h_03_{}'.format(col)][4] - (h_02_n*1e3)) - (eff_combust*LHV)/(lamb*minL)
+    func6 = lambda lamb: ((1+(1/(lamb*minL)))*h_03_df['h_03_{}'.format(col)][5] - (h_02_n*1e3)) - (eff_combust*LHV)/(lamb*minL)
+
+    lamb1 = fsolve(func1, 2.5)
+    lamb2 = fsolve(func2, 2.5)
+    lamb3 = fsolve(func3, 2.5)
+    lamb4 = fsolve(func4, 2.5)
+    lamb5 = fsolve(func5, 2.5)
+    lamb6 = fsolve(func6, 2.5)
+
+    lamb = [lamb1[0], lamb2[0], lamb3[0], lamb4[0], lamb5[0], lamb6[0]]
+
+    return lamb
+
+
+
+
+
+
 
 
 

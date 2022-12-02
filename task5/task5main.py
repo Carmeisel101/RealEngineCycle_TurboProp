@@ -20,7 +20,7 @@ p_0_in = p_in*(1+(gamma-1)/2*M_in**2)**(-gamma/(gamma-1))
 
 rho_0_in = rho_in*(1+(gamma-1)/2*M_in**2)**(-1/(gamma-1))
 
-ALPHAD1 = 55.0 # degrees
+ALPHAD1 = 44.6 # degrees
 
 FLUX = v_in * np.cos(ALPHAD1*np.pi/180) # non-dimensional flux
 VTAN = v_in * np.sin(ALPHAD1*np.pi/180) # non-dimensional tangential velocity

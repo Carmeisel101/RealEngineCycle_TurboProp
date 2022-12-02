@@ -166,7 +166,6 @@ def step10(eff_combust, minL, lamb, m_air, T_01, p_03, TIT, p_01, pi_c_star, m_r
 
     const = ((1+(1/(lamb*minL)))/eff_combust)*((p_03)/(((m_air)*(1+(1/(lamb*minL))))*np.sqrt(TIT)))
     mass_const = m_ref * (np.sqrt(T_01) / p_01) * 0.63
-    # mass_const =
     T = var('T')
     pi_c = const*mass_const*(((T/T_01)**(1/2)))
     eq = Eq(pi_c, pi_c_star)

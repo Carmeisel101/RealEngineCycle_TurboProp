@@ -84,12 +84,6 @@ if __name__ == '__main__':
     m_dot_5, m_dot_bar5 = part5(table_2_1, m_mbase5, m_ref)
 
     ## corrected mass flow rate
-    # cmfr_1 = m_ref*np.sqrt(288.16)/(101325)*m_dot_1/(m_ref*np.sqrt(288.16)/(101325))
-    # cmfr_2 = m_ref*np.sqrt(288.16)/(101325)*m_dot_2/(m_ref*np.sqrt(288.16)/(101325))
-    # cmfr_3 = m_ref*np.sqrt(288.16)/(101325)*m_dot_3/(m_ref*np.sqrt(288.16)/(101325))
-    # cmfr_4 = m_ref*np.sqrt(288.16)/(101325)*m_dot_4/(m_ref*np.sqrt(288.16)/(101325))
-    # cmfr_5 = (m_ref*np.sqrt(288.16)/(101325)*m_dot_5)/(m_ref*np.sqrt(288.16)/(101325))
-
 
     table_2_2 = pd.DataFrame({'m_dot_bar':[0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1],
                                 'pi_bar':[0.425, 0.5, 0.57, 0.64, 0.73, 0.83, 0.95, 1.09, 1.22, 1.37]})
@@ -173,21 +167,7 @@ if __name__ == '__main__':
     # plt.savefig('CompressorMap1.png', dpi=300)
 
 
-    plt.plot(plot_real_fun1, pi_line1, label = 'n = 0.5')
-    plt.plot(plot_real_fun2, pi_line2, label = 'n = 0.6')
-    plt.plot(plot_real_fun3, pi_line3, label = 'n = 0.7')
-    plt.plot(plot_real_fun4, pi_line4, label = 'n = 0.8')
-    plt.plot(plot_real_fun5, pi_line5, label = 'n = 0.9')
-    plt.plot(plot_real_fun6, pi_line6, label = 'n = 1.0')
-    plt.plot(plot_real_fun7, pi_line7, label = 'n = 1.05')
-    plt.plot(plot_real_fun8, pi_line8, label = 'n = 1.1')
 
-    plt.plot(surge_plot, pi_star_surge, label='Surge Line')
-    plt.xlabel('$\dot{m}$  $\dfrac{kg}{s}$')
-    plt.ylabel('$\pi^{*}$')
-    plt.legend()
-    plt.title('Compressor Map $\pi^{*}$ vs mass flow rate')
-    plt.show()
     # save the image with a big size
     # plt.savefig('CompressorMap2.png', dpi=300)
 
@@ -199,37 +179,75 @@ if __name__ == '__main__':
     plt.show()
     # plt.savefig('./images/CompressorMap3.png', dpi=300)
 
-    plt.plot(cmfr_plot1, pi_line1, label = 'n = 0.5')
-    plt.plot(cmfr_plot2, pi_line2, label = 'n = 0.6')
-    plt.plot(cmfr_plot3, pi_line3, label = 'n = 0.7')
-    plt.plot(cmfr_plot4, pi_line4, label = 'n = 0.8')
-    plt.plot(cmfr_plot5, pi_line5, label = 'n = 0.9')
-    plt.plot(cmfr_plot6, pi_line6, label = 'n = 1.0')
-    plt.plot(cmfr_plot7, pi_line7, label = 'n = 1.05')
-    plt.plot(cmfr_plot8, pi_line8, label = 'n = 1.1')
+    # plt.plot(cmfr_plot1, pi_line1, label = 'n = 0.5')
+    # plt.plot(cmfr_plot2, pi_line2, label = 'n = 0.6')
+    # plt.plot(cmfr_plot3, pi_line3, label = 'n = 0.7')
+    # plt.plot(cmfr_plot4, pi_line4, label = 'n = 0.8')
+    # plt.plot(cmfr_plot5, pi_line5, label = 'n = 0.9')
+    # plt.plot(cmfr_plot6, pi_line6, label = 'n = 1.0')
+    # plt.plot(cmfr_plot7, pi_line7, label = 'n = 1.05')
+    # plt.plot(cmfr_plot8, pi_line8, label = 'n = 1.1')
+    #
+    # # plt.plot(surge_plot, pi_star_surge, label='Surge Line')
+    # plt.xlabel('corrected mass flow rate')
+    # plt.ylabel('$\pi^{*}$')
+    # plt.title('Compressor Map $\pi^{*}$ vs corrected mass flow rate')
+    # plt.legend()
+    # plt.show()
+    #
+    #
+    # plt.plot(cmfr_plot1, eta_line1, label = 'n = 0.5')
+    # plt.plot(cmfr_plot2, eta_line2, label = 'n = 0.6')
+    # plt.plot(cmfr_plot3, eta_line3, label = 'n = 0.7')
+    # plt.plot(cmfr_plot4, eta_line4, label = 'n = 0.8')
+    # plt.plot(cmfr_plot5, eta_line5, label = 'n = 0.9')
+    # plt.plot(cmfr_plot6, eta_line6, label = 'n = 1.0')
+    # plt.plot(cmfr_plot7, eta_line7, label = 'n = 1.05')
+    # plt.plot(cmfr_plot8, eta_line8, label = 'n = 1.1')
+    #
+    # plt.xlabel('corrected mass flow rate')
+    # plt.ylabel('$\eta$')
+    # plt.title('Compressor Map $\eta$ vs corrected mass flow rate')
+    # plt.legend()
+    # plt.show()
 
-    # plt.plot(surge_plot, pi_star_surge, label='Surge Line')
-    plt.xlabel('corrected mass flow rate')
+    OL_df = pd.read_csv('../task6/OL.csv')
+    OL_pi_plot = [5.4629853807586, OL_df['pi_c'][0], OL_df['pi_c'][1], OL_df['pi_c'][2]]
+    OL_m_plot = [0.63*m_ref, OL_df['m_bar'][0]*m_ref, (OL_df['m_bar'][1])*m_ref, m_ref*(OL_df['m_bar'][2]+0.205)]
+
+    # plt.plot(OL_m_plot, OL_pi_plot, label = 'OL')
+    # plt.plot(cmfr_plot1, pi_line1, label = 'n = 0.5')
+    # plt.plot(cmfr_plot2, pi_line2, label = 'n = 0.6')
+    # plt.plot(cmfr_plot3, pi_line3, label = 'n = 0.7')
+    # plt.plot(cmfr_plot4, pi_line4, label = 'n = 0.8')
+    # plt.plot(cmfr_plot5, pi_line5, label = 'n = 0.9')
+    # plt.plot(cmfr_plot6, pi_line6, label = 'n = 1.0')
+    # plt.plot(cmfr_plot7, pi_line7, label = 'n = 1.05')
+    # plt.plot(cmfr_plot8, pi_line8, label = 'n = 1.1')
+    # plt.plot(OL_m_plot, OL_pi_plot, label='OL')
+    # plt.xlabel('corrected mass flow rate')
+    # plt.ylabel('$\pi^{*}$')
+    # plt.title('Compressor Map $\pi^{*}$ vs corrected mass flow rate')
+    # plt.legend()
+    # plt.show()
+
+    plt.plot(plot_real_fun1, pi_line1, label = 'n = 0.5')
+    plt.plot(plot_real_fun2, pi_line2, label = 'n = 0.6')
+    plt.plot(plot_real_fun3, pi_line3, label = 'n = 0.7')
+    plt.plot(plot_real_fun4, pi_line4, label = 'n = 0.8')
+    plt.plot(plot_real_fun5, pi_line5, label = 'n = 0.9')
+    plt.plot(plot_real_fun6, pi_line6, label = 'n = 1.0')
+    plt.plot(plot_real_fun7, pi_line7, label = 'n = 1.05')
+    plt.plot(plot_real_fun8, pi_line8, label = 'n = 1.1')
+
+    plt.plot(surge_plot, pi_star_surge, label='Surge Line')
+    plt.plot(OL_m_plot, OL_pi_plot, label='OL')
+    plt.xlabel('$\dot{m}$  $\dfrac{kg}{s}$')
     plt.ylabel('$\pi^{*}$')
-    plt.title('Compressor Map $\pi^{*}$ vs corrected mass flow rate')
     plt.legend()
+    plt.title('Compressor Map $\pi^{*}$ vs mass flow rate')
     plt.show()
 
-
-    plt.plot(cmfr_plot1, eta_line1, label = 'n = 0.5')
-    plt.plot(cmfr_plot2, eta_line2, label = 'n = 0.6')
-    plt.plot(cmfr_plot3, eta_line3, label = 'n = 0.7')
-    plt.plot(cmfr_plot4, eta_line4, label = 'n = 0.8')
-    plt.plot(cmfr_plot5, eta_line5, label = 'n = 0.9')
-    plt.plot(cmfr_plot6, eta_line6, label = 'n = 1.0')
-    plt.plot(cmfr_plot7, eta_line7, label = 'n = 1.05')
-    plt.plot(cmfr_plot8, eta_line8, label = 'n = 1.1')
-
-    plt.xlabel('corrected mass flow rate')
-    plt.ylabel('$\eta$')
-    plt.title('Compressor Map $\eta$ vs corrected mass flow rate')
-    plt.legend()
-    plt.show()
 
 
 

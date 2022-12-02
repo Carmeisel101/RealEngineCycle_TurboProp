@@ -90,7 +90,7 @@ User's are to choose a $\pi_{c}^{ * }$ that is less than the critical pressure r
 
 <div align="center">
 
-$$N = 0.99 N_{cr}$$
+$$N < N_{cr}$$
 
 </div>
 

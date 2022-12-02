@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  29 NOV 2022 02:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  2 DEC 2022 03:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -101,57 +101,184 @@ Package babel Info: You haven't specified a language. I'll use 'nil'
  (/usr/local/texlive/2022basic/texmf-dist/tex/generic/babel/nil.ldf
 Language: nil 2022/10/23 3.82 Nil language
 \l@nil=\language24
-)) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+)) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/local/texlive/2022basic/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/local/texlive/2022basic/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/local/texlive/2022basic/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count273
+\Gm@cntv=\count274
+\c@Gm@tempcnt=\count275
+\Gm@bindingoffset=\dimen153
+\Gm@wd@mp=\dimen154
+\Gm@odd@mp=\dimen155
+\Gm@even@mp=\dimen156
+\Gm@layoutwidth=\dimen157
+\Gm@layoutheight=\dimen158
+\Gm@layouthoffset=\dimen159
+\Gm@layoutvoffset=\dimen160
+\Gm@dimlist=\toks22
+) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count273
+\l__color_backend_stack_int=\count276
 \l__pdf_internal_box=\box53
 ) (./task6report.aux)
 \openout1 = `task6report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
- [1
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+ (/usr/local/texlive/2022basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count277
+\scratchdimen=\dimen161
+\scratchbox=\box54
+\nofMPsegments=\count278
+\nofMParguments=\count279
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count280
+\MPscratchDim=\dimen162
+\MPnumerator=\count281
+\makeMPintoPDFobject=\count282
+\everyMPtoPDFconversion=\toks24
+) (/usr/local/texlive/2022basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2022basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+[1
 
 {/usr/local/texlive/2022basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./task6report.toc)
 \tf@toc=\write3
 \openout3 = `task6report.toc'.
 
+ [1] [2] [3] [4]
+<../images//CompressorMap.png, id=34, 1022.82124pt x 705.13437pt>
+File: ../images//CompressorMap.png Graphic file (type png)
+<use ../images//CompressorMap.png>
+Package pdftex.def Info: ../images//CompressorMap.png  used on input line 412.
+(pdftex.def)             Requested size: 469.75502pt x 323.84929pt.
 
-Overfull \hbox (5.81415pt too wide) in paragraph at lines 26--26
-[]\T1/cmr/bx/n/14.4 Methodology for Computing the Operating Line 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5] [6 <../images//CompressorMap.png>]
+<../images//fig_N.png, id=44, 729.2043pt x 437.2335pt>
+File: ../images//fig_N.png Graphic file (type png)
+<use ../images//fig_N.png>
+Package pdftex.def Info: ../images//fig_N.png  used on input line 564.
+(pdftex.def)             Requested size: 469.75502pt x 281.66985pt.
+ [7 <../images//fig_N.png>]
+Overfull \hbox (7.46812pt too wide) in paragraph at lines 652--669
+ [] 
  []
 
-[1] [2]
-Overfull \hbox (16.41922pt too wide) in paragraph at lines 170--171
-[]$\OML/cmm/m/it/10 h[]$ \T1/cmr/m/n/10 - enthalpy of the combustion products for stoichiometric combustion 
+[8]
+Overfull \hbox (17.46568pt too wide) in paragraph at lines 739--756
+ [] 
  []
 
-[3] [4] [5] (./task6report.aux) ) 
+[9]
+Overfull \hbox (7.46812pt too wide) in paragraph at lines 767--784
+ [] 
+ []
+
+<../images//FHV.png, id=55, 632.3625pt x 382.3083pt>
+File: ../images//FHV.png Graphic file (type png)
+<use ../images//FHV.png>
+Package pdftex.def Info: ../images//FHV.png  used on input line 802.
+(pdftex.def)             Requested size: 469.75502pt x 284.00624pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<../images//TSFCHV.png, id=56, 769.6755pt x 373.6359pt>
+File: ../images//TSFCHV.png Graphic file (type png)
+<use ../images//TSFCHV.png>
+Package pdftex.def Info: ../images//TSFCHV.png  used on input line 809.
+(pdftex.def)             Requested size: 469.75502pt x 228.04298pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[10] [11 <../images//FHV.png> <../images//TSFCHV.png>] (./task6report.aux) ) 
 Here is how much of TeX's memory you used:
- 2362 strings out of 476422
- 37137 string characters out of 5810349
- 406007 words of memory out of 5000000
- 23685 multiletter control sequences out of 15000+600000
+ 3812 strings out of 476422
+ 60090 string characters out of 5810349
+ 439467 words of memory out of 5000000
+ 25085 multiletter control sequences out of 15000+600000
  478072 words of font info for 49 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 54i,10n,62p,407b,250s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,10n,62p,428b,276s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on task6report.pdf (6 pages, 161640 bytes).
+Output written on task6report.pdf (12 pages, 457550 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 310 PDF objects out of 1000 (max. 8388607)
+ 83 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
