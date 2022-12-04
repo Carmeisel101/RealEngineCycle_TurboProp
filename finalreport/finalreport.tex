@@ -1,0 +1,750 @@
+\documentclass[titlepage]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{babel}
+\usepackage{graphicx}
+
+\graphicspath{{./images/}}
+
+% widen margins
+\usepackage[margin=1in]{geometry}
+
+\author{
+    Meisel, Carlos \\
+  \and
+  Juarez, Albert\\
+  \and
+    Quintero, Osvaldo\\
+}
+\title{Performance Analysis of the PT6A-114A Engine}
+\begin{document}
+  \maketitle
+
+  \tableofcontents
+
+    \section{Engine Introduction}
+
+    As per the Pratt and Whitney website, the PT6A-114 is a turboprop engine that is used in a variety of applications. 
+    The PT6A class is the most popular engine in the world for its class and one of Pratt and Whitney's greatest success stories.
+    The PT6A is used in a variety of applications, specifically for this project we will be looking at the PT6A-114A engine; which is 
+    primarily used by the Cessna 208/208B Caravan I. 
+
+    \section{Full Nominal Engine Cycle - Task 1}
+
+    As stated earlier, the PT6A-114A engine is a Turboprop engine.
+    A turboprop engine creates power from a shaft. Thrust is then produced from a combination of the propeller as well as the exhaust gas. The thrust produced from the propeller is far above the thrust provided by the exhaust gas. Given shaft horsepower, the efficiency of the compressor, and the inlet temperature of the turbine we find the specific thrust of the engine.
+
+    Below is a list of given engine parameters:
+
+    \begin{equation}
+        \begin{aligned}
+            \text{Shaft Horsepower, $SHP$} &= \text{600 hp} \\
+            \text{Compressor Efficiency, $\eta_{comp}$} &= \text{0.90} \\
+            \text{Turbine Inlet Temperature, $TIT$} &= \text{1410 K} \\
+            \text{Compressor Ratio, $\pi_{c}$} &= \text{9.2} \\
+            \text{Turbine Efficiency, $\eta_{turb}$} &= \text{0.94} \\
+            \text{Combustor Efficiency, $\eta_{comb}$} &= \text{0.90} \\
+            \text{Free Turbine Efficiency, $\eta_{PT}$} &= \text{0.94} \\
+            \text{Nozzle Efficiency, $\phi_{nozzle}$} &= \text{0.98} \\
+            \text{Propeller Efficiency, $\eta_{prop}$} &= \text{0.8} \\
+            \text{Diffuser Efficiency, $\eta_{d}$} &= \text{0.99} \\
+        \end{aligned}
+    \end{equation}
+
+    \subsection{Stage a}
+
+    We begin at static conditions, specifically here we are calculating the static conditions at take-off. Since we are at take-off conditions, one can assume sea level atmospheric conditions.
+
+    \begin{equation}
+        \begin{aligned}
+            \text{Static Pressure, $p_{a}$} &= 101.325 \text{ kPa} \\
+            \text{Static Temperature, $T_{a}$} &= 288.16 \text{ K} \\
+        \end{aligned}
+    \end{equation}
+
+    By knowing the Temperature $T_{a}$ we are able to calculate enthalpy from the air gas tables:
+
+    \begin{equation}
+        h_{a}(T_{a})_{Tables} = 288.299988 \frac{kJ}{kg}
+    \end{equation}
+
+    And for entropy:
+
+    \begin{equation}
+        s_{a_{p=1 bar}}(T_{a})_{Tables} = 6.6570201 \frac{kJ}{kg K}
+    \end{equation}
+
+    After reading from the tables for entropy, we will need to normalize to the static pressure of $p_{a}$.
+
+    \begin{equation}
+        s_{a} = s_{a_{p=1 bar}}(T_{a}) - R \ln \left( \frac{p_{a}}{1 \text{ bar}} \right)
+    \end{equation}
+
+    \subsection{Stage 0a}
+    In this stage we going to assume that stage 0a is equivalent to stage a. 
+
+    \begin{equation}
+        \begin{aligned}
+            \text{$p_{0a}$} &= 101.325 \text{ kPa} \\
+            \text{$T_{0a}$} &= 288.16 \text{ K} \\
+            \text{$h_{0a}$} &= 288.299988 \frac{kJ}{kg} \\
+            \text{$s_{0a}$} &= 6.6570201 \frac{kJ}{kg K} \\
+        \end{aligned}
+    \end{equation}
+
+    \subsection{Stage 01}
+
+    Here in this stage, we take into account the Diffuser. 
+
+    \begin{equation} 
+        p_{01} = p_{0a} \eta_{d}
+    \end{equation}
+
+    \begin{equation}
+        T_{01} = T_{0a} 
+    \end{equation}
+
+    \begin{equation}
+        h_{01}(T_{01})_{Tables} = 288.299988 \frac{kJ}{kg}
+    \end{equation}
+
+    \begin{equation}
+        s_{01_{p= 1 bar}}(T_{01})_{Tables} = 6.6570201 \frac{kJ}{kg K}
+    \end{equation}
+
+    \begin{equation}
+        s_{01} = s_{01_{p=1 bar}}(T_{01}) - R \ln \left( \frac{p_{01}}{1 \text{ bar}} \right)
+    \end{equation}
+
+    \subsection{Stage 02i}
+
+    Here we are calculating the isentropic conditions of the compressor, stage 02i. At this point, we say that:
+
+    \begin{equation}
+        s_{02i} = s_{01}
+    \end{equation}
+
+    Calculating the pressure, we use the pressure ratio of the compressor:
+
+    \begin{equation}
+        p_{02i} = p_{01} \pi_{c}
+    \end{equation}
+
+    Recall, we need to normalize the entropy to 1 bar pressure to be used for the tables:
+
+    \begin{equation}
+        s_{02i_{p=1 bar}} =  s_{02i}+ R \ln \left( \frac{p_{02i}}{1 \text{ bar}} \right)
+    \end{equation}
+
+    We can use the entropy found, to use the H method, to find enthalpy:
+
+    \begin{equation}
+        h_{02i}(s_{02i_{p=1 bar}})_{Tables} =  543.819 \frac{kJ}{kg}
+    \end{equation}
+
+    We can now calculate the ideal work of the compressor:
+
+    \begin{equation}
+        w_{02i} = h_{02i} - h_{01}
+    \end{equation}
+
+
+    \subsection{Stage 02}
+
+    The pressure at Stage 02 is the same as the pressure at Stage 02i. This allows for us to move forward through the engine cycle.
+
+    \begin{equation}
+        p_{02} = p_{02i}
+    \end{equation}
+
+    \begin{center}
+        \begin{tabular}{|c|}
+            \hline
+            $p_{02}$ \\
+            \hline
+            9.228681 \text{ bar} \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    Using the ideal work of the compressor, we can calculate the actual work of the compressor:
+
+    \begin{equation}
+        w_{02} = \frac{ w_{02i}}{ \eta_{comp}}
+    \end{equation}
+
+    \begin{center}
+        \begin{tabular}{|c|}
+            \hline
+            $w_{02}$ \\
+            \hline
+            283.91025 \text{ kJ/kg} \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    This will allow for us to easily calculate the enthalpy.
+
+    \begin{equation}
+        h_{02} = h_{01} + w_{02}
+    \end{equation}
+
+    This enthalpy can now be used for the S method, to find entropy:
+
+    \begin{equation}
+        s_{02_{p=1 bar}}(h_{02})_{Tables} =  6.7113694 \frac{kJ}{kg K}
+    \end{equation}
+
+    Finally we normalize the entropy:
+
+    \begin{equation}
+        s_{02} = s_{02_{p=1 bar}} - R \ln \left( \frac{p_{02}}{1 \text{ bar}} \right)
+    \end{equation}
+
+    \subsection{Stage 03}
+
+    We were given a pressure drop in the combustor of $3 \%$. Resulting in the following pressure:
+
+    \begin{equation}
+        p_{03} = p_{02} \left( 1 - \frac{3}{100} \right)
+    \end{equation}
+
+    \begin{center}
+        \begin{tabular}{|c|}
+            \hline
+            $p_{03}$ \\
+            \hline
+            8.95182057 \text{ bar} \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    We are also given a $T_{03}$ of 1410 K.
+
+    \begin{equation}
+        h_{03_{air}}(T_{03})_{Air Tables} = h_{03_{air}}
+    \end{equation} 
+
+    \begin{equation} 
+        h_{03_{\lambda=1}}(T_{03})_{Stoich  Tables} = h_{03_{\lambda=1}}
+    \end{equation}
+
+    We then use the two above equations to calculate excess air:
+
+    \begin{equation}
+        \lambda = \frac{h_{03_{\lambda=1}} (1+minL) - \eta_{comb}LHV -h_{03_{air}}minL}{minL (h_{02}-h_{03_{air}})}
+    \end{equation}
+
+    Recall:
+
+    \begin{equation}
+        \begin{aligned}
+            \text{$LHV$} &=  43.5 \frac{kJ}{kg} \\
+            \text{$minL$} &=  14.66 \\
+        \end{aligned}
+    \end{equation}
+
+    \begin{center}
+        \begin{tabular}{|c|}
+            \hline
+            $\lambda$ \\
+            \hline
+            2.8537672 \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    We can now calculate our weighting functions:
+
+    \begin{equation}
+        r = \frac{1 + minL}{1 + \lambda minL}
+    \end{equation}
+
+    \begin{equation}
+        q = \frac{(\lambda -1)minL}{1+\lambda minL}
+    \end{equation}
+
+    With the weighting functions, we can now calculate the enthalpy of the mixture:
+
+    \begin{equation}
+        h_{03} = r h_{03_{\lambda=1}} + q h_{03_{air}}
+    \end{equation}
+
+    Similar to how we calculated the enthalpies from the table, we will now calculate the entropy of the mixture:
+
+    \begin{equation}
+        s_{03_{air, p= 1 bar}}(T_{03})_{Air Tables} = s_{03_{air, p=1 bar}}
+    \end{equation} 
+
+    \begin{equation}
+        s_{03_{\lambda=1, p= 1 bar}}(T_{03})_{Stoich  Tables} = s_{03_{\lambda=1, p = 1 bar}}
+    \end{equation}
+
+    \begin{equation}
+        s_{03_{p=1 \lambda}} = r s_{03_{\lambda=1, p=1 bar}} + q s_{03_{air, p=1 bar}}
+    \end{equation}
+
+    \subsection{Stage 04i}
+    The entropy of stage 04i is the same as the entropy of stage 03. This allows for us to move forward through the engine cycle.
+
+    \begin{equation}
+        s_{04i} = s_{03}
+    \end{equation}
+
+    We make use of:
+
+    \begin{equation}
+        \mathcal{P}_{C} = \mathcal{P}_{T} 
+    \end{equation}
+
+    Which can be simplified to:
+
+    \begin{equation}
+        \dot{m}_{g}w_{T} = \dot{m}_{a}w_{C}
+    \end{equation}
+
+    \begin{equation}
+        w_{T}= w_{C} \left( \frac{1}{1+ \frac{1}{\lambda minL}}\right)
+    \end{equation}
+
+    \begin{center}
+        \begin{tabular}{|c|}
+            \hline
+            $w_{T}$ \\
+            \hline
+            277.2824 \text{ kJ/kg} \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+
+    This will allow for us to calculate the ideal work of the turbine:
+
+    \begin{equation}
+        w_{T_{i}} = \frac{w_{T}}{\eta_{T}}
+    \end{equation}
+
+    We will use the ideal work of the turbine to calculate the enthalpy of stage 04i:
+
+    \begin{equation}
+        h_{04i} = h_{03} - w_{T_{i}}
+    \end{equation}
+
+    From here we will use the enthalpy $h_{04i}$ to calculate the Temperature of stage 04i. To do so, one must iterate, such that the following
+    equation is satsified:
+
+    \begin{equation}
+        f(T) = h_{04i} - r h_{04i_{\lambda=1}}(T) - q h_{04i_{air}}(T) = 0
+    \end{equation}
+
+    Our group developed an iteration algorithm \verb|Iterate_temp_h| to solve for the temperature. The algorithm is as follows:
+
+    \begin{center}
+        $i = 1$ \\
+        $h_{air} = h_{input}$ \\
+        $T_{air_{i=1}}(h_{input})_{Air Tables} = T_{a_{i=1}}$ \\
+        $h_{\lambda= 1_{i=1}}(T_{a_{i=1}})_{Stoich Tables} = h_{\lambda=1_{i=1}}$ \\
+
+        \vspace*{0.5cm}
+
+        $i=2$ \\
+        $h_{\lambda=1_{i=2}} = h_{input}$ \\
+        $T_{\lambda=1_{i=2}}(h_{input})_{Stoich Tables} = T_{\lambda=1_{i=2}}$ \\
+        $h_{air_{i=2}}(T_{\lambda=1_{i=2}})_{Air Tables} = h_{air_{i=2}}$ \\
+
+        \vspace*{0.5cm}
+
+        $f(T)_{1} = h_{input} - r h_{\lambda=1_{i=1}} - q h_{air_{i=1}}$ \\
+        $f(T)_{2} = h_{input} - r h_{\lambda=1_{i=2}} - q h_{air_{i=2}}$ \\
+
+        \vspace*{0.5cm}
+
+        $T = \frac{T_{air_{i=1}} * f(T)_{2} - T_{\lambda=1_{i=2}} * f(T)_{1}}{f(T)_{2} - f(T)_{1}}$ \\
+    \end{center}
+
+    After the \verb|Iterate_temp_h(h04i, r, q)| algorithm is ran, we now have our temperature $T_{04i}$. We can now begin out 
+    entropy calculation.
+    
+    \begin{equation}
+        s_{04i_{air, p= 1 bar}}(T_{04i})_{Air Tables} = s_{04i_{air, p=1 bar}}
+    \end{equation} 
+
+    \begin{equation}
+        s_{04i_{\lambda=1, p= 1 bar}}(T_{04i})_{Stoich  Tables} = s_{04i_{\lambda=1, p = 1 bar}}
+    \end{equation}
+
+    \begin{equation}
+        s_{04i_{p=1 \lambda}} = r s_{04i_{\lambda=1, p=1 bar}} + q s_{04i_{air, p=1 bar}}
+    \end{equation}
+
+    \begin{equation}
+        s_{04i_{\lambda}} = s_{04i_{p=1 \lambda}} - R \ln \left( \frac{p_{04i}}{1 bar} \right)
+    \end{equation}
+
+    We can manipulate the above equation for pressure:
+
+    \begin{equation}
+        p_{04i} = e^{- \frac{s_{04i_{\lambda}} - s_{04i_{p=1 \lambda}}}{R}}
+    \end{equation}
+
+    \subsection{Stage 04}
+
+    Moving from stage 04i to stage 04, we can assume no pressure change meaning:
+
+    \begin{equation}
+        p_{04} = p_{04i}
+    \end{equation}
+
+    We can calculate the enthalpy of stage 04 using the work of the turbine:
+
+    \begin{equation}
+        h_{04} = h_{03} - w_{T}
+    \end{equation}
+
+    From here we are to calculate the temperature by the iterations algorithm again:
+
+    \begin{center}
+        \verb|Iterate_temp_h(h04, r, q)| = $T_{04}$
+    \end{center}
+
+    We can use the temperature to calculate the entropy of stage 04:
+
+    \begin{equation}
+        s_{04_{air, p= 1 bar}}(T_{04})_{Air Tables} = s_{04_{air, p=1 bar}}
+    \end{equation}
+
+    \begin{equation}
+        s_{04_{\lambda=1, p= 1 bar}}(T_{04})_{Stoich  Tables} = s_{04_{\lambda=1, p = 1 bar}}
+    \end{equation}
+
+    \begin{equation}
+        s_{04_{p=1 \lambda}} = r s_{04_{\lambda=1, p=1 bar}} + q s_{04_{air, p=1 bar}}
+    \end{equation}
+
+    Finally we can calculate the entropy of stage 04, by normalizing the pressure:
+
+    \begin{equation}
+        s_{04_{\lambda}} = s_{04_{p=1 \lambda}} - R \ln \left( \frac{p_{04}}{1 bar} \right)
+    \end{equation}
+
+    \subsection{Stage 04.5i}
+
+    One can assume that the transition from stage 04 to stage 04.5i is isentropic. This means that the entropy of stage 04.5i is equal to the entropy of stage 04:
+
+    \begin{equation}
+        s_{04.5i_{\lambda}} = s_{04_{\lambda}}
+    \end{equation}
+
+    The specific work of the of the free turbine is:
+
+    \begin{equation}
+        w_{PT} = \frac{SHP}{\dot{m}_{g}} = \frac{SHP}{\dot{m}_{a} (1 +f)}
+    \end{equation}
+
+    Which can be simplified as:
+
+    \begin{equation}
+        w_{PT} = \frac{SHP}{\dot{m}_{a} \left(1 + \frac{1}{\lambda minL}\right)}
+    \end{equation}
+
+    \begin{center}
+        \begin{tabular}{|c|}
+            \hline
+            $w_{PT}$ \\
+            \hline
+            262.83965 kJ/kg \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    Now we can calculate the ideal work of the free turbine, by making use of its efficiency:
+
+    \begin{equation}
+        w_{PT_{i}} = \frac{w_{PT}}{\eta_{PT}}
+    \end{equation}
+
+    The enthalpy of stage 04.5i is:
+
+    \begin{equation}
+        h_{04.5i} = h_{04} - w_{PT_{i}}
+    \end{equation}
+
+    We can now calculate the temperature of stage 04.5i by using the iterations algorithm:
+
+    \begin{center}
+        \verb|Iterate_temp_h(h04.5i, r, q)| = $T_{04.5i}$
+    \end{center}
+
+    We can now calculate the entropy of stage 04.5i:
+
+    \begin{equation}
+        s_{04.5i_{air, p= 1 bar}}(T_{04.5i})_{Air Tables} = s_{04.5i_{air, p=1 bar}}
+    \end{equation}
+
+    \begin{equation}
+        s_{04.5i_{\lambda=1, p= 1 bar}}(T_{04.5i})_{Stoich  Tables} = s_{04.5i_{\lambda=1, p = 1 bar}}
+    \end{equation}
+
+    \begin{equation}
+        s_{04.5i_{p=1 \lambda}} = r s_{04.5i_{\lambda=1, p=1 bar}} + q s_{04.5i_{air, p=1 bar}}
+    \end{equation}
+
+    We can use this to calculate pressure:
+
+    \begin{equation}
+        p_{04.5i} = e^{ - \frac{s_{04.5i_{\lambda}} - s_{04.5i_{p=1 \lambda}}}{R}}
+    \end{equation}
+
+    \begin{center}
+        \begin{tabular}{|c|}
+            \hline
+            $p_{04.5i}$ \\
+            \hline
+            1.6164346 bar \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \subsection{Stage 04.5}
+
+    The pressure at stage 04.5 is equal to the pressure at stage 04.5i:
+
+    \begin{equation}
+        p_{04.5} = p_{04.5i}
+    \end{equation}
+
+    The enthalpy of stage 04.5 is:
+
+    \begin{equation}
+        h_{04.5} = h_{04} - w_{PT}
+    \end{equation}
+
+    We will use the iterations algorithm to calculate the temperature of stage 04.5:
+
+    \begin{center}
+        \verb|Iterate_temp_h(h04.5, r, q)| = $T_{04.5}$
+    \end{center}
+
+    We can now calculate the entropy of stage 04.5:
+
+    \begin{equation}
+        s_{04.5_{air, p= 1 bar}}(T_{04.5})_{Air Tables} = s_{04.5_{air, p=1 bar}}
+    \end{equation}
+
+    \begin{equation}
+        s_{04.5_{\lambda=1, p= 1 bar}}(T_{04.5})_{Stoich  Tables} = s_{04.5_{\lambda=1, p = 1 bar}}
+    \end{equation}
+
+    \begin{equation}
+        s_{04.5_{p=1 \lambda}} = r s_{04.5_{\lambda=1, p=1 bar}} + q s_{04.5_{air, p=1 bar}}
+    \end{equation}
+
+    Normalize entropy by pressure:
+
+    \begin{equation}
+        s_{04.5_{\lambda}} = s_{04.5_{p=1 \lambda}} - R \ln \left( \frac{p_{04.5}}{1 bar} \right)
+    \end{equation}
+
+
+    \subsection{Stage 5i}
+    The process from Stage 04.5 to Stage 5i is isentropic. This means that the entropy of stage 5i is equal to the entropy of stage 04.5:
+
+    \begin{equation}
+        s_{05i_{\lambda}} = s_{04.5_{\lambda}}
+    \end{equation}
+
+    And the pressure of stage 5i goes to atmospheric pressure:
+
+    \begin{equation}
+        p_{05i} = p_{a} = p_{01}
+    \end{equation}
+
+    Having determined the entropy of stage 5i and the pressure of stage 5i, we must now determine the temperature of stage 5i. We will use the iterations algorithm to calculate the temperature of stage 5i:
+    The iterative process \verb|Iterate_temp_ps| is similar to \verb|Iterate_temp_h| algorithm however it solves:
+
+    \begin{equation}
+        f(T) = s_{5_{i}} - q s_{5_{i_{air}}}(T) - r s_{5_{i_{\lambda=1}}}(T) = 0
+    \end{equation}
+
+    Where;
+
+    \begin{equation}
+        s_{5_{i_{air}}} = s_{5_{i_{air, p=1 bar}}} - R \ln \left( \frac{p_{5_{i}}}{1 bar} \right)
+    \end{equation}
+
+    \begin{equation}
+        s_{5_{i_{\lambda=1}}} = s_{5_{i_{\lambda=1, p=1 bar}}} - R \ln \left( \frac{p_{5_{i}}}{1 bar} \right)
+    \end{equation}
+
+    Ultimately, the algorithm will be solving:
+    \begin{center}
+        
+        $s_{input}$ \\
+        $s_{input_{p=1 bar}} = s_{input} + R \ln \left( \frac{p_{input}}{1 bar} \right)$ \\
+        $s_{algorithm} = s_{input_{p=1 bar}}$ \\
+
+        \vspace*{0.5cm}
+        $i = 1$ \\
+        $s_{air_{i=1}} = s_{algorithm}$ \\
+        $T_{air_{i=1}}(s_{algorithm})_{Air Tables} = T_{air_{i=1}}$ \\
+        $s_{\lambda=1_{i=1}}(T_{air_{i=1}}) = s_{\lambda =1_{i=1}}$ \\
+
+        \vspace*{0.5cm}
+        $i = 2$ \\
+        $s_{\lambda =1_{i=2}} = s_{algorithm}$ \\
+        $T_{\lambda =1_{i=2}}(s_{algorithm})_{Stoich Tables} = T_{\lambda =1_{i=2}}$ \\
+        $s_{air_{i=2}}(T_{\lambda =1_{i=2}}) = s_{air_{i=2}}$ \\
+
+        \vspace*{0.5cm}
+
+        $f(T)_{1} = s_{algorithm} - r s_{\lambda=1_{i=1}} - q s_{air_{i=1}}$ \\
+        $f(T)_{2} = s_{algorithm} - r s_{\lambda=1_{i=2}} - q s_{air_{i=2}}$ \\
+
+        \vspace*{0.5cm}
+
+        $T_{0} = \frac{T_{air_{i=1}} * f(T)_{2} - T_{\lambda=1_{i=2}} * f(T)_{1}}{f(T)_{2} - f(T)_{1}}$ \\
+
+        \vspace*{0.5cm}
+
+        $i= 3$ \\
+        $s_{air_{i=3}}(T_{0}) = s_{air_{i=3}}$ \\
+        $s_{\lambda=1_{i=3}}(T_{0}) = s_{\lambda=1_{i=3}}$ \\
+
+        \vspace*{0.5cm}
+
+        $f(T)_{3} = s_{algorithm} - r s_{\lambda=1_{i=3}} - q s_{air_{i=3}}$ \\
+
+        \vspace*{0.5cm}
+
+        $T = T_{0}  - \frac{f(T_{3})}{s_{air_{i=3}} - s_{\lambda=1_{i=3}}}$ \\ 
+    \end{center}
+
+    We can make use of the \verb|Iterate_temp_ps| algorithm to calculate the temperature of stage 5i:
+    \begin{center}
+        \verb|Iterate_temp_ps(s5i, r, q)| = $T_{5i}$
+    \end{center}
+
+    Once we have the temperature of stage 5i, we can calculate the enthalpy of stage 5i:
+
+    \begin{equation}
+        h_{5i} = q h_{5i_{air}}(T_{5i}) + r h_{5i_{\lambda=1}}(T_{5i})
+    \end{equation}
+
+    By making use of the exit enthalpies and assuming that the heat transfer is small compared to enthalpy variation, we can calculate the velocity of the fluid:
+
+    \begin{equation}
+        c_{5_{i}} = \sqrt{2(h_{04.5} - h_{5_{i}})}
+    \end{equation}
+
+    \subsection{Stage 5}
+
+    The process from Stage 5i to Stage 5 is isentropic. This means that the entropy of stage 5 is equal to the entropy of stage 5i. 
+    As a matter of fact, we assume that stage 5 is equal to stage 5i, in most properties:
+
+    \begin{center}
+        $T_{5} = T_{5i}$ \\
+        $p_{5} = p_{5i}$ \\
+        $h_{5} = h_{5i}$ \\
+        $s_{5} = s_{5i}$ \\
+    \end{center}
+
+    We can calculate the velocity of the fluid, by accounting for the nozzle efficiency:
+
+    \begin{equation}
+        c_{5} = c_{5_{i}} \phi_{nozzle}
+    \end{equation}
+
+    The Specific Thrust is calculated by:
+
+    \begin{equation}
+        F_{sp} = \dot{m}_{air} \left(1 + \frac{1}{\lambda minL}\right) c_{5}
+    \end{equation}
+
+    \begin{center}
+        \begin{tabular}{|c|}
+            \hline
+            $F_{sp}$ \\
+            \hline
+            785.96769 N \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+
+    The equivalent shaft power is calculated by:
+
+    \begin{equation}
+        \mathcal{P}_{es} = \eta_{prop} \mathcal{P}_{s} + \frac{F_{sp}}{11.1}
+    \end{equation}
+
+    Recall $\mathcal{P}_{s} = SHP$.
+
+    \vspace*{0.5cm}
+    
+    One can calculate mass flow rate of teh gases by:
+
+    \begin{equation}
+        \dot{m}_{g} = \dot{m}_{air} \left(\frac{1}{\lambda minL}\right) 
+    \end{equation}
+
+    The equivalent brake specific fuel consumption is calculated by:
+
+    \begin{equation}
+        EBSFC = \frac{\dot{m}_{g}}{\mathcal{P}_{es}}
+    \end{equation}
+
+    \begin{center}
+        \begin{tabular}{|c|}
+            \hline
+            $EBSFC$ \\
+            \hline
+            0.332946 \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \subsection{Cycle Results}
+
+    \begin{center}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            Stage & Pressure [bar] & Enthalpy [kJ/kg] & Entropy [kJ/kg-K]\\
+            \hline
+             a & 1.01325 & 288.299988 & 6.6570201 \\
+            \hline
+            0a & 1.01325 & 288.299988 & 6.6570201 \\
+            \hline
+            01 & 1.01325 & 288.299988 & 6.6570201 \\
+            \hline
+            02i & 9.228681 & 543.819214 & 6.6570201 \\
+            \hline
+            02 & 9.228681 & 572.210239 & 6.7113694 \\
+            \hline
+            03 & 8.9518206 & 1574.3477 & 7.8717827 \\
+            \hline
+            04i & 4.030023 & 1279.3664 & 7.8717827 \\
+            \hline
+            04 & 4.030023 & 1297.06528 & 7.886781 \\
+            \hline
+            045i & 1.616434698 & 1017.44862 & 7.886781 \\
+            \hline
+            045 & 1.616434698 & 1034.225618 & 7.904305 \\
+            \hline
+            5i & 1.0031175 & 920.29226 & 7.904305 \\
+            \hline
+            5 & 1.0031175 & 920.29226 & 7.904305 \\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    \begin{center}
+        $w_{c} = 283.910251 [\frac{kJ}{kg}]$ \\
+        $w_{T} = 277.28244 [\frac{kJ}{kg}]$ \\
+        $w_{PT} = 262.83966 [\frac{kJ}{kg}]$ \\
+        $\dot{m}_{air} = 1.64089 [\frac{kJ}{s}]$ \\
+        $F_{sp} = 785.96769 [N]$ \\
+        $EBSFC = 0.332946$ \\
+    \end{center}
+
+    \section{Axial Compressor Design}
+  \end{document}
