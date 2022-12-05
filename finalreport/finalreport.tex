@@ -22,6 +22,8 @@
 
   \tableofcontents
 
+    \section{Preface}
+
     \section{Engine Introduction}
 
     As per the Pratt and Whitney website, the PT6A-114 is a turboprop engine that is used in a variety of applications. 
@@ -31,7 +33,7 @@
 
     \section{Full Nominal Engine Cycle - Task 1}
 
-    As stated earlier, the PT6A-114A engine is a Turboprop engine.
+    As stated earlier, the PT6A-114 engine is a Turboprop engine.
     A turboprop engine creates power from a shaft. Thrust is then produced from a combination of the propeller as well as the exhaust gas. The thrust produced from the propeller is far above the thrust provided by the exhaust gas. Given shaft horsepower, the efficiency of the compressor, and the inlet temperature of the turbine we find the specific thrust of the engine.
 
     Below is a list of given engine parameters:
@@ -746,5 +748,303 @@
         $EBSFC = 0.332946$ \\
     \end{center}
 
-    \section{Axial Compressor Design}
+    \section{Axial Compressor Design - Task 2}
+
+    The engine analyzed was a PT6A-114 which is a turboprop and thus contains a mixed
+compressor. Using values calculated in the previous assignment in which the engine’s real cycle
+was calculated, here we are designing the axial component of the mixed compressor. Our design
+began with the process below in which the number of stages in the compressor was determined.
+Using the work in the compressor found from the previous assignment, this quantity is divided
+by two due to the fact that a mixed compressor contains both an axial and centrifugal component
+so it is efficient to divide the work of the compressor amongst these components evenly.
+
+
+We can calculate the work per stage by:
+
+\begin{equation}
+    w_{s_{1}} = 0.7 w_{stage}
+\end{equation}
+
+\begin{equation}
+    w_{s_{2}} = 0.85 w_{stage}
+\end{equation}
+
+\begin{equation}
+    w_{s_{n}} = 0.9 w_{stage}
+\end{equation}
+
+\begin{equation}
+    w_{actual} = \frac{w - w_{s_{1}} - w_{s_{2}} -w_{s_{n}}}{n - 3}
+\end{equation}
+
+Where $w_{stage}$ is the work per stage, $n$ is the number of stages. Also $w$ is:
+
+\begin{equation}
+    w = \frac{w_{c}}{2}
+\end{equation}
+
+Once the number of stages was
+determined, next came the preliminary calculations that were needed in order to perform the
+calculations of desired quantities from each of the stages.
+
+\begin{equation}
+    u_{1}^{m} = u_{1}^{t} \left(\frac{1+\bar{d}_{1}}{2}\right)
+\end{equation}
+
+Where $\bar{d}_{1} \in [0.5, 0.7]$ and $u_{1}^{t} \in [330, 350] \frac{m}{s}$  
+
+We can next find the flow coefficient by:
+
+\begin{equation}
+    \frac{c_{1_{a}}^{m}}{u_{1}^{m}} \in [0.3, 0.6]
+\end{equation}
+
+From here we can calculate $\lambda$ number: 
+
+\begin{equation}
+    \lambda_{1_{a}}^{m} = \frac{c_{1_{a}}^{m}}{\sqrt{2\left(\frac{\gamma-1}{\gamma+1}\right) h_{01}}}
+\end{equation}
+
+\begin{equation}
+    \lambda_{1}^{m} = \frac{\lambda_{1_{a}}^{m}}{sin(\tilde{\alpha}_{1}^{m})}
+\end{equation}
+
+
+Absolute velocity at the midpoint:
+
+\begin{equation}
+    c_{1}^{m} = \lambda_{1}^{m} \sqrt{2\left(\frac{\gamma-1}{\gamma+1}\right) h_{01}}
+\end{equation}
+
+The transport component of the flow velocity:
+
+\begin{equation}
+    c_{1_{u}}^{m} = \sqrt{(c_{1}^{m})^{2} - (c_{1_{a}}^{m})^{2}}
+\end{equation}
+
+The relative velocity in the $u$ direction:
+
+\begin{equation} 
+    w_{1_{u}} = u_{1}^{m} - c_{1_{u}}^{m}
+\end{equation}
+
+The relative flow velocity:
+
+\begin{equation}
+    w_{1}^{m} = \sqrt{(w_{1_{u}})^{2} + (c_{1_{u}})^{2}}
+\end{equation}
+
+Mass flow rate function, as a function of $\lambda$:
+
+\begin{equation}
+    q(\lambda_{1}^{m}) = \lambda_{1}^{m} \left[\frac{\gamma+1}{2}\left(1 - \frac{\gamma-1}{\gamma+1} (\lambda_{1}^{m})^{2}\right) \right]
+\end{equation}
+
+
+We can now the Area of the compressor inlet:
+
+\begin{equation}
+    A_{1} = \frac{\dot{m}\sqrt{T_{01}}}{p_{01}} \frac{1}{q(\lambda_{1}^{m}) sin(\tilde{\alpha}_{1}^{m}) \sqrt{\frac{\gamma}{R} \left(\frac{2}{\gamma+1} \right)^{\frac{\gamma+1}{\gamma-1}} }}
+\end{equation}
+
+We can calculate the Diameter of the Tip:
+
+\begin{equation}
+    D_{1}^{t} = \sqrt{\frac{4A_{1}}{\pi (1- \bar{d}_{1})^{2}}}
+\end{equation}
+
+Diameter of the Hub:
+
+\begin{equation}
+    D_{1}^{h} = \bar{d}_{1} D_{1}^{t}
+\end{equation}
+
+Diameter of the Midpoint:
+
+\begin{equation}
+    D_{1}^{m} = \frac{D_{1}^{t} + D_{1}^{h}}{2}
+\end{equation}
+
+The number of blades:
+
+\begin{equation}
+    n_{1} = \frac{60 u_{1}^{m}}{\pi D_{1}^{m}}
+\end{equation}
+
+\subsection{Stage 1}
+
+Calculating the axial velcoity for the first stage:
+
+\begin{equation}
+    c_{1_{a}}^{(1)} = c_{1}^{(1)} sin(\tilde{\alpha}_{1}^{(1)})
+\end{equation}
+
+\begin{equation}
+    c_{1_{u}}^{(1)} = c_{1}^{(1)} cos(\tilde{\alpha}_{1}^{(1)})
+\end{equation}
+
+The transport velocity:
+
+\begin{equation}
+    U^{(1)} = \frac{2 \pi D^{m(1)}}{2} \frac{n}{60} 
+\end{equation}
+
+\begin{equation}
+    \alpha^{(1)} = 90 - \left(tan^{-1}\left(\frac{c_{1_[u]}^{(1)}}{c_{1_{a}}^{(1)}}\right) \right)
+\end{equation}
+
+Relative velocity for the 1st stage in teh $u$ direction:
+
+\begin{equation}
+    W_{1_{u}^{(1)}} = U^{(1)} - c_{1_{u}^{(1)}}
+\end{equation}
+
+Change of $C_{u}$ over the stage:
+
+\begin{equation}
+    \Delta^{(stage)} C_{u}^{(1)} = \left[ \frac{\left( W_{1_{u}}^{(1)} - \frac{W_{s}^{(1)}}{2U^{(1)}}\right) \frac{w_{s}^{(1)}}{U^{(1)}}}{R'^{(1)}}  - c_{1_{a}}^{(1)} \Delta^{(stage)} C_{a}^{(1)} - w_{s}^{(1)} \right] \frac{1}{c_{1_{u}^{(1)}}}
+\end{equation}
+
+Where in $\Delta^{(stage)} C_{u}^{(1)}$ the values of $R'^{(1)}$ and $\Delta^{(stage)} C_{a}^{(1)}$ were imposed which is also the case for the subsequent 
+stages of the axial compressor. For the following stages, a similar process as shown above was computed in order to determine the desired quantities of 
+ $R'$, $w_{s}$, $\Delta^{(stage)} C_{a}$, $\Delta^{(stage)} C_{u}$, and $\alpha^{(1)}$. For context, a generalized derivation of quantities is shown below in
+ which $(n)$ relates to the stage
+
+ \subsection{Stage n}
+
+ \begin{equation}
+    c_{1_{a}}^{(n)} = c_{1_{a}}^{(n-1)} - \Delta^{(stage)} C_{a}^{(n-1)} 
+ \end{equation}
+
+ \begin{equation}
+    c_{1_{u}}^{(n)} = c_{1_{u}}^{(n-1)} - \Delta^{(stage)} C_{u}^{(n-1)}
+ \end{equation}
+
+ \begin{equation}
+    c_{1}^{(n)} = \sqrt{(c_{1_{a}}^{(n)})^{2} + (c_{1_{u}}^{(n)})^{2}}
+ \end{equation}
+
+\begin{equation}
+    \alpha_{1}^{(n)} = 90 - \left(tan^{-1}\left(\frac{c_{1_{u}}^{(n)}}{c_{1_{a}}^{(n)}}\right) \right)
+\end{equation}
+
+The enthalpy at each stage:
+
+\begin{equation}
+    h_{01}^{(n)} = h_{1}^{(n-1)} + w_{s}
+\end{equation}
+
+The pressure ratio at each stage:
+
+\begin{equation}
+    \pi_{c}^{(n-1)} = \left(1 + \frac{\eta_{1_{m}}w_{s}}{h_{01}^{(n-1)}} \right)^{\frac{\gamma}{\gamma-1}}
+\end{equation}
+
+The pressure at each stage:
+
+\begin{equation}
+    p_{01}^{(n)} = p_{01}^{(n-1)} \pi_{c}^{(n-1)}
+\end{equation}
+
+The critical speed of sound at each stage:
+
+\begin{equation}
+    a_{cr}^{(n)} = \sqrt{2 h_{01}^{n}\left(\frac{\gamma-1}{\gamma+1}\right)}
+\end{equation}
+
+The $\lambda$ number at each stage:
+
+\begin{equation}
+    \lambda_{1}^{(n)} = \frac{c_{1}^{(n)}}{a_{cr}^{(n)}}
+\end{equation}
+
+The mass flow rate as a function of $\lambda$ at each stage:
+
+\begin{equation}
+    q(\lambda_{1}^{(n)}) = \lambda_{1}^{(n)} \left[ \frac{\gamma+1}{2} \left(1 - \frac{\gamma-1 }{\gamma+1} (\lambda_{1}^{(n)})^{2} \right)\right]^{\frac{1}{\gamma-1}}                               
+\end{equation}
+
+
+The Area at each stage:
+
+\begin{equation}
+    A_{1}^{n} = \frac{\dot{m} \sqrt{T_{01}^{(n)}}}{p_{01}^{(n)} \frac{1}{q(\lambda_{1}^{(n)}) sin(\alpha_{1}^{(n)})} \sqrt{\left(\frac{\gamma}{R} \frac{2}{\gamma+1}\right)^{\frac{\gamma+1}{\gamma-1}}}}                   
+\end{equation}
+
+
+The Diameter at each stage:
+
+\begin{equation}
+    D_{(n)}^{t} = D_{(n-1)}^{t} 
+\end{equation}
+
+\begin{equation}
+    D^{h(n)} = \sqrt{ \left(D_{(n)}^{t} \right)^{2} - \left( \frac{4 A_{1}^{(n)}}{\pi} \right)}
+\end{equation}
+
+\begin{equation}
+    D^{m(n)} = 0.5 (D^{h(n)} + D^{h(n)})    
+\end{equation}
+
+The transport velocity at each stage:
+
+\begin{equation}
+    U^{(n)} = \frac{2 \pi D^{m(n)}}{2} \frac{n}{60}
+\end{equation}
+
+The relative velocity in the $u$ direction at each stage:
+
+\begin{equation}
+    W_{1_{u}^{(n)}} = U^{(n)} - c_{1_{u}^{(n)}}
+\end{equation}
+
+The change in $C_{u}$ at each stage:
+
+\begin{equation}
+    \Delta^{(stage)} C_{u}^{(n)} = \left[ \frac{\left( W_{1_{u}}^{(n)} - \frac{W_{s}^{(n)}}{2U^{(n)}}\right) \frac{w_{s}^{(n)}}{U^{(n)}}}{R'^{(n)}}  - c_{1_{a}}^{(n)} \Delta^{(stage)} C_{a}^{(n)} - w_{s}^{(n)} \right] \frac{1}{c_{1_{u}^{(n)}}}
+\end{equation}
+
+\subsection{Axial Design Results}
+
+\begin{center} 
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+        \hline
+        Stage & $c_{a}$ & $c_{u}$ & $p$ & $\alpha$ & $R'$ & $U$ \\
+        \hline
+        1 & 157.5 & 27.771499 & 1.01325 & 1.39626340 & 0.68584 & 262.499 \\
+        \hline
+        2 & 156.0 & 24.74814 & 1.401547 & 1.4134655 & 0.700413 & 286.6517 \\
+        \hline
+        3 & 154.0 & 23.4701395 & 2.003553 & 1.4195566 & 0.679087 & 303.6294 \\
+        \hline
+        4 & 151.5 & 20.22314 & 2.925198 & 1.438095 & 0.745890896837544 & 315.5214 \\
+        \hline
+        
+    \end{tabular}
+\end{center}
+
+\vspace*{1cm}
+
+\begin{center} 
+    $u_{1}^{m} = 262.5 [\frac{m}{s}]$ \\
+    $c_{1_{a}} = 157.5 [\frac{m}{s}]$ \\
+    $c_{1_{u}} = 27.7715 [\frac{m}{s}]$ \\
+    $w_{1} = 236.36566 [\frac{m}{s}]$ \\
+    $w_{1_{u}} = 234.59416 [\frac{m}{s}]$ \\
+    $D_{1}^{m} = 0.0953 [m]$ \\
+    $n = 52612.4648 [rpm]$ \\
+    $D_{1}^{t} = 0.1270518 [m]$ \\
+    $D_{1}^{h} = 0.0635259 [m]$ \\
+\end{center}
+
+
+\section{Radial Variation of a flow over Airfoil Geometry - Task 3}
+
+
+
+
+
+
+
+
   \end{document}
