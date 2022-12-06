@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  5 DEC 2022 02:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  6 DEC 2022 00:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -142,23 +142,30 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count276
 \l__pdf_internal_box=\box53
-) (./finalreport.aux)
+) (./finalreport.aux
+
+LaTeX Warning: Label `eq:total pressure' multiply defined.
+
+
+LaTeX Warning: Label `eq:total density' multiply defined.
+
+)
 \openout1 = `finalreport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
  (/usr/local/texlive/2022basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count277
@@ -218,24 +225,166 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \tf@toc=\write3
 \openout3 = `finalreport.toc'.
 
- [1] [2] [3] [4]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 342.
+ [1] [2] [3] [4] [5]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 365.
  (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] (./finalreport.aux) ) 
+) [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
+<./images//veltri1.png, id=76, 791.95876pt x 763.85374pt>
+File: ./images//veltri1.png Graphic file (type png)
+<use ./images//veltri1.png>
+Package pdftex.def Info: ./images//veltri1.png  used on input line 1422.
+(pdftex.def)             Requested size: 352.31625pt x 339.81477pt.
+ [18]
+<./images//veltri2.png, id=82, 772.8875pt x 374.39874pt>
+File: ./images//veltri2.png Graphic file (type png)
+<use ./images//veltri2.png>
+Package pdftex.def Info: ./images//veltri2.png  used on input line 1426.
+(pdftex.def)             Requested size: 352.31625pt x 170.6659pt.
+<./images//veltri3.png, id=83, 770.88pt x 735.74875pt>
+File: ./images//veltri3.png Graphic file (type png)
+<use ./images//veltri3.png>
+Package pdftex.def Info: ./images//veltri3.png  used on input line 1430.
+(pdftex.def)             Requested size: 352.31625pt x 336.25934pt.
+ [19 <./images//veltri1.png> <./images//veltri2.png>]
+<./images//airfoilstack.png, id=89, 582.175pt x 845.1575pt>
+File: ./images//airfoilstack.png Graphic file (type png)
+<use ./images//airfoilstack.png>
+Package pdftex.def Info: ./images//airfoilstack.png  used on input line 1437.
+(pdftex.def)             Requested size: 352.31625pt x 511.47017pt.
+ [20 <./images//veltri3.png>]
+<./images//airfoilstack2.png, id=94, 667.49374pt x 784.9325pt>
+File: ./images//airfoilstack2.png Graphic file (type png)
+<use ./images//airfoilstack2.png>
+Package pdftex.def Info: ./images//airfoilstack2.png  used on input line 1441.
+(pdftex.def)             Requested size: 352.31625pt x 414.3115pt.
+ [21 <./images//airfoilstack.png>] [22 <./images//airfoilstack2.png>] [23] [24]
+<./images//CompressorMap1.png, id=110, 589.7232pt x 408.3255pt>
+File: ./images//CompressorMap1.png Graphic file (type png)
+<use ./images//CompressorMap1.png>
+Package pdftex.def Info: ./images//CompressorMap1.png  used on input line 1610.
+(pdftex.def)             Requested size: 469.75502pt x 325.25896pt.
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 1610--1611
+ [] 
+ []
+
+<./images//CompressorMap2.png, id=111, 656.2116pt x 440.847pt>
+File: ./images//CompressorMap2.png Graphic file (type png)
+<use ./images//CompressorMap2.png>
+Package pdftex.def Info: ./images//CompressorMap2.png  used on input line 1613.
+(pdftex.def)             Requested size: 469.75502pt x 315.59337pt.
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 1613--1614
+ [][] 
+ []
+
+[25 <./images//CompressorMap1.png>]
+<./images//CompressorMap3.png, id=116, 694.5147pt x 450.2421pt>
+File: ./images//CompressorMap3.png Graphic file (type png)
+<use ./images//CompressorMap3.png>
+Package pdftex.def Info: ./images//CompressorMap3.png  used on input line 1615.
+(pdftex.def)             Requested size: 469.75502pt x 304.53922pt.
+
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 1615--1616
+ [][] 
+ []
+
+[26 <./images//CompressorMap2.png> <./images//CompressorMap3.png>] [27]
+<./images////airfoil1.jpeg, id=127, 1798.72pt x 1372.12625pt>
+File: ./images////airfoil1.jpeg Graphic file (type jpg)
+<use ./images////airfoil1.jpeg>
+Package pdftex.def Info: ./images////airfoil1.jpeg  used on input line 1746.
+(pdftex.def)             Requested size: 352.31625pt x 268.74648pt.
+<./images////airfoil2.jpeg, id=128, 1002.74625pt x 774.895pt>
+File: ./images////airfoil2.jpeg Graphic file (type jpg)
+<use ./images////airfoil2.jpeg>
+Package pdftex.def Info: ./images////airfoil2.jpeg  used on input line 1750.
+(pdftex.def)             Requested size: 352.31625pt x 272.25781pt.
+ [28 <./images////airfoil1.jpeg>]
+<./images////airfoil3.jpeg, id=132, 1793.70125pt x 1373.13pt>
+File: ./images////airfoil3.jpeg Graphic file (type jpg)
+<use ./images////airfoil3.jpeg>
+Package pdftex.def Info: ./images////airfoil3.jpeg  used on input line 1754.
+(pdftex.def)             Requested size: 352.31625pt x 269.69736pt.
+<./images////compgrid.jpeg, id=133, 1800.7275pt x 1365.1pt>
+File: ./images////compgrid.jpeg Graphic file (type jpg)
+<use ./images////compgrid.jpeg>
+Package pdftex.def Info: ./images////compgrid.jpeg  used on input line 1758.
+(pdftex.def)             Requested size: 352.31625pt x 267.07869pt.
+ [29 <./images////airfoil2.jpeg> <./images////airfoil3.jpeg>]
+<./images////Mach.jpeg, id=137, 1811.76875pt x 1372.12625pt>
+File: ./images////Mach.jpeg Graphic file (type jpg)
+<use ./images////Mach.jpeg>
+Package pdftex.def Info: ./images////Mach.jpeg  used on input line 1762.
+(pdftex.def)             Requested size: 352.31625pt x 266.82028pt.
+<./images////Pressure.jpeg, id=138, 1786.675pt x 1360.08125pt>
+File: ./images////Pressure.jpeg Graphic file (type jpg)
+<use ./images////Pressure.jpeg>
+Package pdftex.def Info: ./images////Pressure.jpeg  used on input line 1766.
+(pdftex.def)             Requested size: 352.31625pt x 268.19286pt.
+ [30 <./images////compgrid.jpeg> <./images////Mach.jpeg>]
+<./images////velocity.jpeg, id=143, 1787.67876pt x 1361.085pt>
+File: ./images////velocity.jpeg Graphic file (type jpg)
+<use ./images////velocity.jpeg>
+Package pdftex.def Info: ./images////velocity.jpeg  used on input line 1770.
+(pdftex.def)             Requested size: 352.31625pt x 268.2454pt.
+ [31 <./images////Pressure.jpeg> <./images////velocity.jpeg>] [32] [33] [34] [35]
+<./images//CompressorMap.png, id=159, 1022.82124pt x 705.13437pt>
+File: ./images//CompressorMap.png Graphic file (type png)
+<use ./images//CompressorMap.png>
+Package pdftex.def Info: ./images//CompressorMap.png  used on input line 2165.
+(pdftex.def)             Requested size: 469.75502pt x 323.84929pt.
+ [36 <./images//CompressorMap.png>] [37]
+<./images//fig_N.png, id=168, 729.2043pt x 437.2335pt>
+File: ./images//fig_N.png Graphic file (type png)
+<use ./images//fig_N.png>
+Package pdftex.def Info: ./images//fig_N.png  used on input line 2314.
+(pdftex.def)             Requested size: 469.75502pt x 281.66985pt.
+ [38 <./images//fig_N.png>]
+Overfull \hbox (7.46812pt too wide) in paragraph at lines 2396--2413
+ [] 
+ []
+
+[39]
+Overfull \hbox (17.46568pt too wide) in paragraph at lines 2483--2500
+ [] 
+ []
+
+
+Overfull \hbox (7.46812pt too wide) in paragraph at lines 2511--2528
+ [] 
+ []
+
+[40]
+<./images//FHV.png, id=179, 632.3625pt x 382.3083pt>
+File: ./images//FHV.png Graphic file (type png)
+<use ./images//FHV.png>
+Package pdftex.def Info: ./images//FHV.png  used on input line 2545.
+(pdftex.def)             Requested size: 469.75502pt x 284.00624pt.
+<./images//TSFCHV.png, id=180, 769.6755pt x 373.6359pt>
+File: ./images//TSFCHV.png Graphic file (type png)
+<use ./images//TSFCHV.png>
+Package pdftex.def Info: ./images//TSFCHV.png  used on input line 2549.
+(pdftex.def)             Requested size: 469.75502pt x 228.04298pt.
+ [41 <./images//FHV.png>] [42 <./images//TSFCHV.png>] (./finalreport.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3793 strings out of 476422
- 59850 string characters out of 5810349
- 434462 words of memory out of 5000000
- 25066 multiletter control sequences out of 15000+600000
- 480360 words of font info for 52 fonts, out of 8000000 for 9000
+ 3993 strings out of 476422
+ 64655 string characters out of 5810349
+ 452644 words of memory out of 5000000
+ 25241 multiletter control sequences out of 15000+600000
+ 481381 words of font info for 54 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,12n,62p,535b,198s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on finalreport.pdf (15 pages, 223762 bytes).
+ 55i,13n,62p,603b,288s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on finalreport.pdf (43 pages, 2928692 bytes).
 PDF statistics:
- 381 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
+ 585 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
