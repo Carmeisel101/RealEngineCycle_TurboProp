@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  6 DEC 2022 00:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.14)  6 DEC 2022 14:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -226,148 +226,147 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 \openout3 = `finalreport.toc'.
 
  [1] [2] [3] [4] [5]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 365.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 392.
  (/usr/local/texlive/2022basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-) [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
-<./images//veltri1.png, id=76, 791.95876pt x 763.85374pt>
+) [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
+<./images//veltri1.png, id=83, 791.95876pt x 763.85374pt>
 File: ./images//veltri1.png Graphic file (type png)
 <use ./images//veltri1.png>
-Package pdftex.def Info: ./images//veltri1.png  used on input line 1422.
+Package pdftex.def Info: ./images//veltri1.png  used on input line 1453.
 (pdftex.def)             Requested size: 352.31625pt x 339.81477pt.
- [18]
-<./images//veltri2.png, id=82, 772.8875pt x 374.39874pt>
+<./images//veltri2.png, id=85, 772.8875pt x 374.39874pt>
 File: ./images//veltri2.png Graphic file (type png)
 <use ./images//veltri2.png>
-Package pdftex.def Info: ./images//veltri2.png  used on input line 1426.
+Package pdftex.def Info: ./images//veltri2.png  used on input line 1457.
 (pdftex.def)             Requested size: 352.31625pt x 170.6659pt.
-<./images//veltri3.png, id=83, 770.88pt x 735.74875pt>
+ [20 <./images//veltri1.png>]
+<./images//veltri3.png, id=90, 770.88pt x 735.74875pt>
 File: ./images//veltri3.png Graphic file (type png)
 <use ./images//veltri3.png>
-Package pdftex.def Info: ./images//veltri3.png  used on input line 1430.
+Package pdftex.def Info: ./images//veltri3.png  used on input line 1461.
 (pdftex.def)             Requested size: 352.31625pt x 336.25934pt.
- [19 <./images//veltri1.png> <./images//veltri2.png>]
-<./images//airfoilstack.png, id=89, 582.175pt x 845.1575pt>
+<./images//airfoilstack.png, id=91, 582.175pt x 845.1575pt>
 File: ./images//airfoilstack.png Graphic file (type png)
 <use ./images//airfoilstack.png>
-Package pdftex.def Info: ./images//airfoilstack.png  used on input line 1437.
+Package pdftex.def Info: ./images//airfoilstack.png  used on input line 1468.
 (pdftex.def)             Requested size: 352.31625pt x 511.47017pt.
- [20 <./images//veltri3.png>]
-<./images//airfoilstack2.png, id=94, 667.49374pt x 784.9325pt>
+ [21 <./images//veltri2.png> <./images//veltri3.png>]
+<./images//airfoilstack2.png, id=97, 667.49374pt x 784.9325pt>
 File: ./images//airfoilstack2.png Graphic file (type png)
 <use ./images//airfoilstack2.png>
-Package pdftex.def Info: ./images//airfoilstack2.png  used on input line 1441.
+Package pdftex.def Info: ./images//airfoilstack2.png  used on input line 1472.
 (pdftex.def)             Requested size: 352.31625pt x 414.3115pt.
- [21 <./images//airfoilstack.png>] [22 <./images//airfoilstack2.png>] [23] [24]
-<./images//CompressorMap1.png, id=110, 589.7232pt x 408.3255pt>
+ [22 <./images//airfoilstack.png>] [23 <./images//airfoilstack2.png>] [24] [25]
+<./images//CompressorMap1.png, id=113, 589.7232pt x 408.3255pt>
 File: ./images//CompressorMap1.png Graphic file (type png)
 <use ./images//CompressorMap1.png>
-Package pdftex.def Info: ./images//CompressorMap1.png  used on input line 1610.
+Package pdftex.def Info: ./images//CompressorMap1.png  used on input line 1643.
 (pdftex.def)             Requested size: 469.75502pt x 325.25896pt.
 
-Overfull \hbox (25.00003pt too wide) in paragraph at lines 1610--1611
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 1643--1644
  [] 
  []
 
-<./images//CompressorMap2.png, id=111, 656.2116pt x 440.847pt>
+<./images//CompressorMap2.png, id=114, 656.2116pt x 440.847pt>
 File: ./images//CompressorMap2.png Graphic file (type png)
 <use ./images//CompressorMap2.png>
-Package pdftex.def Info: ./images//CompressorMap2.png  used on input line 1613.
+Package pdftex.def Info: ./images//CompressorMap2.png  used on input line 1646.
 (pdftex.def)             Requested size: 469.75502pt x 315.59337pt.
 
-Overfull \hbox (25.00003pt too wide) in paragraph at lines 1613--1614
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 1646--1647
  [][] 
  []
 
-[25 <./images//CompressorMap1.png>]
-<./images//CompressorMap3.png, id=116, 694.5147pt x 450.2421pt>
+[26 <./images//CompressorMap1.png>]
+<./images//CompressorMap3.png, id=119, 694.5147pt x 450.2421pt>
 File: ./images//CompressorMap3.png Graphic file (type png)
 <use ./images//CompressorMap3.png>
-Package pdftex.def Info: ./images//CompressorMap3.png  used on input line 1615.
+Package pdftex.def Info: ./images//CompressorMap3.png  used on input line 1648.
 (pdftex.def)             Requested size: 469.75502pt x 304.53922pt.
 
-Overfull \hbox (25.00003pt too wide) in paragraph at lines 1615--1616
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 1648--1649
  [][] 
  []
 
-[26 <./images//CompressorMap2.png> <./images//CompressorMap3.png>] [27]
-<./images////airfoil1.jpeg, id=127, 1798.72pt x 1372.12625pt>
+[27 <./images//CompressorMap2.png> <./images//CompressorMap3.png>] [28]
+<./images////airfoil1.jpeg, id=130, 1798.72pt x 1372.12625pt>
 File: ./images////airfoil1.jpeg Graphic file (type jpg)
 <use ./images////airfoil1.jpeg>
-Package pdftex.def Info: ./images////airfoil1.jpeg  used on input line 1746.
+Package pdftex.def Info: ./images////airfoil1.jpeg  used on input line 1779.
 (pdftex.def)             Requested size: 352.31625pt x 268.74648pt.
-<./images////airfoil2.jpeg, id=128, 1002.74625pt x 774.895pt>
+<./images////airfoil2.jpeg, id=131, 1002.74625pt x 774.895pt>
 File: ./images////airfoil2.jpeg Graphic file (type jpg)
 <use ./images////airfoil2.jpeg>
-Package pdftex.def Info: ./images////airfoil2.jpeg  used on input line 1750.
+Package pdftex.def Info: ./images////airfoil2.jpeg  used on input line 1783.
 (pdftex.def)             Requested size: 352.31625pt x 272.25781pt.
- [28 <./images////airfoil1.jpeg>]
-<./images////airfoil3.jpeg, id=132, 1793.70125pt x 1373.13pt>
+ [29 <./images////airfoil1.jpeg>]
+<./images////airfoil3.jpeg, id=135, 1793.70125pt x 1373.13pt>
 File: ./images////airfoil3.jpeg Graphic file (type jpg)
 <use ./images////airfoil3.jpeg>
-Package pdftex.def Info: ./images////airfoil3.jpeg  used on input line 1754.
+Package pdftex.def Info: ./images////airfoil3.jpeg  used on input line 1787.
 (pdftex.def)             Requested size: 352.31625pt x 269.69736pt.
-<./images////compgrid.jpeg, id=133, 1800.7275pt x 1365.1pt>
+<./images////compgrid.jpeg, id=136, 1800.7275pt x 1365.1pt>
 File: ./images////compgrid.jpeg Graphic file (type jpg)
 <use ./images////compgrid.jpeg>
-Package pdftex.def Info: ./images////compgrid.jpeg  used on input line 1758.
+Package pdftex.def Info: ./images////compgrid.jpeg  used on input line 1791.
 (pdftex.def)             Requested size: 352.31625pt x 267.07869pt.
- [29 <./images////airfoil2.jpeg> <./images////airfoil3.jpeg>]
-<./images////Mach.jpeg, id=137, 1811.76875pt x 1372.12625pt>
+ [30 <./images////airfoil2.jpeg> <./images////airfoil3.jpeg>]
+<./images////Mach.jpeg, id=141, 1811.76875pt x 1372.12625pt>
 File: ./images////Mach.jpeg Graphic file (type jpg)
 <use ./images////Mach.jpeg>
-Package pdftex.def Info: ./images////Mach.jpeg  used on input line 1762.
+Package pdftex.def Info: ./images////Mach.jpeg  used on input line 1795.
 (pdftex.def)             Requested size: 352.31625pt x 266.82028pt.
-<./images////Pressure.jpeg, id=138, 1786.675pt x 1360.08125pt>
+<./images////Pressure.jpeg, id=142, 1786.675pt x 1360.08125pt>
 File: ./images////Pressure.jpeg Graphic file (type jpg)
 <use ./images////Pressure.jpeg>
-Package pdftex.def Info: ./images////Pressure.jpeg  used on input line 1766.
+Package pdftex.def Info: ./images////Pressure.jpeg  used on input line 1799.
 (pdftex.def)             Requested size: 352.31625pt x 268.19286pt.
- [30 <./images////compgrid.jpeg> <./images////Mach.jpeg>]
-<./images////velocity.jpeg, id=143, 1787.67876pt x 1361.085pt>
+ [31 <./images////compgrid.jpeg> <./images////Mach.jpeg>]
+<./images////velocity.jpeg, id=146, 1787.67876pt x 1361.085pt>
 File: ./images////velocity.jpeg Graphic file (type jpg)
 <use ./images////velocity.jpeg>
-Package pdftex.def Info: ./images////velocity.jpeg  used on input line 1770.
+Package pdftex.def Info: ./images////velocity.jpeg  used on input line 1803.
 (pdftex.def)             Requested size: 352.31625pt x 268.2454pt.
- [31 <./images////Pressure.jpeg> <./images////velocity.jpeg>] [32] [33] [34] [35]
-<./images//CompressorMap.png, id=159, 1022.82124pt x 705.13437pt>
+ [32 <./images////Pressure.jpeg> <./images////velocity.jpeg>] [33] [34] [35] [36]
+<./images//CompressorMap.png, id=163, 1022.82124pt x 705.13437pt>
 File: ./images//CompressorMap.png Graphic file (type png)
 <use ./images//CompressorMap.png>
-Package pdftex.def Info: ./images//CompressorMap.png  used on input line 2165.
+Package pdftex.def Info: ./images//CompressorMap.png  used on input line 2198.
 (pdftex.def)             Requested size: 469.75502pt x 323.84929pt.
- [36 <./images//CompressorMap.png>] [37]
-<./images//fig_N.png, id=168, 729.2043pt x 437.2335pt>
+ [37 <./images//CompressorMap.png>] [38]
+<./images//fig_N.png, id=171, 729.2043pt x 437.2335pt>
 File: ./images//fig_N.png Graphic file (type png)
 <use ./images//fig_N.png>
-Package pdftex.def Info: ./images//fig_N.png  used on input line 2314.
+Package pdftex.def Info: ./images//fig_N.png  used on input line 2347.
 (pdftex.def)             Requested size: 469.75502pt x 281.66985pt.
- [38 <./images//fig_N.png>]
-Overfull \hbox (7.46812pt too wide) in paragraph at lines 2396--2413
- [] 
- []
-
-[39]
-Overfull \hbox (17.46568pt too wide) in paragraph at lines 2483--2500
- [] 
- []
-
-
-Overfull \hbox (7.46812pt too wide) in paragraph at lines 2511--2528
+ [39 <./images//fig_N.png>]
+Overfull \hbox (7.46812pt too wide) in paragraph at lines 2429--2446
  [] 
  []
 
 [40]
-<./images//FHV.png, id=179, 632.3625pt x 382.3083pt>
+Overfull \hbox (17.46568pt too wide) in paragraph at lines 2516--2533
+ [] 
+ []
+
+
+Overfull \hbox (7.46812pt too wide) in paragraph at lines 2544--2561
+ [] 
+ []
+
+[41]
+<./images//FHV.png, id=182, 632.3625pt x 382.3083pt>
 File: ./images//FHV.png Graphic file (type png)
 <use ./images//FHV.png>
-Package pdftex.def Info: ./images//FHV.png  used on input line 2545.
+Package pdftex.def Info: ./images//FHV.png  used on input line 2578.
 (pdftex.def)             Requested size: 469.75502pt x 284.00624pt.
-<./images//TSFCHV.png, id=180, 769.6755pt x 373.6359pt>
+<./images//TSFCHV.png, id=183, 769.6755pt x 373.6359pt>
 File: ./images//TSFCHV.png Graphic file (type png)
 <use ./images//TSFCHV.png>
-Package pdftex.def Info: ./images//TSFCHV.png  used on input line 2549.
+Package pdftex.def Info: ./images//TSFCHV.png  used on input line 2582.
 (pdftex.def)             Requested size: 469.75502pt x 228.04298pt.
- [41 <./images//FHV.png>] [42 <./images//TSFCHV.png>] (./finalreport.aux)
+ [42 <./images//FHV.png>] [43 <./images//TSFCHV.png>] (./finalreport.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -379,12 +378,12 @@ Here is how much of TeX's memory you used:
  25241 multiletter control sequences out of 15000+600000
  481381 words of font info for 54 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 55i,13n,62p,603b,288s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 55i,13n,62p,882b,288s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </Users/carlosmeisel/Library/texlive/2022basic/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2022basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on finalreport.pdf (43 pages, 2928692 bytes).
+Output written on finalreport.pdf (44 pages, 2930946 bytes).
 PDF statistics:
- 585 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
+ 589 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
