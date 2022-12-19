@@ -71,7 +71,7 @@ And $\frac{p_{H}}{{p_{3}^{ * }}}$ is calculated:
 
 <div align="center">
  
- $$\frac{p_{H}}{p_{3}^{ * }} = \frac{1}{\sigma_{combustion}^{*} \pi_{c}^{*} \pi_{D}}$$
+ $$\frac{p_{H}}{p_{3}^{ * }} = \frac{1}{\sigma_{combustion}^{ * } \pi_{c}^{ * } \pi_{D}}$$
 
 </div>
 
